@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>3P's Produções | Produtora Audiovisual, Vídeos Estratégicos & Branding</title>
+  <meta name="title" content="3P's Produções | Produtora Audiovisual, Vídeos Estratégicos & Branding">
+  <meta name="description" content="Produtora audiovisual no Rio de Janeiro fundada por Rodrigo Ramos. Criamos conteúdos estratégicos, vídeos institucionais, reels e coberturas baseadas no tripé dos 3P's.">
+  <meta name="keywords" content="produtora audiovisual, vídeos para instagram, vídeos corporativos, branding, rio de janeiro, barra da tijuca, reels médico, produção de vídeo">
+  <meta name="author" content="Rodrigo Ramos - 3P's Produções">
+  <link rel="canonical" href="https://rprramos9.wixsite.com/3psproducoes">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rprramos9.wixsite.com/3psproducoes">
+  <meta property="og:title" content="3P's Produções | Produtora Audiovisual & Estratégia de Marca">
+  <meta property="og:description" content="Transformamos ideias em narrativas visuais estratégicas que geram autoridade e resultados de negócio.">
+  <meta property="og:image" content="assets/images/rodrigo_ramos_quem_sou.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo_3ps.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="assets/images/logo_3ps.png" alt="3P's Produções Logo" class="logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#3ps" class="nav-link">Os 3 P's</a></li>
+          <li><a href="#quem-sou" class="nav-link">Quem Sou</a></li>
+          <li><a href="#youtube" class="nav-link"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> YouTube</a></li>
+          <li><a href="#instagram" class="nav-link"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</a></li>
+          
+          <!-- Dropdown com Destaque de Fotografia -->
+          <li class="nav-dropdown">
+            <a href="#fotografia" class="nav-link nav-dropdown-trigger">
+              📸 <span>Fotografia</span> <span class="badge-photo">Galeria</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('pessoas')">👤 Pessoas</a>
+              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('profissoes')">💼 Profissões</a>
+              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('estudio')">🎬 Estúdio</a>
+              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('gastronomia')">🍽️ Gastronomia</a>
+              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('arquitetura')">🏛️ Arquitetura</a>
+            </div>
+          </li>
+
+          <li><a href="#contato" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Solicitar Orçamento</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero / 3P's Section -->
+  <section class="hero" id="3ps">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>3P's Produções <span class="text-gold">Audiovisual & Estratégia</span></h1>
+        <p class="hero-tagline">Tripé Bíblico: Provedor, Protetor e Profeta.</p>
+        <p class="hero-description">
+          Direto ao ponto: os 3P’s representam a base para a formação do Homem e servem como pilar absoluto da nossa produtora — entregando estratégia, ética e valor em cada frame.
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <h3 class="pillar-title">Provedor</h3>
+            <p class="pillar-text">Nunca deixa de prover o sustento e gerar valor real e resultados consistentes para nossos clientes.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="pillar-title">Protetor</h3>
+            <p class="pillar-text">Protege sua família, clientes e marca com ética, responsabilidade e zelo pela reputação.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-compass"></i></div>
+            <h3 class="pillar-title">Profeta</h3>
+            <p class="pillar-text">Sabe qual caminho trilhar. Visão estratégica e antecipação de tendências para guiar marcas ao futuro.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://wa.me/5521979223500?text=Olá!%20Vim%20pelo%20site%20da%203P's%20Produções%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> Falar no WhatsApp
+          </a>
+          <a href="#youtube" class="btn btn-outline">
+            Ver Portfólio de Vídeos
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media" style="text-align: center;">
+        <img src="assets/images/logo_3ps.png" alt="3P's Produções" style="max-width: 80%; height: auto; filter: drop-shadow(0 0 25px rgba(229,179,66,0.2));">
+      </div>
+    </div>
+  </section>
+
+  <!-- Missão, Visão e Valores -->
+  <section class="mvv-section">
+    <div class="container">
+      <div class="mvv-grid">
+        <div class="mvv-card">
+          <h3><i class="fa-solid fa-rocket"></i> Missão</h3>
+          <p style="color: var(--text-muted);">
+            Transformar ideias em narrativas audiovisuais que sustentam negócios, protegem reputações e projetam marcas para o futuro, com criatividade e excelência em cada entrega.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <h3><i class="fa-solid fa-eye"></i> Visão</h3>
+          <p style="color: var(--text-muted);">
+            Ser referência no mercado audiovisual como empresa que une propósito, estratégia e inovação, ajudando clientes a se posicionarem com credibilidade, impacto e originalidade.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <h3><i class="fa-solid fa-gem"></i> Valores</h3>
+          <ul>
+            <li><strong>Provedor:</strong> Foco em gerar resultados consistentes.</li>
+            <li><strong>Protetor:</strong> Ética e zelo pela imagem do cliente.</li>
+            <li><strong>Profeta:</strong> Visão estratégica de mercado.</li>
+            <li><strong>Criatividade & Excelência:</strong> Entregas únicas e memoráveis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem Sou Section -->
+  <section class="quem-sou" id="quem-sou">
+    <div class="container quem-sou-grid">
+      <div class="quem-sou-img-wrapper">
+        <img src="assets/images/rodrigo_ramos_quem_sou.jpg" alt="Rodrigo Ramos - Fundador da 3P's Produções">
+      </div>
+
+      <div class="quem-sou-content">
+        <h2>Muito prazer!</h2>
+        <p class="quem-sou-subtitle">Me chamo Rodrigo Ramos.</p>
+        
+        <div class="quem-sou-text">
+          <p><strong>Há quem comece no audiovisual por paixão. Eu comecei por propósito.</strong></p>
+          <p>
+            Antes mesmo de pegar uma câmera, vivi mais de 20 anos nas trincheiras das vendas — conectando soluções a pessoas, ouvindo dores, traduzindo necessidades e aprendendo o que realmente faz uma marca se conectar de verdade: relevância, emoção e resultado.
+          </p>
+          <p>
+            Quando entrei no audiovisual, trouxe comigo algo que poucos têm nesse mercado: <strong>a visão estratégica de quem entende que cada frame precisa servir a um propósito de negócio.</strong>
+          </p>
+
+          <div class="highlight-box">
+            "Não produzo vídeos! Crio experiências visuais que contam o porquê por trás de cada marca."
+          </div>
+
+          <p>
+            Desde 2018, transformo histórias em narrativas visuais que posicionam marcas, fortalecem identidades e geram conexões reais nas redes sociais.
+          </p>
+          <p>
+            O audiovisual também me abriu portas para o empreendedorismo — criando a Calzoca (@calzocatapiocaria), um delivery inovador levado do zero ao mercado, além de projetos como o @alemdoponteiro (arte e relojoaria) e o e-commerce @seufunko_.
+          </p>
+
+          <p style="font-style: italic; color: var(--accent-gold); margin-top: 1rem;">
+            "Porque no fim, o que constrói uma marca não é o que ela vende. É o que ela faz as pessoas sentirem — e lembrarem."
+          </p>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="https://www.instagram.com/rodrigoprramos/" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+              <i class="fa-brands fa-instagram"></i> @rodrigoprramos
+            </a>
+            <a href="https://www.linkedin.com/in/rprramos/" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/3psproducoes/" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+              <i class="fa-brands fa-instagram"></i> @3psproducoes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Portfolio Section -->
+  <section class="portfolio-section" id="youtube">
+    <div class="container">
+      <h2 class="section-title">Canal do YouTube & <span class="text-gold">Portfólio de Vídeos</span></h2>
+      <p class="section-subtitle">Casos reais de clientes, reels dinâmicos, vídeos institucionais e conteúdos gravados em nosso estúdio.</p>
+
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card" onclick="openVideoModal('YTT7JiTkgVI')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/YTT7JiTkgVI/maxresdefault.jpg" alt="Reels Médico- Vídeo Dinâmico">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Reels Médico - Vídeo Dinâmico</h3>
+            <p class="video-desc">Vídeo gravado e editado para ser dinâmico com legenda interativa para médicos e especialistas.</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card" onclick="openVideoModal('TJq-UDLjBFo')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/TJq-UDLjBFo/maxresdefault.jpg" alt="Reels: Cicatriclear">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Reels: Cicatriclear</h3>
+            <p class="video-desc">Conteúdo captado durante o evento de Bronze, no qual a Cicatriclear era patrocinadora oficial.</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card" onclick="openVideoModal('P0aTGN6WkKo')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/P0aTGN6WkKo/maxresdefault.jpg" alt="Reels Corretor de Imóveis Nyemeier">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Reels: Corretor de Imóveis - Nyemeier</h3>
+            <p class="video-desc">Divulgação de empreendimento imobiliário de alto padrão Costa Nyemeier.</p>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card" onclick="openVideoModal('cAhkHZcWKqI')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/cAhkHZcWKqI/maxresdefault.jpg" alt="Fórum ANB">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Fórum ANB - Museu da Marinha</h3>
+            <p class="video-desc">Captação e cobertura completa do Fórum da ANB realizado no centro do Rio de Janeiro.</p>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-card" onclick="openVideoModal('jJpyGaF7AB8')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/jJpyGaF7AB8/maxresdefault.jpg" alt="Reels LA Comunicação">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Reels: LA Comunicação</h3>
+            <p class="video-desc">Conteúdo gravado no estúdio na Barra da Tijuca e editado para redes sociais verticais.</p>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="video-card" onclick="openVideoModal('73AaKkBId6c')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/73AaKkBId6c/maxresdefault.jpg" alt="Vídeo Institucional Tree Intelligence">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Vídeo Institucional: Tree Intelligence</h3>
+            <p class="video-desc">Vídeo institucional com suporte na roteirização, captação e edição no estúdio.</p>
+          </div>
+        </div>
+
+        <!-- Video 7 -->
+        <div class="video-card" onclick="openVideoModal('sKblSBXNpC4')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/sKblSBXNpC4/maxresdefault.jpg" alt="Canal Sem Dogma">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Canal Sem Dogma - Teologia & Hipnose</h3>
+            <p class="video-desc">Produção de vídeo completo para o canal de Rafael Schmidt no estúdio da Barra da Tijuca.</p>
+          </div>
+        </div>
+
+        <!-- Video 8 -->
+        <div class="video-card" onclick="openVideoModal('L-azUanXJRs')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/L-azUanXJRs/maxresdefault.jpg" alt="Reels de Autoridade">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Reels de Autoridade: Rio Prime Clinic</h3>
+            <p class="video-desc">Posicionamento de autoridade para a expert Karen Stephane focado em público High Ticket.</p>
+          </div>
+        </div>
+
+        <!-- Video 9 -->
+        <div class="video-card" onclick="openVideoModal('cxhBEqAC8C4')">
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/cxhBEqAC8C4/maxresdefault.jpg" alt="Mercedes Benz Places Dubai">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Mercedes Benz Places - Dubai (CD Homes)</h3>
+            <p class="video-desc">Vídeo de alto padrão imobiliário roteirizado e editado para empreendimento em Dubai.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram & TikTok Reels Section -->
+  <section class="portfolio-section" id="instagram" style="background: rgba(18, 21, 30, 0.3);">
+    <div class="container">
+      <h2 class="section-title">Instagram & TikTok | <span class="text-gold">Reels Verticais</span></h2>
+      <p class="section-subtitle">Formatos curtos, dinâmicos e otimizados para alto engajamento em redes sociais.</p>
+
+      <div class="reels-grid">
+        <div class="reel-card" onclick="window.open('https://www.instagram.com/3psproducoes/', '_blank')">
+          <div class="reel-thumb">
+            <img src="assets/images/photography/pessoas_1.jpg" alt="Além do Ponteiro">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="reel-info">
+            <h3 class="reel-title">Além do Ponteiro</h3>
+            <span class="reel-tag">@alemdoponteiro</span>
+          </div>
+        </div>
+
+        <div class="reel-card" onclick="window.open('https://www.instagram.com/3psproducoes/', '_blank')">
+          <div class="reel-thumb">
+            <img src="assets/images/photography/profissoes_1.jpg" alt="Lucian Hipnoterapeuta">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="reel-info">
+            <h3 class="reel-title">Lucian - Hipnoterapeuta</h3>
+            <span class="reel-tag">Saúde & Mente</span>
+          </div>
+        </div>
+
+        <div class="reel-card" onclick="window.open('https://www.instagram.com/3psproducoes/', '_blank')">
+          <div class="reel-thumb">
+            <img src="assets/images/photography/profissoes_2.jpg" alt="Jéssica Bork Advogada">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="reel-info">
+            <h3 class="reel-title">Jéssica Bork</h3>
+            <span class="reel-tag">Advocacia & Direito</span>
+          </div>
+        </div>
+
+        <div class="reel-card" onclick="window.open('https://www.instagram.com/3psproducoes/', '_blank')">
+          <div class="reel-thumb">
+            <img src="assets/images/photography/estudio_1.jpg" alt="Dra Silvia Bretz">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="reel-info">
+            <h3 class="reel-title">Dra. Silvia Bretz</h3>
+            <span class="reel-tag">Endocrinologia Integrativa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fotografia Section (With Dropdown Filter Tabs & Gallery) -->
+  <section class="portfolio-section" id="fotografia">
+    <div class="container">
+      <h2 class="section-title">📸 Galeria de <span class="text-gold">Fotografia</span></h2>
+      <p class="section-subtitle">Ensaios de autoridade, retratos profissionais, coberturas e fotos de estúdio, gastronomia e arquitetura.</p>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">Todas as Fotos</button>
+        <button class="tab-btn" data-filter="pessoas">👤 Pessoas</button>
+        <button class="tab-btn" data-filter="profissoes">💼 Profissões</button>
+        <button class="tab-btn" data-filter="estudio">🎬 Estúdio</button>
+        <button class="tab-btn" data-filter="gastronomia">🍽️ Gastronomia</button>
+        <button class="tab-btn" data-filter="arquitetura">🏛️ Arquitetura</button>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="gallery-grid">
+        <!-- Pessoas -->
+        <div class="gallery-item" data-category="pessoas">
+          <img src="assets/images/photography/pessoas_1.jpg" alt="Retrato Corporal Pessoas">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Pessoas</span>
+            <h3 class="gallery-title">Ensaio Pessoal & Autoridade</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="pessoas">
+          <img src="assets/images/photography/pessoas_2.jpg" alt="Retrato Pessoas 2">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Pessoas</span>
+            <h3 class="gallery-title">Posicionamento de Imagem</h3>
+          </div>
+        </div>
+
+        <!-- Profissões -->
+        <div class="gallery-item" data-category="profissoes">
+          <img src="assets/images/photography/profissoes_1.jpg" alt="Retrato Corporativo Profissões">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Profissões</span>
+            <h3 class="gallery-title">Retrato Corporativo & Médicos</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="profissoes">
+          <img src="assets/images/photography/profissoes_2.jpg" alt="Advocacia e Mentores">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Profissões</span>
+            <h3 class="gallery-title">Advogados & Mentores</h3>
+          </div>
+        </div>
+
+        <!-- Estúdio -->
+        <div class="gallery-item" data-category="estudio">
+          <img src="assets/images/photography/estudio_1.jpg" alt="Captação em Estúdio Barra da Tijuca">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Estúdio</span>
+            <h3 class="gallery-title">Produção em Estúdio (Barra)</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="estudio">
+          <img src="assets/images/photography/estudio_2.jpg" alt="Estúdio de Vídeo e Foto">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Estúdio</span>
+            <h3 class="gallery-title">Iluminação & Cenário Profissional</h3>
+          </div>
+        </div>
+
+        <!-- Gastronomia -->
+        <div class="gallery-item" data-category="gastronomia">
+          <img src="assets/images/photography/gastronomia_1.jpg" alt="Fotografia de Gastronomia">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Gastronomia</span>
+            <h3 class="gallery-title">Delivery & Restaurantes (Calzoca)</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="gastronomia">
+          <img src="assets/images/photography/gastronomia_2.jpg" alt="Pratos e Culinária">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Gastronomia</span>
+            <h3 class="gallery-title">Culinária & Branding Gastronômico</h3>
+          </div>
+        </div>
+
+        <!-- Arquitetura -->
+        <div class="gallery-item" data-category="arquitetura">
+          <img src="assets/images/photography/arquitetura_1.jpg" alt="Fotografia de Arquitetura Imobiliária">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Arquitetura</span>
+            <h3 class="gallery-title">Imóveis de Alto Padrão</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="arquitetura">
+          <img src="assets/images/photography/arquitetura_2.jpg" alt="Projetos de Interiores">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Arquitetura</span>
+            <h3 class="gallery-title">Design de Interiores & Ambientes</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Lead Form Section -->
+  <section class="contact-section" id="contato">
+    <div class="container contact-grid">
+      <div>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Vamos transformar sua ideia em <span class="text-gold">impacto real?</span></h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem;">
+          Entre em contato direto pelo WhatsApp ou preencha o formulário para agendarmos uma conversa sobre a produção do seu vídeo ou ensaio fotográfico.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: rgba(37,211,102,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--whatsapp-green); font-size: 1.25rem;">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.85rem; color: var(--text-dim);">WhatsApp Direto</span>
+              <p style="font-weight: 600; font-size: 1.1rem;">+55 (21) 97922-3500</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: rgba(229,179,66,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-gold); font-size: 1.25rem;">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.85rem; color: var(--text-dim);">Estúdio Próprio</span>
+              <p style="font-weight: 600; font-size: 1.1rem;">Barra da Tijuca, Rio de Janeiro - RJ</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/5521979223500?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20com%20a%203P's%20Produções." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Iniciar Conversa no WhatsApp
+        </a>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <form class="contact-form" id="leadContactForm">
+        <h3 style="font-size: 1.35rem; margin-bottom: 1.5rem; color: var(--accent-gold);">Solicitar Orçamento de Projeto</h3>
+        
+        <div class="form-group">
+          <label for="formName">Seu Nome / Nome da Empresa</label>
+          <input type="text" id="formName" class="form-input" placeholder="Ex: Dr. Bernardo / Empresa X" required>
+        </div>
+
+        <div class="form-group">
+          <label for="formPhone">Telefone / WhatsApp</label>
+          <input type="tel" id="formPhone" class="form-input" placeholder="(21) 99999-9999" required>
+        </div>
+
+        <div class="form-group">
+          <label for="formService">Serviço Desejado</label>
+          <select id="formService" class="form-select" required>
+            <option value="Vídeo Institucional / Branding">Vídeo Institucional / Branding</option>
+            <option value="Reels & Conteúdo para Redes Sociais">Reels & Conteúdo para Redes Sociais</option>
+            <option value="Gravação em Estúdio">Gravação em Estúdio (Barra da Tijuca)</option>
+            <option value="Ensaio Fotográfico">Ensaio Fotográfico (Pessoas / Profissões / Gastronomia / Arquitetura)</option>
+            <option value="Cobertura de Evento Corporativo">Cobertura de Evento Corporativo</option>
+            <option value="Outro Serviço">Outro Serviço</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="formMessage">Detalhes do Projeto (Opcional)</label>
+          <textarea id="formMessage" class="form-textarea" rows="4" placeholder="Conte-nos um pouco sobre o objetivo da gravação..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Enviar Pedido de Orçamento <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Fechar Vídeo">&times;</button>
+      <div class="modal-video-container">
+        <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a href="https://wa.me/5521979223500?text=Olá!%20Vim%20pelo%20site%20da%203P's%20Produções." target="_blank" class="floating-whatsapp" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo_3ps.png" alt="3P's Produções" style="height: 38px; margin-bottom: 1rem;">
+          <p style="max-width: 400px; color: var(--text-muted);">
+            Provedor, Protetor e Profeta. Criatividade, digital e visão de negócios para transformar comunicação em resultado.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 1rem;">Navegação</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><a href="#3ps" style="color: var(--text-muted); text-decoration: none;">Os 3 P's</a></li>
+            <li><a href="#quem-sou" style="color: var(--text-muted); text-decoration: none;">Quem Sou</a></li>
+            <li><a href="#youtube" style="color: var(--text-muted); text-decoration: none;">YouTube</a></li>
+            <li><a href="#instagram" style="color: var(--text-muted); text-decoration: none;">Instagram & TikTok</a></li>
+            <li><a href="#fotografia" style="color: var(--text-muted); text-decoration: none;">Fotografia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 1rem;">Redes Sociais</h4>
+          <div style="display: flex; gap: 1rem; font-size: 1.25rem;">
+            <a href="https://www.instagram.com/3psproducoes/" target="_blank" style="color: var(--accent-gold);"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/rodrigoprramos/" target="_blank" style="color: var(--accent-gold);"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rprramos/" target="_blank" style="color: var(--accent-gold);"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid var(--border-glass); padding-top: 1.5rem; color: var(--text-dim);">
+        <p>© 2026 3P's Produções. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Helper function for dropdown photography filters
+    function filterGallery(category) {
+      const btn = document.querySelector(`.tab-btn[data-filter="${category}"]`);
+      if (btn) btn.click();
+    }
+  </script>
+</body>
+</html>
