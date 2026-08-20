@@ -1,5 +1,5 @@
 /* ==========================================================================
-   3P's Produções - Modern Dark Theme & Design System (Mundo Boss Style)
+   3P's Produções - Modern Dark Theme & Layout System (Exato Formato Mundo Boss)
    ========================================================================== */
 
 :root {
@@ -7,13 +7,16 @@
   --bg-dark: #090a0f;
   --bg-card: #12151e;
   --bg-card-hover: #1a1e2c;
-  --bg-glass: rgba(18, 21, 30, 0.75);
+  --bg-glass: rgba(18, 21, 30, 0.85);
   --border-glass: rgba(255, 255, 255, 0.08);
   
   --accent-gold: #e5b342;
   --accent-gold-hover: #f0c359;
   --accent-gold-glow: rgba(229, 179, 66, 0.25);
   
+  --accent-green: #00d8b1;
+  --accent-green-glow: rgba(0, 216, 177, 0.2);
+
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
   --text-dim: #6b7280;
@@ -33,7 +36,7 @@
   
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px var(--accent-gold-glow);
+  --shadow-glow: 0 0 35px var(--accent-gold-glow);
   
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -85,8 +88,8 @@ body {
 /* Typography Utilities */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.15;
   color: #ffffff;
 }
 
@@ -97,21 +100,30 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
+.text-green {
+  color: var(--accent-green);
+}
+
+.text-left {
+  text-align: left !important;
+}
+
 .section-title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
 }
 
 .section-subtitle {
   text-align: center;
   color: var(--text-muted);
   font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
+  max-width: 750px;
+  margin: 0 auto 3.5rem auto;
 }
 
-/* Buttons */
+/* Buttons (Formato Mundo Boss) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -119,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.6rem;
   padding: 0.85rem 1.75rem;
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   border-radius: var(--radius-full);
   text-decoration: none;
@@ -128,25 +140,30 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
+.btn-large {
+  padding: 1rem 2.25rem;
+  font-size: 1.05rem;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, #f0c359 0%, #e5b342 100%);
   color: #000000;
-  box-shadow: 0 4px 15px var(--accent-gold-glow);
+  box-shadow: 0 4px 20px var(--accent-gold-glow);
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(229, 179, 66, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(229, 179, 66, 0.45);
 }
 
 .btn-whatsapp {
   background-color: var(--whatsapp-green);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
 }
 .btn-whatsapp:hover {
   background-color: var(--whatsapp-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55);
 }
 
 .btn-outline {
@@ -160,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Header & Navbar */
+/* Header & Navbar Sticky (Mundo Boss Glassmorphism) */
 .navbar {
   position: fixed;
   top: 0;
@@ -168,8 +185,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 1000;
   background: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
   transition: var(--transition);
 }
@@ -178,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 84px;
 }
 
 .logo {
@@ -188,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 .logo-img {
-  height: 44px;
+  height: 46px;
   width: auto;
   object-fit: contain;
 }
@@ -207,7 +224,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   transition: var(--transition);
   padding: 0.5rem 0;
-  position: relative;
 }
 .nav-link:hover, .nav-link.active {
   color: var(--accent-gold);
@@ -234,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   padding: 0.75rem 0;
-  min-width: 220px;
+  min-width: 240px;
   box-shadow: var(--shadow-md);
   opacity: 0;
   visibility: hidden;
@@ -271,44 +287,58 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-  padding-top: 140px;
-  padding-bottom: 80px;
+/* Hero Section (Formato Mundo Boss Display Banner) */
+.hero-mb {
+  padding-top: 160px;
+  padding-bottom: 100px;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 20%, rgba(229, 179, 66, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 20%, rgba(229, 179, 66, 0.12) 0%, transparent 70%);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  align-items: center;
+.hero-mb-container {
+  max-width: 1100px;
 }
 
-.hero-content h1 {
-  font-size: 2.85rem;
-  margin-bottom: 1rem;
+.hero-mb-badge {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: rgba(229, 179, 66, 0.1);
+  border: 1px solid rgba(229, 179, 66, 0.3);
+  color: var(--accent-gold);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
-.hero-tagline {
-  font-size: 1.2rem;
+.hero-mb-title {
+  font-size: 3.75rem;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
+}
+
+.hero-mb-tagline {
+  font-size: 1.35rem;
   color: var(--accent-gold);
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-.hero-description {
+.hero-mb-desc {
   color: var(--text-muted);
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -316,80 +346,155 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.75rem;
   transition: var(--transition);
 }
 .pillar-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: var(--accent-gold);
   box-shadow: var(--shadow-glow);
 }
 
 .pillar-icon {
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin-bottom: 0.75rem;
   color: var(--accent-gold);
 }
 .pillar-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .pillar-text {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
-/* Mission, Vision, Values Grid */
-.mvv-section {
-  padding: 70px 0;
-  background: rgba(18, 21, 30, 0.4);
+/* Panorama Section (Formato Mundo Boss Stats) */
+.panorama-section {
+  padding: 90px 0;
+  background: rgba(18, 21, 30, 0.5);
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
 }
-.mvv-grid {
+.panorama-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.mvv-card {
+.panorama-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 2rem;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  transition: var(--transition);
 }
-.mvv-card h3 {
-  color: var(--accent-gold);
-  font-size: 1.35rem;
+.panorama-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 35px var(--accent-green-glow);
+}
+.panorama-stat {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: #ffffff;
 }
-.mvv-card ul {
-  list-style: none;
-}
-.mvv-card li {
+.panorama-card h3 {
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  padding-left: 1.25rem;
-  position: relative;
 }
-.mvv-card li::before {
-  content: "•";
+.panorama-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.panorama-source {
+  font-size: 0.78rem;
   color: var(--accent-gold);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
-/* Services Grid (Mundo Boss Inspired Glassmorphism Cards) */
+/* Máquina de Onipresença (Formato Mundo Boss Package Block) */
+.onipresenca-section {
+  padding: 100px 0;
+}
+.onipresenca-badge {
+  text-align: center;
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.package-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.package-card.featured {
+  border-color: var(--accent-gold);
+  background: linear-gradient(180deg, rgba(229, 179, 66, 0.08) 0%, var(--bg-card) 100%);
+  box-shadow: var(--shadow-glow);
+}
+.package-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+}
+
+.package-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+.package-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+.package-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.package-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.package-list li {
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.package-list strong {
+  color: #ffffff;
+}
+
+/* Services Grid (Mundo Boss Glassmorphism Cards) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
@@ -405,29 +510,20 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--accent-gold);
   box-shadow: var(--shadow-glow);
 }
-
-.service-header {
-  margin-bottom: 1rem;
-}
-
 .service-icon {
   font-size: 2.25rem;
   color: var(--accent-gold);
   margin-bottom: 1rem;
 }
-
 .service-card h3 {
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
 }
-
 .service-desc {
   font-size: 0.92rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
-  line-height: 1.5;
 }
-
 .service-portfolio-preview {
   position: relative;
   border-radius: var(--radius-md);
@@ -446,14 +542,14 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
-/* Quem Sou Section */
+/* Quem Sou Section (Formato Mundo Boss Split Screen) */
 .quem-sou {
-  padding: 90px 0;
+  padding: 100px 0;
 }
 .quem-sou-grid {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
   align-items: center;
 }
 .quem-sou-img-wrapper {
@@ -465,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .quem-sou-img-wrapper img {
   width: 100%;
-  height: 520px;
+  height: 540px;
   object-fit: cover;
   object-position: top center;
   display: block;
@@ -474,13 +570,12 @@ h1, h2, h3, h4, h5, h6 {
 .quem-sou-img-wrapper:hover img {
   transform: scale(1.03);
 }
-
 .quem-sou-content h2 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   margin-bottom: 0.25rem;
 }
 .quem-sou-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--accent-gold);
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -499,18 +594,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* Portfolio Video Grid */
+/* Portfolio Section & Video Grid */
 .portfolio-section {
-  padding: 90px 0;
+  padding: 95px 0;
   background: var(--bg-dark);
 }
-
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.75rem;
 }
-
 .video-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
@@ -524,7 +617,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--accent-gold);
   box-shadow: var(--shadow-md);
 }
-
 .video-thumb {
   position: relative;
   width: 100%;
@@ -541,15 +633,14 @@ h1, h2, h3, h4, h5, h6 {
 .video-card:hover .video-thumb img {
   transform: scale(1.05);
 }
-
 .play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 54px;
-  height: 54px;
-  background: rgba(229, 179, 66, 0.9);
+  width: 56px;
+  height: 56px;
+  background: rgba(229, 179, 66, 0.95);
   color: #000;
   border-radius: 50%;
   display: flex;
@@ -563,14 +654,12 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   transform: translate(-50%, -50%) scale(1.15);
 }
-
 .video-info {
   padding: 1.25rem;
 }
 .video-title {
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
-  line-height: 1.3;
 }
 .video-desc {
   font-size: 0.85rem;
@@ -621,7 +710,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Photography Section - 4 columns desktop layout for complete rows */
+/* Photography Section - 4 columns desktop layout */
 .filter-tabs {
   display: flex;
   justify-content: center;
@@ -636,7 +725,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.6rem 1.25rem;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -694,15 +783,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.05rem;
 }
 
-/* Contact & Form */
+/* Contact Section (Mundo Boss Form Card) */
 .contact-section {
-  padding: 90px 0;
+  padding: 100px 0;
   background: rgba(18, 21, 30, 0.6);
 }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 3.5rem;
+  gap: 4rem;
 }
 .contact-form {
   background: var(--bg-card);
@@ -760,7 +849,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--whatsapp-hover);
 }
 
-/* Modals (Video Player & Image Lightbox) */
+/* Modals */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -832,7 +921,10 @@ footer {
 
 /* Responsive Breakdown */
 @media (max-width: 1024px) {
-  .services-grid {
+  .hero-mb-title {
+    font-size: 2.85rem;
+  }
+  .packages-grid, .panorama-grid, .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .gallery-grid {
@@ -841,13 +933,13 @@ footer {
 }
 
 @media (max-width: 992px) {
-  .hero-grid, .quem-sou-grid, .contact-grid {
+  .quem-sou-grid, .contact-grid {
     grid-template-columns: 1fr;
   }
   .quem-sou-img-wrapper img {
     height: 400px;
   }
-  .mvv-grid, .pillars-grid {
+  .pillars-grid {
     grid-template-columns: 1fr;
   }
   .footer-grid {
@@ -856,18 +948,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .services-grid {
+  .hero-mb-title {
+    font-size: 2.25rem;
+  }
+  .packages-grid, .panorama-grid, .services-grid {
     grid-template-columns: 1fr;
   }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 84px;
     left: 0;
     right: 0;
     background: var(--bg-card);
@@ -882,20 +974,6 @@ footer {
     transform: translateY(0);
   }
   .mobile-toggle {
-    display: block;
-  }
-  .dropdown-menu {
-    position: static;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding-left: 1rem;
-    display: none;
-  }
-  .nav-dropdown.active .dropdown-menu {
     display: block;
   }
 }
