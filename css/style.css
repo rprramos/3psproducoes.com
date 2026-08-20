@@ -1,5 +1,5 @@
 /* ==========================================================================
-   3P's Produções - Modern Dark Theme & Layout System (Exato Formato Mundo Boss)
+   3P's Produções - Modern Dark Theme & Framer-Style Scroll Animations
    ========================================================================== */
 
 :root {
@@ -15,7 +15,6 @@
   --accent-gold-glow: rgba(229, 179, 66, 0.25);
   
   --accent-green: #00d8b1;
-  --accent-green-glow: rgba(0, 216, 177, 0.2);
 
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
@@ -38,7 +37,7 @@
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 35px var(--accent-gold-glow);
   
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Base */
@@ -100,14 +99,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
-.text-green {
-  color: var(--accent-green);
-}
-
-.text-left {
-  text-align: left !important;
-}
-
 .section-title {
   font-size: 2.5rem;
   text-align: center;
@@ -123,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto 3.5rem auto;
 }
 
-/* Buttons (Formato Mundo Boss) */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -287,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Hero Section (Formato Mundo Boss Display Banner) */
+/* Hero Section */
 .hero-mb {
   padding-top: 160px;
   padding-bottom: 100px;
@@ -369,56 +360,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
-/* Panorama Section (Formato Mundo Boss Stats) */
-.panorama-section {
-  padding: 90px 0;
-  background: rgba(18, 21, 30, 0.5);
-  border-top: 1px solid var(--border-glass);
-  border-bottom: 1px solid var(--border-glass);
-}
-.panorama-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.panorama-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-  transition: var(--transition);
-}
-.panorama-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-green);
-  box-shadow: 0 0 35px var(--accent-green-glow);
-}
-.panorama-stat {
-  font-family: var(--font-heading);
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-.panorama-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-.panorama-card p {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-}
-.panorama-source {
-  font-size: 0.78rem;
-  color: var(--accent-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-}
-
-/* Máquina de Onipresença (Formato Mundo Boss Package Block) */
+/* Máquina de Onipresença */
 .onipresenca-section {
   padding: 100px 0;
 }
@@ -484,12 +426,72 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.5;
+  position: relative;
+  padding-left: 1.25rem;
+}
+.package-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-weight: bold;
 }
 .package-list strong {
   color: #ffffff;
 }
 
-/* Services Grid (Mundo Boss Glassmorphism Cards) */
+/* Agency Box */
+.agency-box {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, rgba(18, 21, 30, 0.9) 0%, rgba(26, 30, 44, 0.9) 100%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+.agency-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.agency-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+.agency-box p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+.agency-options {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.agency-opt {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  flex: 1;
+  min-width: 240px;
+}
+.opt-title {
+  display: block;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.25rem;
+}
+.opt-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -522,8 +524,30 @@ h1, h2, h3, h4, h5, h6 {
 .service-desc {
   font-size: 0.92rem;
   color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.service-details-list {
+  list-style: none;
   margin-bottom: 1.5rem;
 }
+.service-details-list li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.service-details-list li::before {
+  content: "•";
+  color: var(--accent-gold);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.service-details-list strong {
+  color: #ffffff;
+}
+
 .service-portfolio-preview {
   position: relative;
   border-radius: var(--radius-md);
@@ -542,7 +566,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
-/* Quem Sou Section (Formato Mundo Boss Split Screen) */
+/* Quem Sou Section */
 .quem-sou {
   padding: 100px 0;
 }
@@ -919,12 +943,23 @@ footer {
   margin-bottom: 3rem;
 }
 
+/* Framer-Style Scroll Reveal Animation Classes */
+.reveal-on-scroll, .reveal-card {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.revealed, .reveal-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive Breakdown */
 @media (max-width: 1024px) {
   .hero-mb-title {
     font-size: 2.85rem;
   }
-  .packages-grid, .panorama-grid, .services-grid {
+  .packages-grid, .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .gallery-grid {
@@ -951,7 +986,7 @@ footer {
   .hero-mb-title {
     font-size: 2.25rem;
   }
-  .packages-grid, .panorama-grid, .services-grid {
+  .packages-grid, .services-grid {
     grid-template-columns: 1fr;
   }
   .gallery-grid {
