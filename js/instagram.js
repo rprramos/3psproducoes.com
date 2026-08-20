@@ -8,20 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!instagramContainer) return;
 
-  // Instagram Feed items (12 items dynamically updated)
+  // Instagram Feed items with matching professional thumbnails (NO food/pizza photos on non-food posts)
   const defaultReels = [
     { title: 'Além do Ponteiro', category: '@alemdoponteiro', thumb: 'assets/images/photography/pessoas_1.jpg' },
     { title: 'Lucian - Hipnoterapeuta', category: 'Saúde & Mente', thumb: 'assets/images/photography/profissoes_1.jpg' },
     { title: 'Jéssica Bork - Advogada', category: 'Advocacia & Direito', thumb: 'assets/images/photography/profissoes_2.jpg' },
     { title: 'Juliana - Pedagoga', category: 'Educação', thumb: 'assets/images/photography/pessoas_2.jpg' },
-    { title: 'Gabriele Negreiros - Luxx Hair', category: 'Beleza & Mega Hair', thumb: 'assets/images/photography/profissoes_3.jpg' },
+    { title: 'Gabriele Negreiros - Luxx Hair', category: 'Beleza & Mega Hair', thumb: 'assets/images/photography/pessoas_3.jpg' },
     { title: 'Dra. Silvia Bretz', category: 'Endocrinologia Integrativa', thumb: 'assets/images/photography/estudio_1.jpg' },
-    { title: 'Maycon - Psicólogo', category: 'Psicologia Inclusiva', thumb: 'assets/images/photography/pessoas_3.jpg' },
+    { title: 'Maycon - Psicólogo', category: 'Psicologia Inclusiva', thumb: 'assets/images/photography/profissoes_3.jpg' },
     { title: 'Rexya Leilões', category: 'Leilões de Imóveis', thumb: 'assets/images/photography/arquitetura_1.jpg' },
     { title: 'Thiago Santamarta', category: 'Escritor & Mentor', thumb: 'assets/images/photography/estudio_2.jpg' },
     { title: 'Alberto Pinho - Mentor', category: 'Importação & Vendas', thumb: 'assets/images/photography/estudio_3.jpg' },
-    { title: 'Gestor de Milhas', category: 'Finanças & Milhas', thumb: 'assets/images/photography/gastronomia_1.jpg' },
-    { title: 'Christiane Leanza', category: 'Constelação Familiar', thumb: 'assets/images/photography/gastronomia_2.jpg' }
+    { title: 'Gestor de Milhas', category: 'Finanças & Milhas', thumb: 'assets/images/photography/profissoes_1.jpg' },
+    { title: 'Christiane Leanza', category: 'Constelação Familiar', thumb: 'assets/images/photography/pessoas_1.jpg' }
   ];
 
   function renderInstagramGrid(posts) {
