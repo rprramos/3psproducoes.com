@@ -1,35 +1,51 @@
 /* ==========================================================================
-   3P's Produções - Photography Gallery (4 Clean Albums)
-   1. Pessoas (Casuais e Profissionais)
-   2. Estúdio (Fotos Corporativas)
-   3. Gastronomia (Culinária)
-   4. Arquitetura (Imóveis e Interiores)
+   3P's Produções - Photography Gallery (5 Separate Categories)
+   1. Pessoas (Casuais / Ensaios)
+   2. Corporativo (Retratos Profissionais & Executivos)
+   3. Estúdio (Fotos de Estúdio, incluindo novidades)
+   4. Gastronomia (Culinária & Pratos)
+   5. Arquitetura (Imóveis & Interiores)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   const galleryGrid = document.getElementById('fullGalleryGrid');
   if (!galleryGrid) return;
 
-  // 4 Strict Albums mapping:
+  // 5 Clean Categories Mapping:
   const categoryData = {
-    pessoas: Array.from({ length: 30 }, (_, i) => ({
+    pessoas: Array.from({ length: 20 }, (_, i) => ({
       id: i + 1,
       category: 'pessoas',
-      categoryName: 'Pessoas',
-      title: `Retrato Pessoas #${i + 1}`,
-      imgSrc: `assets/images/photography/full_photo_${i + 3}.jpg` // Skip photo 1 and 2 (icons)
+      categoryName: 'Pessoas (Ensaios)',
+      title: `Ensaio Pessoas #${i + 1}`,
+      imgSrc: `assets/images/photography/full_photo_${i + 3}.jpg`
     })),
 
-    estudio: Array.from({ length: 25 }, (_, i) => ({
-      id: i + 31,
-      category: 'estudio',
-      categoryName: 'Estúdio Corporativo',
-      title: `Estúdio Corporativo #${i + 1}`,
-      imgSrc: `assets/images/photography/full_photo_${i + 33}.jpg`
+    corporativo: Array.from({ length: 20 }, (_, i) => ({
+      id: i + 21,
+      category: 'corporativo',
+      categoryName: 'Corporativo',
+      title: `Retrato Corporativo #${i + 1}`,
+      imgSrc: `assets/images/photography/full_photo_${i + 23}.jpg`
     })),
+
+    estudio: [
+      { id: 101, category: 'estudio', categoryName: 'Estúdio', title: 'Estúdio Produção #1', imgSrc: 'assets/images/photography/estudio_new_1.jpg' },
+      { id: 102, category: 'estudio', categoryName: 'Estúdio', title: 'Estúdio Produção #2', imgSrc: 'assets/images/photography/estudio_new_2.jpg' },
+      { id: 103, category: 'estudio', categoryName: 'Estúdio', title: 'Estúdio Produção #3', imgSrc: 'assets/images/photography/estudio_new_3.jpg' },
+      { id: 104, category: 'estudio', categoryName: 'Estúdio', title: 'Estúdio Produção #4', imgSrc: 'assets/images/photography/estudio_new_4.jpg' },
+      { id: 105, category: 'estudio', categoryName: 'Estúdio', title: 'Estúdio Produção #5', imgSrc: 'assets/images/photography/estudio_new_5.jpg' },
+      ...Array.from({ length: 15 }, (_, i) => ({
+        id: i + 106,
+        category: 'estudio',
+        categoryName: 'Estúdio',
+        title: `Estúdio Iluminação #${i + 6}`,
+        imgSrc: `assets/images/photography/full_photo_${i + 43}.jpg`
+      }))
+    ],
 
     gastronomia: Array.from({ length: 25 }, (_, i) => ({
-      id: i + 56,
+      id: i + 121,
       category: 'gastronomia',
       categoryName: 'Gastronomia',
       title: `Fotografia Culinária #${i + 1}`,
@@ -37,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })),
 
     arquitetura: Array.from({ length: 32 }, (_, i) => ({
-      id: i + 81,
+      id: i + 146,
       category: 'arquitetura',
       categoryName: 'Arquitetura',
       title: `Projeto Arquitetura #${i + 1}`,
@@ -109,8 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.filterGallery = function(cat) {
-    const targetCat = cat === 'profissoes' ? 'pessoas' : cat;
-    const btn = document.querySelector(`.tab-btn[data-filter="${targetCat}"]`);
+    const btn = document.querySelector(`.tab-btn[data-filter="${cat}"]`);
     if (btn) btn.click();
   };
 
