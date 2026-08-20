@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Primary Meta Tags -->
-  <title>3P's Produções | Produtora Audiovisual, Vídeos Estratégicos & Branding</title>
-  <meta name="title" content="3P's Produções | Produtora Audiovisual, Vídeos Estratégicos & Branding">
-  <meta name="description" content="Produtora audiovisual no Rio de Janeiro fundada por Rodrigo Ramos (@videomakerrodrigoramos). Criamos conteúdos estratégicos, vídeos institucionais, reels e coberturas baseadas no tripé dos 3P's.">
-  <meta name="keywords" content="produtora audiovisual, vídeos para instagram, vídeos corporativos, branding, rio de janeiro, barra da tijuca, reels médico, produção de vídeo, videomaker rodrigo ramos">
+  <title>3P's Produções | Estúdio Audiovisual, Vídeos Estratégicos & Fotografia no Rio de Janeiro</title>
+  <meta name="title" content="3P's Produções | Estúdio Audiovisual, Vídeos Estratégicos & Fotografia no Rio de Janeiro">
+  <meta name="description" content="Estúdio de gravação e produção audiovisual na Barra da Tijuca fundado por Rodrigo Ramos. Produção de vídeos verticais para Instagram/TikTok, anúncios Meta Ads, YouTube, vídeos institucionais, cursos online e fotografia profissional.">
+  <meta name="keywords" content="estúdio audiovisual barra da tijuca, vídeos verticais instagram tiktok, vídeo institucional rio de janeiro, gravação de curso online, produção de vídeos corporativos, fotografia profissional rio de janeiro, rodrigo ramos videomaker">
   <meta name="author" content="Rodrigo Ramos - 3P's Produções">
   <link rel="canonical" href="https://rprramos.github.io/3psproducoes.com/">
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rprramos.github.io/3psproducoes.com/">
-  <meta property="og:title" content="3P's Produções | Produtora Audiovisual & Estratégia de Marca">
-  <meta property="og:description" content="Transformamos ideias em narrativas visuais estratégicas que geram autoridade e resultados de negócio.">
+  <meta property="og:title" content="3P's Produções | Estúdio Audiovisual & Estratégia de Marca">
+  <meta property="og:description" content="Transformamos ideias em narrativas visuais estratégicas que geram autoridade e vendas reais.">
   <meta property="og:image" content="assets/images/rodrigo_ramos_quem_sou.jpg">
 
   <!-- Favicon -->
@@ -30,12 +30,12 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Main Stylesheet -->
+  <!-- Main Stylesheet (Mundo Boss Inspired Dark Theme) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar Header - Clean sem Emojis -->
+  <!-- Navbar Header (Sleek Glassmorphism ohne Emojis) -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">
@@ -46,8 +46,21 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#3ps" class="nav-link">Os 3 P's</a></li>
           <li><a href="#quem-sou" class="nav-link">Quem Sou</a></li>
-          <li><a href="#youtube" class="nav-link">YouTube</a></li>
-          <li><a href="#instagram" class="nav-link">Instagram</a></li>
+
+          <!-- Dropdown Serviços sem Emojis -->
+          <li class="nav-dropdown">
+            <a href="#servicos" class="nav-link nav-dropdown-trigger">
+              Serviços <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('verticais')">Vídeos Verticais (Instagram/TikTok)</a>
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('youtube')">YouTube & Canais Longos</a>
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('cursos')">Cursos Online & Videoaulas</a>
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('institucional')">Vídeo Institucional & Manifesto</a>
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('eventos')">Cobertura de Eventos 360º</a>
+              <a href="#servicos" class="dropdown-item" onclick="filterServices('digital')">Produtos Digitais & Mentorias</a>
+            </div>
+          </li>
           
           <!-- Dropdown Fotografia sem Emojis -->
           <li class="nav-dropdown">
@@ -63,6 +76,8 @@
             </div>
           </li>
 
+          <li><a href="#youtube-live" class="nav-link">YouTube</a></li>
+          <li><a href="#instagram-live" class="nav-link">Instagram</a></li>
           <li><a href="#contato" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Solicitar Orçamento</a></li>
         </ul>
       </nav>
@@ -73,31 +88,31 @@
     </div>
   </header>
 
-  <!-- Hero / 3P's Section -->
+  <!-- Hero Section (Dark Theme Cinematic Glow) -->
   <section class="hero" id="3ps">
     <div class="container hero-grid">
       <div class="hero-content">
-        <h1>3P's Produções <span class="text-gold">Audiovisual & Estratégia</span></h1>
+        <h1>3P's Produções <span class="text-gold">Estúdio Audiovisual & Vendas</span></h1>
         <p class="hero-tagline">Tripé Bíblico: Provedor, Protetor e Profeta.</p>
         <p class="hero-description">
-          Direto ao ponto: os 3P’s representam a base para a formação do Homem e servem como pilar absoluto da nossa produtora — entregando estratégia, ética e valor em cada frame.
+          Estúdio de gravação e direção estratégica localizado na Barra da Tijuca, Rio de Janeiro. Criamos conteúdos em nível de cinema com foco comercial em conversão para que a sua marca seja a única escolha lógica do seu cliente.
         </p>
 
         <div class="pillars-grid">
           <div class="pillar-card">
             <div class="pillar-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
             <h3 class="pillar-title">Provedor</h3>
-            <p class="pillar-text">Nunca deixa de prover o sustento e gerar valor real e resultados consistentes para nossos clientes.</p>
+            <p class="pillar-text">Compromisso em gerar valor real, sustento e resultados de vendas consistentes para nossos clientes.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <h3 class="pillar-title">Protetor</h3>
-            <p class="pillar-text">Protege sua família, clientes e marca com ética, responsabilidade e zelo pela reputação.</p>
+            <p class="pillar-text">Protege sua imagem e reputação com ética, responsabilidade e rigor estético no audiovisual.</p>
           </div>
           <div class="pillar-card">
             <div class="pillar-icon"><i class="fa-solid fa-compass"></i></div>
             <h3 class="pillar-title">Profeta</h3>
-            <p class="pillar-text">Sabe qual caminho trilhar. Visão estratégica e antecipação de tendências para guiar marcas ao futuro.</p>
+            <p class="pillar-text">Visão estratégica e antecipação de tendências para posicionar sua marca no futuro das redes.</p>
           </div>
         </div>
 
@@ -105,14 +120,14 @@
           <a href="https://wa.me/5521979223500?text=Olá!%20Vim%20pelo%20site%20da%203P's%20Produções%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="btn btn-whatsapp">
             <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> Falar no WhatsApp
           </a>
-          <a href="#youtube" class="btn btn-outline">
-            Ver Portfólio de Vídeos
+          <a href="#servicos" class="btn btn-outline">
+            Conhecer Nossos Serviços
           </a>
         </div>
       </div>
 
       <div class="hero-media" style="text-align: center;">
-        <img src="assets/images/logo_3ps.png" alt="3P's Produções" style="max-width: 80%; height: auto; filter: drop-shadow(0 0 25px rgba(229,179,66,0.2));">
+        <img src="assets/images/logo_3ps.png" alt="3P's Produções Estúdio Barra da Tijuca" style="max-width: 85%; height: auto; filter: drop-shadow(0 0 35px rgba(229,179,66,0.25));">
       </div>
     </div>
   </section>
@@ -131,24 +146,138 @@
         <div class="mvv-card">
           <h3><i class="fa-solid fa-eye"></i> Visão</h3>
           <p style="color: var(--text-muted);">
-            Ser referência no mercado audiovisual como empresa que une propósito, estratégia e inovação, ajudando clientes a se posicionarem com credibilidade, impacto e originalidade.
+            Ser referência no mercado audiovisual como empresa que une propósito, estratégia comercial e inovação, ajudando clientes a se posicionarem com credibilidade e impacto.
           </p>
         </div>
 
         <div class="mvv-card">
           <h3><i class="fa-solid fa-gem"></i> Valores</h3>
           <ul>
-            <li><strong>Provedor:</strong> Foco em gerar resultados consistentes.</li>
+            <li><strong>Provedor:</strong> Foco em gerar resultados e vendas reais.</li>
             <li><strong>Protetor:</strong> Ética e zelo pela imagem do cliente.</li>
-            <li><strong>Profeta:</strong> Visão estratégica de mercado.</li>
-            <li><strong>Criatividade & Excelência:</strong> Entregas únicas e memoráveis.</li>
+            <li><strong>Profeta:</strong> Visão estratégica de tendências.</li>
+            <li><strong>Criatividade & Excelência:</strong> Padrão de cinema em cada entrega.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quem Sou Section -->
+  <!-- Seção de Serviços Categorizados (Tabela Oficial 3P's Produções) -->
+  <section class="portfolio-section" id="servicos">
+    <div class="container">
+      <h2 class="section-title">Nossos <span class="text-gold">Serviços & Portfólio</span></h2>
+      <p class="section-subtitle">Soluções audiovisuais desenhadas sob medida para acelerar a autoridade e as vendas da sua empresa.</p>
+
+      <!-- Servicos Filter Tabs -->
+      <div class="filter-tabs" id="servicesFilterTabs">
+        <button class="tab-btn active" data-service="all">Todos os Serviços</button>
+        <button class="tab-btn" data-service="verticais">Vídeos Verticais</button>
+        <button class="tab-btn" data-service="youtube">YouTube & Canais</button>
+        <button class="tab-btn" data-service="cursos">Cursos Online</button>
+        <button class="tab-btn" data-service="institucional">Vídeo Institucional</button>
+        <button class="tab-btn" data-service="eventos">Cobertura de Eventos</button>
+        <button class="tab-btn" data-service="digital">Produtos Digitais</button>
+      </div>
+
+      <!-- Services Cards Grid with Synergy to Work -->
+      <div class="services-grid" id="servicesGrid">
+        
+        <!-- Categoria 1: Vídeos Verticais (Instagram & TikTok) -->
+        <div class="service-card" data-service-category="verticais">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-mobile-screen-button"></i></div>
+            <h3>Vídeos Verticais (Instagram & TikTok)</h3>
+          </div>
+          <p class="service-desc">
+            Atuação em dias úteis ou no mês completo (10 a 30 conteúdos). Produção de vídeos dinâmicos com cortes acelerados, legendas interativas e vídeos estratégicos para anúncios (Meta Ads) que prendem a atenção nos primeiros segundos.
+          </p>
+          <div class="service-portfolio-preview" onclick="openVideoModal('YTT7JiTkgVI')">
+            <img src="https://i.ytimg.com/vi/YTT7JiTkgVI/maxresdefault.jpg" alt="Reels Médico Dinâmico">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+
+        <!-- Categoria 2: YouTube & Canais Longos -->
+        <div class="service-card" data-service-category="youtube">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-brands fa-youtube"></i></div>
+            <h3>YouTube & Conteúdos de Autoridade</h3>
+          </div>
+          <p class="service-desc">
+            Construção de autoridade profunda com vídeos longos de até 10 minutos (expansão e domínio de mercado) reciclados em pílulas curtas para Shorts e Reels. Captação de cinema em nosso estúdio na Barra da Tijuca.
+          </p>
+          <div class="service-portfolio-preview" onclick="openVideoModal('sKblSBXNpC4')">
+            <img src="https://i.ytimg.com/vi/sKblSBXNpC4/maxresdefault.jpg" alt="Canal Sem Dogma YouTube">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+
+        <!-- Categoria 3: Cursos Online & Videoaulas -->
+        <div class="service-card" data-service-category="cursos">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Cursos Online & Treinamentos</h3>
+          </div>
+          <p class="service-desc">
+            Transforme seu conhecimento em infoprodutos de alto valor. Gravação em nosso estúdio profissional ou no seu espaço, com áudio de ponta, iluminação de cinema e suporte a teleprompter (Formatos Flash, Minicursos e Cursos completos).
+          </p>
+          <div class="service-portfolio-preview" onclick="openVideoModal('4V6Er4lU7Es')">
+            <img src="https://i.ytimg.com/vi/4V6Er4lU7Es/maxresdefault.jpg" alt="Curso Mulheres da Lei">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+
+        <!-- Categoria 4: Vídeo Institucional & Manifesto -->
+        <div class="service-card" data-service-category="institucional">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+            <h3>Vídeo Institucional & Manifesto de Marca</h3>
+          </div>
+          <p class="service-desc">
+            Uma obra-prima visual em formato de até 5 minutos com narrativa premium, iluminação dramática, storytelling avançado, depoimentos estratégicos de prova social e cortes para redes sociais. Opção de captação aérea com drone.
+          </p>
+          <div class="service-portfolio-preview" onclick="openVideoModal('73AaKkBId6c')">
+            <img src="https://i.ytimg.com/vi/73AaKkBId6c/maxresdefault.jpg" alt="Vídeo Institucional Tree Intelligence">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+
+        <!-- Categoria 5: Cobertura de Eventos 360º -->
+        <div class="service-card" data-service-category="eventos">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <h3>Cobertura de Eventos 360º</h3>
+          </div>
+          <p class="service-desc">
+            Agilidade mobile e rigor cinematográfico. Produção tática de Stories/Reels in-loco (Story Maker) para engajamento em tempo real + captação de palestras e registros de autoridade (Video Maker) + fotografia de elite.
+          </p>
+          <div class="service-portfolio-preview" onclick="openVideoModal('cAhkHZcWKqI')">
+            <img src="https://i.ytimg.com/vi/cAhkHZcWKqI/maxresdefault.jpg" alt="Fórum ANB Cobertura de Evento">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+
+        <!-- Categoria 6: Produtos Digitais & Mentorias -->
+        <div class="service-card" data-service-category="digital">
+          <div class="service-header">
+            <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Produtos Digitais, Mentorias & Imersão</h3>
+          </div>
+          <p class="service-desc">
+            Treinamentos e consultorias individuais de posicionamento comandadas por Rodrigo Ramos. Curso "Domine seu Celular em 1h", Mentoria Ao Vivo e Formação Presencial de 2 dias no nosso estúdio na Barra da Tijuca.
+          </p>
+          <div class="service-portfolio-preview" onclick="window.open('https://www.instagram.com/videomakerrodrigoramos/', '_blank')">
+            <img src="assets/images/rodrigo_ramos_quem_sou.jpg" alt="Mentoria e Imersão Rodrigo Ramos">
+            <div class="play-icon"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem Sou Section (Biografia Oficial e Estrutura do Estúdio Barra da Tijuca) -->
   <section class="quem-sou" id="quem-sou">
     <div class="container quem-sou-grid">
       <div class="quem-sou-img-wrapper">
@@ -160,27 +289,28 @@
         <p class="quem-sou-subtitle">Me chamo Rodrigo Ramos.</p>
         
         <div class="quem-sou-text">
-          <p><strong>Há quem comece no audiovisual por paixão. Eu comecei por propósito.</strong></p>
           <p>
-            Antes mesmo de pegar uma câmera, vivi mais de 20 anos nas trincheiras das vendas — conectando soluções a pessoas, ouvindo dores, traduzindo necessidades e aprendendo o que realmente faz uma marca se conectar de verdade: relevância, emoção e resultado.
+            Sou o fundador da <strong>3P's Produções</strong>, um estúdio físico de criação de conteúdo e vendas para redes sociais localizado na Barra da Tijuca, Rio de Janeiro.
           </p>
           <p>
-            Quando entrei no audiovisual, trouxe comigo algo que poucos têm nesse mercado: <strong>a visão estratégica de quem entende que cada frame precisa servir a um propósito de negócio.</strong>
+            A minha jornada com as câmeras começou após mais de 20 anos trabalhando na linha de frente das vendas comerciais, liderando negociações e conectando soluções a clientes em ambientes corporativos de alta exigência — desde startups até multinacionais.
+          </p>
+          <p>
+            Essa bagagem única no mercado me deu uma visão muito clara e rara no audiovisual: <strong>vídeo nas redes sociais não serve apenas para ser bonito, serve para vender.</strong>
           </p>
 
           <div class="highlight-box">
-            "Não produzo vídeos! Crio experiências visuais que contam o porquê por trás de cada marca."
+            "Não produzo vídeos! Crio experiências visuais e estratégias de conteúdo que transformam a sua presença digital na única escolha lógica do seu cliente."
           </div>
 
           <p>
-            Desde 2018, transformo histórias em narrativas visuais que posicionam marcas, fortalecem identidades e geram conexões reais nas redes sociais.
+            É com essa mentalidade comercial que comandei a criação do nosso estúdio na Barra da Tijuca. Aqui, oferecemos a estrutura definitiva de gravação e direção para que profissionais liberais, empresários e marcas gravem conteúdos em nível de cinema, com roteiros focados em conversão e direção de set que elimina qualquer timidez em frente às câmeras.
           </p>
           <p>
-            O audiovisual também me abriu portas para o empreendedorismo — criando a Calzoca (@calzocatapiocaria), um delivery inovador levado do zero ao mercado, além de projetos como o @alemdoponteiro (arte e relojoaria) e o e-commerce @seufunko_.
+            Eu pratico diariamente o método que aplico com os meus clientes. Para provar o poder da retenção na arena real, criei o canal <strong>Além do Ponteiro (@alemdoponteiro)</strong>, um canal de relojoaria de luxo que utilizo como laboratório vivo de testes de SEO, monetização e formatos verticais.
           </p>
-
-          <p style="font-style: italic; color: var(--accent-gold); margin-top: 1rem;">
-            "Porque no fim, o que constrói uma marca não é o que ela vende. É o que ela faz as pessoas sentirem — e lembrarem."
+          <p>
+            Através de consultorias individuais de posicionamento e da nossa imersão presencial de dois dias no próprio estúdio, eu treino empresários, profissionais e futuros videomakers a dominarem suas próprias lentes, roteiros e equipamentos.
           </p>
 
           <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
@@ -197,7 +327,7 @@
   </section>
 
   <!-- YouTube Section (Live Auto-Updating RSS/API Feed) -->
-  <section class="portfolio-section" id="youtube">
+  <section class="portfolio-section" id="youtube-live">
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
         <div>
@@ -216,7 +346,7 @@
   </section>
 
   <!-- Instagram Section (Live Auto-Updating Grid) -->
-  <section class="portfolio-section" id="instagram" style="background: rgba(18, 21, 30, 0.3);">
+  <section class="portfolio-section" id="instagram-live" style="background: rgba(18, 21, 30, 0.3);">
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
         <div>
@@ -238,7 +368,7 @@
   <section class="portfolio-section" id="fotografia">
     <div class="container">
       <h2 class="section-title">Galeria Completa de <span class="text-gold">Fotografia</span></h2>
-      <p class="section-subtitle">Todas as fotografias do portfólio original divididas e organizadas em 4 colunas.</p>
+      <p class="section-subtitle">Todas as 115 fotografias do portfólio original divididas e organizadas em 4 colunas.</p>
 
       <!-- Category Filter Tabs (sem emojis) -->
       <div class="filter-tabs">
@@ -318,12 +448,13 @@
         <div class="form-group">
           <label for="formService">Serviço Desejado</label>
           <select id="formService" name="Serviço" class="form-select" required>
-            <option value="Vídeo Institucional / Branding">Vídeo Institucional / Branding</option>
-            <option value="Reels & Conteúdo para Redes Sociais">Reels & Conteúdo para Redes Sociais</option>
-            <option value="Gravação em Estúdio">Gravação em Estúdio (Barra da Tijuca)</option>
-            <option value="Ensaio Fotográfico">Ensaio Fotográfico (Pessoas / Profissões / Gastronomia / Arquitetura)</option>
-            <option value="Cobertura de Evento Corporativo">Cobertura de Evento Corporativo</option>
-            <option value="Outro Serviço">Outro Serviço</option>
+            <option value="Vídeos Verticais (Instagram & TikTok)">Vídeos Verticais (Instagram & TikTok)</option>
+            <option value="YouTube & Canais Longos">YouTube & Canais Longos</option>
+            <option value="Cursos Online & Videoaulas">Cursos Online & Videoaulas</option>
+            <option value="Vídeo Institucional & Manifesto">Vídeo Institucional & Manifesto</option>
+            <option value="Cobertura de Eventos 360º">Cobertura de Eventos 360º</option>
+            <option value="Fotografia Profissional">Fotografia Profissional (Pessoas / Profissões / Estúdio / Gastronomia / Arquitetura)</option>
+            <option value="Produtos Digitais & Mentorias">Produtos Digitais & Mentorias de Posicionamento</option>
           </select>
         </div>
 
@@ -361,7 +492,7 @@
         <div>
           <img src="assets/images/logo_3ps.png" alt="3P's Produções" style="height: 38px; margin-bottom: 1rem;">
           <p style="max-width: 400px; color: var(--text-muted);">
-            Provedor, Protetor e Profeta. Criatividade, digital e visão de negócios para transformar comunicação em resultado.
+            Provedor, Protetor e Profeta. Criatividade, digital e visão de negócios para transformar comunicação em resultado. Estúdio na Barra da Tijuca - RJ.
           </p>
         </div>
 
@@ -370,8 +501,9 @@
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
             <li><a href="#3ps" style="color: var(--text-muted); text-decoration: none;">Os 3 P's</a></li>
             <li><a href="#quem-sou" style="color: var(--text-muted); text-decoration: none;">Quem Sou</a></li>
-            <li><a href="#youtube" style="color: var(--text-muted); text-decoration: none;">YouTube</a></li>
-            <li><a href="#instagram" style="color: var(--text-muted); text-decoration: none;">Instagram</a></li>
+            <li><a href="#servicos" style="color: var(--text-muted); text-decoration: none;">Serviços</a></li>
+            <li><a href="#youtube-live" style="color: var(--text-muted); text-decoration: none;">YouTube</a></li>
+            <li><a href="#instagram-live" style="color: var(--text-muted); text-decoration: none;">Instagram</a></li>
             <li><a href="#fotografia" style="color: var(--text-muted); text-decoration: none;">Fotografia</a></li>
           </ul>
         </div>
@@ -397,5 +529,35 @@
   <script src="js/youtube.js"></script>
   <script src="js/instagram.js"></script>
   <script src="js/gallery.js"></script>
+
+  <script>
+    // Services Filtering Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const sBtns = document.querySelectorAll('#servicesFilterTabs .tab-btn');
+      const sCards = document.querySelectorAll('#servicesGrid .service-card');
+
+      sBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.getAttribute('data-service');
+
+          sCards.forEach(card => {
+            const cardCat = card.getAttribute('data-service-category');
+            if (cat === 'all' || cardCat === cat) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      window.filterServices = function(cat) {
+        const btn = document.querySelector(`#servicesFilterTabs .tab-btn[data-service="${cat}"]`);
+        if (btn) btn.click();
+      };
+    });
+  </script>
 </body>
 </html>

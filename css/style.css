@@ -1,5 +1,5 @@
 /* ==========================================================================
-   3P's Produções - Modern Dark Theme & Design System
+   3P's Produções - Modern Dark Theme & Design System (Mundo Boss Style)
    ========================================================================== */
 
 :root {
@@ -61,7 +61,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 100px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Dropdown Menu for Photography - Clean without emojis */
+/* Dropdown Menu - Clean sem emojis */
 .nav-dropdown {
   position: relative;
 }
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   padding: 0.75rem 0;
-  min-width: 180px;
+  min-width: 220px;
   box-shadow: var(--shadow-md);
   opacity: 0;
   visibility: hidden;
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.6rem 1.25rem;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: var(--transition);
 }
 .dropdown-item:hover {
@@ -381,6 +381,69 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   position: absolute;
   left: 0;
+}
+
+/* Services Grid (Mundo Boss Inspired Glassmorphism Cards) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-glow);
+}
+
+.service-header {
+  margin-bottom: 1rem;
+}
+
+.service-icon {
+  font-size: 2.25rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.service-portfolio-preview {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  border: 1px solid var(--border-glass);
+}
+.service-portfolio-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.service-portfolio-preview:hover img {
+  transform: scale(1.05);
 }
 
 /* Quem Sou Section */
@@ -558,7 +621,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Photography Section - 4 columns desktop layout for complete 3x4 rows */
+/* Photography Section - 4 columns desktop layout for complete rows */
 .filter-tabs {
   display: flex;
   justify-content: center;
@@ -769,6 +832,9 @@ footer {
 
 /* Responsive Breakdown */
 @media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -790,6 +856,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
