@@ -61,7 +61,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 100px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
@@ -192,13 +192,6 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   object-fit: contain;
 }
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.5px;
-}
 
 .nav-links {
   display: flex;
@@ -220,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Dropdown Menu for Photography */
+/* Dropdown Menu for Photography - Clean without emojis */
 .nav-dropdown {
   position: relative;
 }
@@ -230,16 +223,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
-}
-
-.nav-dropdown-trigger .badge-photo {
-  background: rgba(229, 179, 66, 0.15);
-  color: var(--accent-gold);
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(229, 179, 66, 0.3);
-  font-weight: 600;
 }
 
 .dropdown-menu {
@@ -278,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 1.5rem;
 }
 
-/* Hamburger Mobile Toggle */
+/* Mobile Toggle */
 .mobile-toggle {
   display: none;
   background: none;
@@ -288,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Hero / 3P's Section */
+/* Hero Section */
 .hero {
   padding-top: 140px;
   padding-bottom: 80px;
@@ -453,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* YouTube & Instagram Video Grids */
+/* Portfolio Video Grid */
 .portfolio-section {
   padding: 90px 0;
   background: var(--bg-dark);
@@ -575,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
-/* Photography Section & Filter Tabs */
+/* Photography Section - 4 columns desktop layout for complete 3x4 rows */
 .filter-tabs {
   display: flex;
   justify-content: center;
@@ -602,7 +585,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .gallery-item {
@@ -785,6 +768,12 @@ footer {
 }
 
 /* Responsive Breakdown */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .hero-grid, .quem-sou-grid, .contact-grid {
     grid-template-columns: 1fr;
@@ -801,6 +790,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .hero-content h1 {
     font-size: 2.2rem;
   }
