@@ -55,7 +55,6 @@
             </a>
             <div class="dropdown-menu">
               <a href="#fotografia" class="dropdown-item" onclick="filterGallery('pessoas')">Pessoas</a>
-              <a href="#fotografia" class="dropdown-item" onclick="filterGallery('profissoes')">Profissões</a>
               <a href="#fotografia" class="dropdown-item" onclick="filterGallery('estudio')">Estúdio</a>
               <a href="#fotografia" class="dropdown-item" onclick="filterGallery('gastronomia')">Gastronomia</a>
               <a href="#fotografia" class="dropdown-item" onclick="filterGallery('arquitetura')">Arquitetura</a>
@@ -323,22 +322,21 @@
     </div>
   </section>
 
-  <!-- Fotografia Section (Strict Categorization, No "Todas as Fotos" Mix) -->
+  <!-- Fotografia Section (4 Clean Albums) -->
   <section class="portfolio-section" id="fotografia">
     <div class="container">
       <h2 class="section-title">Galeria de <span class="text-gold">Fotografia</span></h2>
-      <p class="section-subtitle">Fotografias profissionais organizadas estritamente por categorias individuais sem misturas.</p>
+      <p class="section-subtitle">Fotografias profissionais divididas exclusivamente em 4 álbuns oficiais.</p>
 
-      <!-- Category Filter Tabs (Sem botão "Todas as Fotos") -->
+      <!-- Category Filter Tabs (4 Álbuns Oficiais) -->
       <div class="filter-tabs">
-        <button class="tab-btn active" data-filter="pessoas">Pessoas</button>
-        <button class="tab-btn" data-filter="profissoes">Profissões</button>
-        <button class="tab-btn" data-filter="estudio">Estúdio</button>
+        <button class="tab-btn active" data-filter="pessoas">Pessoas (Casuais & Profissionais)</button>
+        <button class="tab-btn" data-filter="estudio">Estúdio Corporativo</button>
         <button class="tab-btn" data-filter="gastronomia">Gastronomia</button>
         <button class="tab-btn" data-filter="arquitetura">Arquitetura</button>
       </div>
 
-      <!-- Dynamic Full Gallery Grid for clean categorized photos -->
+      <!-- Dynamic Full Gallery Grid -->
       <div class="gallery-grid" id="fullGalleryGrid"></div>
     </div>
   </section>
