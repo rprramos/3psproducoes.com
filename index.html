@@ -102,8 +102,8 @@ button{font:inherit}
 .insight-card p{font-size:10px;line-height:1.45;margin:0;color:#5e584f}
 .insight-card.dark p,.insight-card.red p{color:#c0bbb2}
 
-.data-wall{margin-top:18px;display:grid;grid-template-columns:1.05fr .95fr .95fr;gap:18px}
-.data-card{border-radius:var(--radius);background:#f2ede4;padding:32px;min-height:360px;border:1px solid #00000010}
+.data-wall{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.data-card{border-radius:var(--radius);background:#f2ede4;padding:32px;min-height:360px;border:1px solid #00000010;display:flex;flex-direction:column}
 .data-card h3{font:600 27px/.98 'Manrope',sans-serif;margin:12px 0 28px}
 .bars{display:grid;gap:12px}
 .barline{display:grid;grid-template-columns:110px 1fr 44px;gap:10px;align-items:center;font-size:9px}
@@ -114,11 +114,7 @@ button{font:inherit}
 .donut{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) 0 70.3%,var(--red) 70.3% 89.1%,#c9bbaa 89.1%)}
 .donut:after{content:'70,3%';width:118px;height:118px;border-radius:50%;background:#f2ede4;display:grid;place-items:center;font:600 36px 'Manrope',sans-serif}
 .data-legend{display:flex;justify-content:center;gap:18px;margin-top:18px;font-size:9px;color:#69645e}
-.consistency{background:linear-gradient(145deg,#262725,#171817);color:var(--ivory)}
-.columns{height:205px;display:flex;align-items:end;justify-content:space-around;gap:13px;margin-top:20px;border-bottom:1px solid #ffffff28}
-.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:8px;font-size:8px;color:#aaa49a}
-.col i{display:block;width:100%;background:linear-gradient(#d8b577,#7b5233);border-radius:7px 7px 0 0}
-.market-source{font-size:9px;color:#655f57;margin-top:18px;line-height:1.6}
+.market-source{font-size:9px;color:#655f57;margin-top:24px;line-height:1.6}
 
 .motion-ribbon{position:relative;z-index:3;overflow:hidden;background:var(--gold2);color:#171717;border-top:1px solid #17171722;border-bottom:1px solid #17171722;padding:22px 0}
 .motion-ribbon.ribbon-dark{background:#1a1b1a;color:var(--gold2);border-color:#dabb8225}
@@ -309,8 +305,9 @@ button{font:inherit}
 .platform-head small,.instagram-copy small{font-size:8px;letter-spacing:.16em;color:var(--gold2)}
 .platform-head h3,.instagram-copy h3{font:700 clamp(30px,4vw,54px)/1 'Manrope',sans-serif;letter-spacing:-.045em;margin:10px 0}
 .platform-head p,.instagram-copy p{color:#aaa39a;max-width:610px}
-.youtube-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.youtube-card{position:relative;display:block;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#090a09}
+.youtube-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.youtube-card{position:relative;display:block;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#090a09;border:1px solid rgba(219,188,130,.2);transition:transform .32s cubic-bezier(.23,1,.32,1),border-color .32s ease,box-shadow .32s ease}
+.youtube-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 45px rgba(0,0,0,.4)}
 .youtube-card>img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .youtube-card:hover>img{transform:scale(1.045)}
 .youtube-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88))}
@@ -319,12 +316,10 @@ button{font:inherit}
 .youtube-card small{font-size:7px;letter-spacing:.14em;color:var(--gold2)}
 .youtube-card strong{font:700 16px 'Manrope',sans-serif;color:#fff;margin-top:5px}
 .play-chip{position:absolute;z-index:2;top:16px;right:16px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold2);color:#141414;font-size:12px}
-.playlist-frame{margin-top:16px;height:430px;border-radius:22px;overflow:hidden;background:#080908}
-.playlist-frame iframe{width:100%;height:100%;border:0}
 
 .instagram-showcase{margin-top:24px;display:grid;grid-template-columns:.78fr 1.22fr;gap:0;border-radius:32px;overflow:hidden;background:#eeeae2;color:#181818}
 .instagram-copy{padding:clamp(38px,6vw,76px);align-self:center}
-.instagram-copy p{color:#625b53;margin-bottom:26px}
+.instagram-copy .btn{margin-top:20px}
 .instagram-white-shell{background:#fff;padding:24px;min-height:650px}
 .instagram-white-shell iframe{display:block;width:100%;height:100%;min-height:600px;border:0;background:#fff;border-radius:18px}
 
@@ -380,6 +375,7 @@ button{font:inherit}
   .market-side{grid-template-columns:repeat(2,minmax(0,1fr))}
   .famous-grid,.youtube-card-grid,.offer-grid.four{grid-template-columns:repeat(2,1fr)}
   .offer-grid.three{grid-template-columns:repeat(2,1fr)}
+  .data-wall{grid-template-columns:1fr}
   .studio-proof{grid-template-columns:1fr}
   .instagram-showcase{grid-template-columns:1fr}
   .instagram-white-shell{min-height:600px}
@@ -400,7 +396,6 @@ button{font:inherit}
   .hero-orbit{opacity:.55}
   .hero-grid,.market-head,.market-stage,.about-grid,.direction-grid,.case-feature,.faq-grid,.cta-grid{grid-template-columns:1fr;gap:44px}
   .display{font-size:clamp(55px,17vw,82px)}
-  .data-wall{grid-template-columns:1fr}
   .section{padding:82px 0}
   .portrait-art{min-height:430px}
   .portrait-real{min-height:520px}
@@ -439,7 +434,6 @@ button{font:inherit}
   .studio-instagram .instagram-media{width:100%!important;max-width:100%!important}
   .platform-head{align-items:flex-start;flex-direction:column}
   .youtube-showcase{padding:18px}
-  .playlist-frame{height:260px}
   .instagram-white-shell{padding:12px;min-height:560px}
   .instagram-white-shell iframe{min-height:540px}
   .offer-family-head{grid-template-columns:58px 1fr}
@@ -496,9 +490,9 @@ button{font:inherit}
     <a href="#inicio" aria-label="Início"><img class="logo" data-brand src="" alt="Logomarca da produtora"></a>
     <nav class="nav" id="nav">
       <a href="#mercado">Mercado</a>
-      <a href="#direcao">A diferença</a>
+      <a href="#direcao">Direção</a>
       <a href="#cases">Case</a>
-      <a href="#sobre">Rodrigo</a>
+      <a href="#sobre">Quem sou</a>
       <a href="#servicos">Serviços</a>
       <a href="#planos">Valores</a>
     </nav>
@@ -517,7 +511,7 @@ button{font:inherit}
         <p class="lead">Produção audiovisual para profissionais, empresas e marcas que não querem apenas aparecer — querem ser percebidos como a escolha certa.</p>
         <div class="hero-actions">
           <a class="btn" href="#servicos">Conhecer as soluções <span>↗</span></a>
-          <a class="btn ghost" href="#direcao">Ver a diferença <span>▶</span></a>
+          <a class="btn ghost" href="#direcao">Ver direção <span>▶</span></a>
         </div>
       </div>
       <div class="hero-orbit orbit-one" data-parallax="-0.05"></div>
@@ -609,29 +603,6 @@ button{font:inherit}
           <div class="rings"><div class="donut"></div></div>
           <div class="data-legend"><span>● Sim</span><span>● Não</span><span>● Incerto</span></div>
         </article>
-        <article class="data-card consistency">
-          <div class="eyebrow">Consistência</div>
-          <h3>Publicar menos de 3 vezes limita o crescimento.</h3>
-          <div class="columns">
-            <div class="col"><i style="height:28px"></i><span>1–2 posts</span></div>
-            <div class="col"><i style="height:75px"></i><span>3–5 posts</span></div>
-            <div class="col"><i style="height:126px"></i><span>6–9 posts</span></div>
-            <div class="col"><i style="height:190px"></i><span>10+ posts</span></div>
-          </div>
-        </article>
-      </div>
-      <div class="data-wall reveal">
-        <article class="data-card">
-          <div class="eyebrow">Reels · duração</div>
-          <h3>O melhor equilíbrio aparece entre 60 e 90 segundos.</h3>
-          <div class="bars">
-            <div class="barline"><span>&lt; 15s</span><div class="bar"><i style="width:58%"></i></div><b>0,58%</b></div>
-            <div class="barline"><span>30–45s</span><div class="bar"><i style="width:63%"></i></div><b>0,63%</b></div>
-            <div class="barline"><span>60–90s</span><div class="bar"><i style="width:70%"></i></div><b>0,70%</b></div>
-            <div class="barline"><span>90–120s</span><div class="bar"><i style="width:67%"></i></div><b>0,67%</b></div>
-            <div class="barline"><span>&gt; 180s</span><div class="bar"><i style="width:50%"></i></div><b>0,50%</b></div>
-          </div>
-        </article>
         <article class="data-card">
           <div class="eyebrow">Onde mais compram</div>
           <h3>Instagram lidera a compra influenciada por anúncios.</h3>
@@ -642,14 +613,8 @@ button{font:inherit}
             <div class="barline"><span>TikTok</span><div class="bar"><i style="width:25%"></i></div><b>14%</b></div>
           </div>
         </article>
-        <article class="data-card consistency">
-          <div class="eyebrow">O contraponto</div>
-          <h3>O algoritmo distribui.<br><span class="gold">A identidade diferencia.</span></h3>
-          <p style="color:#aaa59d;font-size:12px;line-height:1.6;margin-top:32px">79% acreditam que otimizar apenas para o algoritmo cria um mar de mesmice. Por isso, roteiro, direção e personalidade importam tanto quanto frequência.</p>
-          <div style="font:500 72px 'Manrope',sans-serif;color:var(--gold2);margin-top:30px">79%</div>
-        </article>
       </div>
-      <p class="market-source">Fontes apresentadas nos materiais enviados: DataReportal Digital 2026 Brasil; Conversion e mLabs; Opinion Box; E-commerce Trends 2025; Socialinsider 2025; Buffer 2025; Dentsu Creative 2025 CMO Report; Rival IQ 2024. Os números de alcance publicitário não equivalem necessariamente a usuários ativos mensais.</p>
+      <p class="market-source">Fontes apresentadas nos materiais enviados: DataReportal Digital 2026 Brasil; Conversion e mLabs; Opinion Box; E-commerce Trends 2025; Buffer 2025. Os números de alcance publicitário não equivalem necessariamente a usuários ativos mensais.</p>
     </div>
   </section>
 
@@ -1120,7 +1085,7 @@ button{font:inherit}
             </div>
           </article>
           <article class="plan compact featured">
-            <span class="plan-badge">FORMATO INTERMEDIÁRIO</span>
+            <span class="plan-badge">MAIS CONTRATADO</span>
             <small>MINICURSO</small>
             <h3>Até 2 horas de conteúdo</h3>
             <div class="plan-price">R$ 1.750 <i>Pix</i></div>
@@ -1268,7 +1233,7 @@ button{font:inherit}
     <div class="motion-track reverse" data-marquee="-0.09">CONTEÚDO • FOTOGRAFIA • EVENTOS • CURSOS • INSTITUCIONAL • CONTEÚDO • FOTOGRAFIA • EVENTOS • </div>
   </div>
 
-  <!-- Canais: YouTube & Instagram (Movido para baixo da captação) -->
+  <!-- Canais: YouTube & Instagram -->
   <section class="section channel-section noise" id="canais">
     <div class="container">
       <div class="services-open-head reveal">
@@ -1276,13 +1241,13 @@ button{font:inherit}
         <h2 class="title">A melhor apresentação<br><span class="gold">é aquela que você assiste.</span></h2>
       </div>
       
-      <!-- YouTube Showcase -->
+      <!-- YouTube Showcase (Apenas 3 vídeos horizontais) -->
       <article class="youtube-showcase reveal" data-parallax="0.012">
         <div class="platform-head">
           <div>
             <small>YOUTUBE · CANAL OFICIAL</small>
             <h3>Produções completas e portfólio</h3>
-            <p>Vídeos recentes, projetos longos, coberturas, cursos e filmes institucionais.</p>
+            <p>Vídeos recentes, projetos longos, coberturas, cursos e filmes institucionais em formato horizontal.</p>
           </div>
           <a class="btn outline" href="https://www.youtube.com/@videomakerrodrigoramos" target="_blank">ABRIR CANAL ↗</a>
         </div>
@@ -1312,9 +1277,6 @@ button{font:inherit}
             </div>
           </a>
         </div>
-        <div class="playlist-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUZZ9v1-TkJkTqp9B5NjTYRQ&rel=0" title="Playlist com as publicações do canal de Rodrigo Ramos" loading="lazy" allowfullscreen></iframe>
-        </div>
       </article>
 
       <!-- Instagram Showcase -->
@@ -1322,7 +1284,6 @@ button{font:inherit}
         <div class="instagram-copy">
           <small>INSTAGRAM · @VIDEOMAKERRODRIGORAMOS</small>
           <h3>Conteúdo, bastidores e trabalhos recentes.</h3>
-          <p>O perfil oficial está incorporado em uma área neutra, coerente com a identidade visual do site.</p>
           <a class="btn dark" href="https://www.instagram.com/videomakerrodrigoramos/" target="_blank">ABRIR INSTAGRAM ↗</a>
         </div>
         <div class="instagram-white-shell">
@@ -1353,8 +1314,8 @@ button{font:inherit}
           <div class="faq-a">Sim. A gravação pode acontecer no estúdio, no ambiente do cliente ou em locação combinada.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">O que está incluído nos ajustes?<span>＋</span></button>
-          <div class="faq-a">Ajustes pontuais de fonte, trilha, B-roll e detalhes de edição. Mudança de roteiro ou nova gravação constitui novo escopo.</div>
+          <button class="faq-q">O material é entregue pronto para ser postado?<span>＋</span></button>
+          <div class="faq-a">Sim, inclusive o de redes sociais, já vai legendado.</div>
         </div>
       </div>
     </div>
@@ -1385,7 +1346,7 @@ button{font:inherit}
     <nav class="footer-nav">
       <b>Explorar</b>
       <a href="#mercado">Mercado</a>
-      <a href="#sobre">A produtora</a>
+      <a href="#sobre">Quem sou</a>
       <a href="#servicos">Serviços</a>
       <a href="#cases">Cases</a>
     </nav>
