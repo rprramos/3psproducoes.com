@@ -476,6 +476,75 @@ button{font:inherit}
   .photo-gallery .photo-card:last-child{max-width:100%}
 }
 
+/* Floating Back to Top Button on Left Side */
+.back-to-top{
+  position:fixed;
+  left:24px;
+  bottom:28px;
+  z-index:90;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 16px;
+  border-radius:999px;
+  background:rgba(17,18,17,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(219,188,130,.4);
+  color:var(--gold2);
+  font-family:'Nunito Sans',sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 10px 28px rgba(0,0,0,.5);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(16px);
+  transition:opacity .3s ease,visibility .3s ease,transform .3s cubic-bezier(.23,1,.32,1),border-color .25s,background .25s,color .25s;
+}
+.back-to-top.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.back-to-top:hover{
+  border-color:var(--gold2);
+  background:#232421;
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(0,0,0,.65);
+}
+.back-to-top svg{
+  width:14px;
+  height:14px;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:2.4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:transform .2s;
+}
+.back-to-top:hover svg{
+  transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+  .back-to-top{
+    left:16px;
+    bottom:20px;
+    width:42px;
+    height:42px;
+    padding:0;
+    justify-content:center;
+    border-radius:50%;
+  }
+  .back-to-top span{
+    display:none;
+  }
+}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
@@ -1365,6 +1434,11 @@ button{font:inherit}
   </div>
 </footer>
 
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <span>Topo</span>
+</button>
+
 <script>
 const brandAsset='assets/logo.png';
 document.querySelectorAll('[data-brand]').forEach(img=>img.src=brandAsset);
@@ -1427,6 +1501,21 @@ const observer=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.08});
 
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Back to Top button logic
+const backToTopBtn = document.getElementById('backToTop');
+if(backToTopBtn){
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 350) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
 <script>
