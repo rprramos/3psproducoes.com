@@ -1,0 +1,1714 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3P’s Produções — Conteúdo, direção e presença</title>
+<meta name="description" content="Produção audiovisual, fotografia, conteúdo para redes sociais, eventos, cursos e filmes institucionais.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+:root{
+  --black:#111211;
+  --metal:#1c1d1c;
+  --metal2:#292a28;
+  --concrete:#b3a696;
+  --sand:#d7cbbc;
+  --ivory:#eee9df;
+  --gold:#b58a50;
+  --gold2:#dbbc82;
+  --copper:#8d5e3d;
+  --red:#8a362d;
+  --line:rgba(219,188,130,.25);
+  --muted:#938e86;
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--ivory);font-family:'Nunito Sans',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 48px));margin:auto}
+.serif{font-family:'Manrope',serif}
+.gold{color:var(--gold2)}
+.section{padding:120px 0;position:relative}
+.section-light{background:var(--ivory);color:var(--black)}
+.section-concrete{background:linear-gradient(115deg,#a99e90,#c4b9aa 50%,#978c7e);color:var(--black)}
+.noise:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:700}
+.eyebrow:before{content:'';width:36px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.section-light .eyebrow,.section-concrete .eyebrow{color:#6f4b30}
+.section-light .eyebrow:before,.section-concrete .eyebrow:before{background:#6f4b30}
+.display{font:500 clamp(50px,7vw,96px)/.86 'Manrope',serif;letter-spacing:-.055em;margin:30px 0}
+.title{font:500 clamp(42px,5vw,68px)/.93 'Manrope',serif;letter-spacing:-.045em;margin:24px 0}
+.lead{font-size:16px;line-height:1.7;color:#aaa69f;max-width:600px}
+.section-light .lead{color:#5c5954}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 20px;border:1px solid var(--gold);background:linear-gradient(135deg,#c1975e,#8d6437);color:#151515;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.13)}
+.btn.ghost{background:transparent;color:var(--ivory);border-color:#706857}
+.btn.dark{background:var(--black);color:var(--ivory);border-color:var(--black)}
+.btn.outline{background:transparent;color:var(--gold2);border-color:var(--gold)}
+.link{display:inline-flex;gap:8px;align-items:center;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:5px}
+.topbar{position:fixed;z-index:30;top:0;left:0;right:0;height:88px;display:flex;align-items:center;background:rgba(17,18,17,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(219,188,130,.17)}
+.navwrap{width:min(1260px,calc(100% - 48px));margin:auto;display:flex;align-items:center}
+.logo{width:64px;height:64px;display:block;border-radius:13px;object-fit:cover;box-shadow:0 0 0 1px #d4ad7247,0 8px 30px #0008}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{font-size:10px;color:#a9a49c;letter-spacing:.08em}
+.nav a:hover{color:var(--gold2)}
+.navcta{margin-left:30px;padding:12px 14px;border:1px solid #7d6a50;color:var(--gold2);font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.menubtn{display:none;margin-left:auto;background:transparent;border:0;color:var(--ivory);font-size:25px}
+
+.hero{min-height:900px;padding-top:88px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 30%,rgba(181,138,80,.17),transparent 28%),linear-gradient(115deg,#0e0f0e,#242522)}
+.hero-clean{min-height:770px;display:flex;align-items:center}
+.hero-clean .container{position:relative}
+.hero-copy-clean{max-width:1060px;padding:120px 0 90px;position:relative;z-index:2}
+.hero-copy-clean .display{max-width:1060px;font-size:clamp(38px,5vw,72px);line-height:1.1;letter-spacing:-.04em}
+.hero-copy-clean .display span{display:block;margin-top:8px;color:var(--gold2);background:linear-gradient(135deg,#e8d1a7,#c1975e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-copy-clean .lead{max-width:690px}
+.hero-orbit{position:absolute;border:1px solid rgba(219,188,130,.16);border-radius:50%;pointer-events:none}
+.orbit-one{width:590px;height:590px;right:-230px;top:-250px;box-shadow:0 0 0 74px rgba(181,138,80,.025),0 0 0 150px rgba(181,138,80,.018)}
+.orbit-two{width:220px;height:220px;right:110px;bottom:-160px;border-color:rgba(219,188,130,.09)}
+.hero-actions{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+
+.think{background:var(--gold2);color:var(--black);padding:55px 0;position:relative}
+.think-grid{display:grid;grid-template-columns:.55fr 2fr .25fr;gap:40px;align-items:center}
+.think-index{font-size:9px;letter-spacing:.16em;font-weight:800}
+.think h2{font:600 clamp(34px,4.4vw,58px)/.93 'Manrope',sans-serif;margin:0;letter-spacing:-.035em}
+.think p{margin:12px 0 0;max-width:630px;color:#57452f;font-size:13px;line-height:1.55}
+.circle{width:62px;height:62px;border:1px solid #111;border-radius:50%;display:grid;place-items:center;font-size:24px}
+
+.market-head{display:block}
+.market-question-callout{max-width:none;width:100%;margin:0 auto 74px;padding:clamp(32px,5vw,64px);border:1px solid #dabb8252;border-radius:28px;background:linear-gradient(120deg,#dabb8214,#111210);box-shadow:0 20px 60px #00000025;margin-top:48px}
+.market-question-callout h3{font:700 clamp(30px,5vw,64px)/1.02 'Manrope',sans-serif;letter-spacing:-.055em;color:var(--ivory);margin:12px 0}
+.market-question-callout h3:nth-of-type(2){color:var(--gold2)}
+.market-question-callout p{margin-top:30px;color:#e1d4bd;font-size:clamp(16px,2vw,22px);font-weight:600;max-width:680px}
+.market-stage{display:block}
+.market-main{width:100%;min-height:560px;border-radius:var(--radius);padding:45px;background:linear-gradient(145deg,#181918,#2b2d2b);color:var(--ivory);position:relative;overflow:hidden;box-shadow:0 25px 60px rgba(52,43,34,.25)}
+.market-main:after{content:'';position:absolute;width:380px;height:380px;border:1px solid #dabb8255;border-radius:50%;right:-140px;bottom:-170px;box-shadow:0 0 0 34px #dabb8209,0 0 0 70px #dabb8208}
+.market-main .big-number{font:600 clamp(95px,13vw,170px)/.75 'Manrope',sans-serif;color:var(--gold2);letter-spacing:-.08em;margin-top:90px}
+.market-main h3{font:600 36px/.95 'Manrope',sans-serif;max-width:430px;margin:22px 0 15px}
+.market-main p{color:#9f9b94;max-width:460px;font-size:12px;line-height:1.6}
+.platform-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
+.platform-row span{border:1px solid #dabb8233;padding:8px 10px;border-radius:999px;color:#bcb5aa;font-size:9px}
+.platform-row b{color:var(--gold2)}
+
+.market-side{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(300px,auto);gap:18px;align-items:stretch;margin-top:18px}
+.insight-card{height:100%;height:auto;min-height:300px;border-radius:var(--radius);padding:28px;background:#d7cbbc;position:relative;overflow:hidden}
+.insight-card.dark{background:#2a2b29;color:var(--ivory)}
+.insight-card.red{background:#79382f;color:var(--ivory)}
+.insight-card.goldcard{background:#b58a50}
+.insight-card small{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#6c6256}
+.insight-card.dark small,.insight-card.red small{color:#c6b8a6}
+.insight-card strong{display:block;font:600 58px/.85 'Manrope',sans-serif;margin-top:40px}
+.insight-card h3{font:600 22px/.98 'Manrope',sans-serif;margin:15px 0 10px}
+.insight-card p{font-size:10px;line-height:1.45;margin:0;color:#5e584f}
+.insight-card.dark p,.insight-card.red p{color:#c0bbb2}
+
+.data-wall{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.data-card{border-radius:var(--radius);background:#f2ede4;padding:32px;min-height:360px;border:1px solid #00000010;display:flex;flex-direction:column}
+.data-card h3{font:600 27px/.98 'Manrope',sans-serif;margin:12px 0 28px}
+.bars{display:grid;gap:12px}
+.barline{display:grid;grid-template-columns:110px 1fr 44px;gap:10px;align-items:center;font-size:9px}
+.bar{height:8px;background:#d2c7b7;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#7a4d2d,#c19a63);border-radius:99px}
+.barline b{text-align:right;font-size:10px}
+.rings{display:grid;place-items:center;margin-top:14px}
+.donut{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) 0 70.3%,var(--red) 70.3% 89.1%,#c9bbaa 89.1%)}
+.donut:after{content:'70,3%';width:118px;height:118px;border-radius:50%;background:#f2ede4;display:grid;place-items:center;font:600 36px 'Manrope',sans-serif}
+.data-legend{display:flex;justify-content:center;gap:18px;margin-top:18px;font-size:9px;color:#69645e}
+.market-source{font-size:9px;color:#655f57;margin-top:24px;line-height:1.6}
+
+.motion-ribbon{position:relative;z-index:3;overflow:hidden;background:var(--gold2);color:#171717;border-top:1px solid #17171722;border-bottom:1px solid #17171722;padding:22px 0}
+.motion-ribbon.ribbon-dark{background:#1a1b1a;color:var(--gold2);border-color:#dabb8225}
+.motion-track{display:block;width:max-content;white-space:nowrap;font:700 clamp(24px,3.5vw,52px)/1 'Manrope',sans-serif;letter-spacing:-.04em;transform:translate3d(var(--mx,0px),0,0)}
+.motion-track.reverse{font-weight:500}
+
+/* A diferença / Compare */
+.direction-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:center}
+.direction-copy p{color:#5a5650;font-size:14px;line-height:1.7}
+.points{display:grid;gap:0;margin:32px 0;border-top:1px solid #0002}
+.point{padding:14px 0;border-bottom:1px solid #0002;display:flex;gap:12px;font-size:11px}
+.point b{color:#7a4d2d}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%}
+.compare-card{border-radius:22px;padding:15px;background:#cbc0b1;box-shadow:0 24px 55px #332a2033;display:flex;flex-direction:column}
+.compare-card.after{background:var(--metal);color:var(--ivory)}
+.compare-top{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.14em;color:#69635c;padding:3px 4px 12px}
+.after .compare-top{color:#b6afa5}
+.compare-top b{color:#8c5c3a}
+.compare-video{aspect-ratio:9/16;background:#111;border-radius:15px;overflow:hidden;position:relative;width:100%}
+.compare-video iframe{width:100%;height:100%;border:0;display:block}
+.compare-foot{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#736b62;padding:12px 4px 0}
+.after .compare-foot{color:#b6afa5}
+
+/* Cases */
+.case-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.case-image{padding:16px 16px 50px;background:#2b2c2a;border-radius:24px;transform:rotate(-1.2deg);box-shadow:0 30px 70px #0008}
+.case-image img{width:100%;display:block;border-radius:15px}
+.case-image small{display:block;margin:18px 3px 0;color:#9c948a;font-size:8px;letter-spacing:.16em}
+.case-copy .title{max-width:520px}
+.case-copy p{color:#aaa59d;font-size:13px;line-height:1.7}
+.result{display:flex;gap:18px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin:28px 0}
+.result strong{font:600 88px/.75 'Manrope',sans-serif;color:var(--gold2)}
+.result span{max-width:230px;font-size:12px;font-weight:700;line-height:1.4}
+.case-quote{color:var(--gold2)!important;font:600 21px/1.1 'Manrope',sans-serif!important}
+
+/* Sobre */
+.about-v3{background:linear-gradient(145deg,#161715,#262724)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:start}
+.portrait-art{min-height:580px;border-radius:34px;background:linear-gradient(145deg,#6a6259,#302f2d);position:relative;overflow:hidden;padding:30px}
+.portrait-real{padding:0;background:#101110;min-height:650px;position:relative}
+.portrait-photo-wrap{position:absolute;inset:0;overflow:hidden;border-radius:34px}
+.portrait-photo{width:100%;height:112%;object-fit:cover;object-position:center 34%;filter:saturate(.86) contrast(1.05);transform:translate3d(0,var(--py,0px),0) scale(1.025)}
+.portrait-real:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(10,11,10,.82));pointer-events:none}
+.portrait-caption{position:absolute;z-index:3;left:30px;right:30px;bottom:30px;padding:18px 20px;border-left:2px solid var(--gold2);background:#121312d6;backdrop-filter:blur(12px)}
+.portrait-caption span{display:block;font:700 13px 'Manrope',sans-serif;letter-spacing:.13em;color:var(--ivory)}
+.portrait-caption small{display:block;margin-top:6px;font-size:8px;letter-spacing:.12em;color:var(--gold2);text-transform:uppercase}
+.about-copy .title{max-width:590px}
+.about-copy p{color:#a7a39c;font-size:14px;line-height:1.75;margin-bottom:18px}
+.about-copy p strong{color:var(--ivory)}
+.about-cta{display:flex;justify-content:flex-start;margin-top:28px;margin-bottom:72px}
+.about-cta .btn{display:inline-flex;align-items:center;gap:10px}
+
+/* Trajetória / Nomes */
+.names-block{margin-top:20px;position:relative;z-index:2}
+.names-head{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:end;margin-bottom:28px}
+.names-head h3{font:700 clamp(34px,5vw,70px)/.98 'Manrope',sans-serif;letter-spacing:-.055em;max-width:780px}
+.names-head p{max-width:520px;color:#aaa39a}
+.famous-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.famous-card{position:relative;aspect-ratio:9/14;min-height:360px;border-radius:22px;overflow:hidden;background:#090a09;border:1px solid #dabb8224;transition:transform .32s cubic-bezier(.23,1,.32,1),border-color .32s ease,box-shadow .32s ease}
+.famous-card:hover{transform:translateY(-8px);border-color:rgba(218,187,130,.78);box-shadow:0 20px 42px rgba(0,0,0,.26)}
+.famous-card img,.famous-card video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.famous-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,6,5,.94))}
+.famous-label{position:absolute;z-index:2;left:16px;right:16px;bottom:18px}
+.famous-label small,.famous-label strong,.famous-label span{display:block}
+.famous-label small{font-size:7.5px;letter-spacing:.14em;color:var(--gold2)}
+.famous-label strong{font:700 clamp(16px,1.2vw,21px)/1.1 'Manrope',sans-serif;margin:6px 0;color:var(--ivory);transition:color .32s ease,letter-spacing .32s ease}
+.famous-card:hover .famous-label strong{color:var(--gold2);letter-spacing:.01em}
+.famous-label span{font-size:10px;color:#c9c4bc}
+
+/* Estúdio */
+.studio-proof{display:grid;grid-template-columns:1fr 1.1fr;gap:0;margin-top:60px;border-radius:34px;overflow:hidden;background:var(--concrete);color:#181818}
+.studio-media{height:auto!important;min-height:0!important;display:flex;align-items:flex-start}
+.studio-instagram{height:auto!important;min-height:0!important;overflow:visible!important;padding:18px!important;display:flex;align-items:flex-start;background:#eee8df;width:100%}
+.studio-instagram .instagram-media{width:100%!important;max-width:480px!important;min-width:0!important;max-height:none!important;overflow:visible!important;margin:0 auto!important;background:#fff;border-radius:18px}
+.studio-copy{padding:clamp(40px,7vw,90px);align-self:center}
+.studio-copy h3{font:700 clamp(38px,5vw,70px)/.98 'Manrope',sans-serif;letter-spacing:-.055em;margin:18px 0}
+.studio-copy p{color:#5d574f;line-height:1.7}
+.studio-points{display:grid;gap:12px;margin-top:28px}
+.studio-points span{padding-top:12px;border-top:1px solid #18181824;font-size:11px}
+
+/* Serviços */
+.services-open{background:#111211}
+.services-open-head{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end;margin-bottom:70px}
+.services-open-head .eyebrow,.services-open-head .title{grid-column:1}
+.services-open-head p{grid-column:2;grid-row:1/3;color:#aaa59d;font-size:14px;line-height:1.7}
+.service-showcase{border-top:1px solid var(--line);padding:78px 0 92px;position:relative}
+.service-showcase:after{content:'';position:absolute;width:140px;height:140px;border:1px solid #dabb8214;border-radius:50%;right:2%;top:32px;pointer-events:none}
+.service-showcase#conteudo-redes,.service-showcase#eventos{display:grid;grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr);column-gap:64px;align-items:start}
+.service-showcase#conteudo-redes>.service-showcase-head,.service-showcase#eventos>.service-showcase-head{display:block;margin-bottom:0;position:relative}
+.service-showcase#conteudo-redes>.service-showcase-head .service-index,.service-showcase#eventos>.service-showcase-head .service-index{display:block;margin-bottom:28px}
+.service-showcase#conteudo-redes>.portfolio-grid,.service-showcase#eventos>.portfolio-grid{grid-column:2;grid-row:1;margin-top:4px;align-self:start}
+.service-showcase-head{display:grid;grid-template-columns:90px 1fr .85fr;gap:28px;align-items:start;margin-bottom:38px}
+.service-index{font:600 38px 'Manrope',sans-serif;color:#5c554d}
+.service-showcase-head small,.channel-copy small{font-size:8px;letter-spacing:.16em;color:var(--gold2)}
+.service-showcase-head h3{font:600 clamp(31px,4vw,51px)/1 'Manrope',sans-serif;letter-spacing:-.04em;margin:10px 0}
+.service-showcase-head p{font-size:12px;line-height:1.65;color:#aaa59d;margin:10px 0}
+
+.light-showcase{background:#ded5c8;color:#151515;padding:58px;border-radius:28px;border-top:0;margin:18px 0 72px}
+.light-showcase .service-index{color:#8e7558}
+.light-showcase .service-showcase-head small{color:#785535}
+.light-showcase .service-showcase-head p{color:#615c55}
+.light-showcase:after{border-color:#5b45301c}
+
+/* Portfolio Video Grids - Uniform Dimensions */
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;width:100%}
+.portfolio-card{background:#232422;border:1px solid #ffffff12;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;height:100%}
+.portfolio-frame{background:#090a09;overflow:hidden;width:100%;position:relative}
+.portfolio-frame.vertical{aspect-ratio:9/16;width:100%}
+.portfolio-frame.landscape{aspect-ratio:16/9;width:100%}
+.portfolio-frame iframe{width:100%;height:100%;border:0;display:block}
+.portfolio-meta{padding:17px;margin-top:auto}
+.portfolio-meta small{font-size:8px;letter-spacing:.13em;color:var(--gold2);text-transform:uppercase}
+.portfolio-meta h4{font:600 18px/1.15 'Manrope',sans-serif;margin:8px 0 0}
+
+/* Professional Photography Gallery - 5 Vertical 9:16 Cards Without Cropping */
+.photo-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%}
+.photo-card{position:relative;border-radius:18px;overflow:hidden;background:#181818;box-shadow:0 14px 35px rgba(0,0,0,.15);border:1px solid rgba(219,188,130,.25);aspect-ratio:9/16;width:100%;transition:transform .32s cubic-bezier(.23,1,.32,1),box-shadow .32s ease,border-color .32s ease}
+.photo-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.3);border-color:var(--gold)}
+.photo-card img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease}
+.photo-card:hover img{transform:scale(1.03)}
+
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%}
+.agency-showcase{background:linear-gradient(135deg,#201d19,#3b2d23);border:1px solid #b58a5030;padding:58px;border-radius:28px;margin-bottom:72px}
+.agency-flow{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:32px;border:1px solid #dabb8230;border-radius:18px;color:var(--gold2)}
+.agency-flow span{font-size:9px;font-weight:800;letter-spacing:.13em}
+.agency-flow i{font-style:normal;color:#72614d}
+
+.institutional-feature{display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center}
+.institutional-feature h4{font:600 27px/1.1 'Manrope',sans-serif;margin:0 0 15px}
+.institutional-feature p{font-size:12px;line-height:1.65;color:#615c55}
+
+/* Planos */
+.plans{background:linear-gradient(145deg,#9e9284,#c1b5a6);color:var(--black);overflow:hidden}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;perspective:1200px}
+.plan{padding:30px;border-radius:24px;background:#e7dfd4;border:1px solid #fff9;min-height:420px;display:flex;flex-direction:column;position:relative;transform:translate3d(0,var(--py,0px),0)}
+.plan.featured{background:#242522;color:var(--ivory);transform:translateY(-12px);box-shadow:0 30px 70px #3a302755}
+.plan-badge{position:absolute;right:20px;top:20px;background:var(--gold);padding:6px 8px;border-radius:99px;font-size:7px;font-weight:800;letter-spacing:.13em}
+.plan small{font-size:8px;letter-spacing:.15em;color:#756e66}
+.plan.featured small{color:#bdb6ac}
+.plan h3{font:600 36px 'Manrope',sans-serif;margin:30px 0 20px}
+.plan-price{font:600 55px/.8 'Manrope',sans-serif}
+.plan-price i{font:10px 'Nunito Sans',sans-serif;font-style:normal;color:#7c766e}
+.plan p{font-size:11px;color:#716b64;line-height:1.55}
+.plan.featured p{color:#aaa59d}
+.plan-lines{margin:17px 0;display:grid;gap:9px;font-size:10px}
+.plan .btn{margin-top:auto;justify-content:center}
+
+.plan:not(.featured) small{color:#51483f!important}
+.plan:not(.featured) h3,.plan:not(.featured) .plan-price,.plan:not(.featured) .plan-lines,.plan:not(.featured) .plan-lines span{color:#201c18!important}
+.plan:not(.featured) .plan-price i{color:#5d554d!important}
+.plan:not(.featured) p{color:#51483f!important}
+.plan:not(.featured) .plan-badge{color:#201c18!important}
+
+/* Produtos Detalhados */
+.products-detailed .services-head{margin-bottom:75px}
+.services-head{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end;margin-bottom:52px}
+.services-head p{color:#aaa59d;font-size:14px;line-height:1.65}
+.offer-family{margin-bottom:92px}
+.offer-family:last-child{margin-bottom:0}
+.offer-family-head{display:grid;grid-template-columns:90px 1fr;align-items:end;border-bottom:1px solid #dabb8233;padding-bottom:24px;margin-bottom:24px}
+.offer-family-head>span{font:600 50px/1 'Manrope',sans-serif;color:var(--gold2)}
+.offer-family-head small{font-size:8px;letter-spacing:.16em;color:#aaa39a}
+.offer-family-head h3{font:700 clamp(34px,5vw,62px)/1 'Manrope',sans-serif;letter-spacing:-.05em;margin-top:8px}
+.offer-grid{display:grid;gap:16px}
+.offer-grid.four{grid-template-columns:repeat(4,1fr)}
+.offer-grid.three{grid-template-columns:repeat(3,1fr)}
+.offer-grid.two{grid-template-columns:repeat(2,1fr)}
+.plan.compact{min-height:490px;padding:30px 25px}
+.plan.compact h3{font-size:26px}
+.plan.compact .plan-price{font-size:32px;margin:24px 0 14px}
+.plan.compact .plan-price i{font-size:9px}
+.plan.compact p{min-height:72px}
+.offer-note{margin-top:14px;padding:16px 20px;background:#dabb8211;border:1px solid #dabb8226;border-radius:14px;font-size:11px;color:#c8c2b8}
+
+/* Agências / White Label */
+.agency-visual{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.22)}
+.agency-image-card{position:relative;aspect-ratio:9/13;min-height:440px;width:100%;background:#111;border-radius:26px;overflow:hidden;border:1px solid rgba(219,188,130,.3)}
+.agency-photo{width:100%;height:100%;object-fit:cover;display:block}
+.agency-overlay{position:absolute;inset:auto 0 0 0;padding:26px 24px;background:linear-gradient(180deg,transparent 0%,rgba(10,11,10,.85) 40%,rgba(10,11,10,.96) 100%);color:#eee9df}
+.agency-overlay span{font-size:8px;letter-spacing:.18em;color:var(--gold2);font-weight:700;display:block;margin-bottom:6px}
+.agency-overlay strong{font:700 20px/1.2 'Manrope',sans-serif;color:#fff;display:block;margin-bottom:6px}
+.agency-overlay p{font-size:11px;line-height:1.5;color:#bbb4aa;margin:0}
+
+/* Canais: YouTube & Instagram */
+.channel-section{padding:100px 0;overflow:hidden}
+.youtube-showcase{margin-top:40px;padding:36px;border:1px solid #dabb8229;border-radius:32px;background:#111210}
+.platform-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:28px}
+.platform-head small,.instagram-copy small{font-size:8px;letter-spacing:.16em;color:var(--gold2)}
+.platform-head h3,.instagram-copy h3{font:700 clamp(30px,4vw,54px)/1 'Manrope',sans-serif;letter-spacing:-.045em;margin:10px 0}
+.platform-head p,.instagram-copy p{color:#aaa39a;max-width:610px}
+.youtube-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.youtube-card{position:relative;display:block;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#090a09;border:1px solid rgba(219,188,130,.2);transition:transform .32s cubic-bezier(.23,1,.32,1),border-color .32s ease,box-shadow .32s ease}
+.youtube-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 45px rgba(0,0,0,.4)}
+.youtube-card>img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.youtube-card:hover>img{transform:scale(1.045)}
+.youtube-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88))}
+.youtube-card>div{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}
+.youtube-card small,.youtube-card strong{display:block}
+.youtube-card small{font-size:7px;letter-spacing:.14em;color:var(--gold2)}
+.youtube-card strong{font:700 16px 'Manrope',sans-serif;color:#fff;margin-top:5px}
+.play-chip{position:absolute;z-index:2;top:16px;right:16px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold2);color:#141414;font-size:12px}
+
+.instagram-showcase{margin-top:24px;display:grid;grid-template-columns:.78fr 1.22fr;gap:0;border-radius:32px;overflow:hidden;background:#eeeae2;color:#181818}
+.instagram-copy{padding:clamp(38px,6vw,76px);align-self:center}
+.instagram-copy .btn{margin-top:20px}
+.instagram-white-shell{background:#fff;padding:24px;min-height:650px}
+.instagram-white-shell iframe{display:block;width:100%;height:100%;min-height:600px;border:0;background:#fff;border-radius:18px}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
+.faq-list{border-top:1px solid #0002}
+.faq-category{margin:36px 0 10px;padding-bottom:8px;border-bottom:1.5px solid rgba(111,75,48,.35);display:flex;align-items:center;gap:10px}
+.faq-category:first-child{margin-top:0}
+.faq-category-badge{font-size:9.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6f4b30}
+.faq-item{border-bottom:1px solid #0002}
+.faq-q{width:100%;background:transparent;border:0;color:var(--black);padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;font:600 clamp(16px,1.4vw,20px)/1.35 'Manrope',sans-serif;cursor:pointer;transition:color .2s}
+.faq-q:hover{color:#7a4d2d}
+.faq-q span{font-size:22px;line-height:1;color:#7a4d2d;flex-shrink:0;transition:transform .25s ease,color .25s ease}
+.faq-item.open .faq-q{color:#7a4d2d}
+.faq-item.open .faq-q span{transform:rotate(45deg);color:#111}
+.faq-a{display:none;padding:0 0 22px;color:#4e4842;font-size:13.5px;line-height:1.75;max-width:680px}
+.faq-a p{margin:0 0 12px}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a strong{color:#1a1917;font-weight:700}
+.faq-item.open .faq-a{display:block}
+
+/* FAQ Video Comparison */
+.faq-video-compare{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px;max-width:580px}
+.faq-video-box{background:#1f201e;color:var(--ivory);border-radius:18px;padding:12px;border:1px solid rgba(219,188,130,.22);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.faq-video-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.faq-video-head small{font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+.faq-video-link{font-size:8px;font-weight:700;color:#c0b9af;text-decoration:underline;letter-spacing:.05em}
+.faq-video-link:hover{color:var(--gold2)}
+.faq-video-frame{aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#090a09}
+.faq-video-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:540px){
+  .faq-video-compare{grid-template-columns:1fr}
+}
+
+/* CTA */
+.cta{padding:100px 0;background:linear-gradient(115deg,#b8935e,#6d4b31);color:var(--black);position:relative;overflow:hidden}
+.cta-orbit{position:absolute;border:1px solid #1515152b;border-radius:50%;pointer-events:none}
+.cta-orbit-one{width:520px;height:520px;right:-150px;top:-260px}
+.cta-orbit-two{width:240px;height:240px;left:8%;bottom:-150px}
+.cta-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end;position:relative;z-index:2}
+.cta .title{font-size:clamp(48px,6vw,83px);margin-bottom:0}
+.cta .title span{color:var(--ivory);font-style:italic}
+.cta-side{display:flex;flex-direction:column;align-items:flex-start;gap:17px}
+
+/* Footer */
+.footer{padding:55px 0 25px;background:#0d0e0d}
+.footer-grid{display:grid;grid-template-columns:1fr .55fr .55fr 1fr;gap:50px}
+.footer-logo{width:115px;border-radius:20px}
+.footer-nav{display:flex;flex-direction:column;gap:10px}
+.footer-nav b{color:var(--gold2);font-size:8px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+.footer-nav a{font-size:10px;color:#908c84}
+.footer-quote{font:600 22px/1.05 'Manrope',sans-serif;color:#aaa59d;border-left:1px solid var(--line);padding-left:25px}
+.footer-bottom{margin-top:48px;padding-top:18px;border-top:1px solid #ffffff13;display:flex;justify-content:space-between;color:#66635e;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+
+/* Animations & Motion */
+.reveal{opacity:0;transform:translate3d(var(--px,0px),calc(24px + var(--py,0px)),0);transition:opacity .65s cubic-bezier(.23,1,.32,1),transform .65s cubic-bezier(.23,1,.32,1)}
+.reveal.on{opacity:1;transform:translate3d(var(--px,0px),var(--py,0px),0)}
+[data-parallax],[data-parallax-x],[data-marquee]{will-change:transform}
+[data-parallax]:not(.reveal){transform:translate3d(0,var(--py,0px),0)}
+[data-parallax-x]:not(.reveal){transform:translate3d(var(--px,0px),0,0)}
+.scroll-progress{position:fixed;z-index:80;left:0;top:0;height:2px;width:var(--progress,0%);background:linear-gradient(90deg,#8d6437,#dbbc82);box-shadow:0 0 16px #dbbc82;pointer-events:none}
+
+/* RESPONSIVE BREAKPOINTS */
+@media(min-width:851px){
+  .market-main{position:sticky;top:112px;align-self:start}
+  .market-side .insight-card{min-height:255px}
+}
+
+@media(max-width:1100px){
+  .photo-gallery{grid-template-columns:repeat(3,1fr);gap:14px}
+  .photo-gallery .photo-card:nth-child(4),
+  .photo-gallery .photo-card:nth-child(5){grid-column:span 1}
+}
+
+@media(max-width:1050px){
+  .market-side{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .famous-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .youtube-card-grid,.offer-grid.four{grid-template-columns:repeat(2,1fr)}
+  .offer-grid.three{grid-template-columns:repeat(2,1fr)}
+  .data-wall{grid-template-columns:1fr}
+  .studio-proof{grid-template-columns:1fr}
+  .instagram-showcase{grid-template-columns:1fr}
+  .instagram-white-shell{min-height:600px}
+}
+
+@media(max-width:850px){
+  .container,.navwrap{width:min(100% - 32px,1180px)}
+  .topbar{height:76px}
+  .logo{width:54px;height:54px}
+  .nav{position:absolute;display:none;top:76px;left:0;right:0;background:#111;padding:12px 20px 22px;flex-direction:column}
+  .nav.open{display:flex}
+  .nav a{padding:11px 0;border-bottom:1px solid #ffffff12}
+  .navcta{display:none}
+  .menubtn{display:block}
+  .hero{min-height:auto;padding-top:76px}
+  .hero-clean{min-height:auto}
+  .hero-copy-clean{padding:100px 0 78px}
+  .hero-orbit{opacity:.55}
+  .hero-grid,.market-head,.market-stage,.about-grid,.direction-grid,.case-feature,.faq-grid,.cta-grid{grid-template-columns:1fr;gap:44px}
+  .display{font-size:clamp(36px,7vw,58px);line-height:1.15}
+  .hero-copy-clean .display{font-size:clamp(34px,6.8vw,56px);line-height:1.15}
+  .section{padding:82px 0}
+  .portrait-art{min-height:430px}
+  .portrait-real{min-height:520px}
+  .motion-ribbon{padding:15px 0}
+  .motion-track{font-size:25px}
+  .service-showcase:after{display:none}
+  .cta-orbit{opacity:.45}
+  .services-open-head{grid-template-columns:1fr;gap:20px}
+  .services-open-head .eyebrow,.services-open-head .title,.services-open-head p{grid-column:1;grid-row:auto}
+  .service-showcase#conteudo-redes,.service-showcase#eventos{display:block}
+  .service-showcase#conteudo-redes>.service-showcase-head,.service-showcase#eventos>.service-showcase-head{margin-bottom:38px}
+  .service-showcase#conteudo-redes>.portfolio-grid,.service-showcase#eventos>.portfolio-grid{margin-top:0}
+  .service-showcase-head{grid-template-columns:52px 1fr}
+  .service-showcase-head p{grid-column:1/-1}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .light-showcase,.agency-showcase{padding:30px}
+  .course-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .course-grid .portfolio-card:last-child{grid-column:1/-1}
+  .agency-flow{flex-wrap:wrap;justify-content:center}
+  .institutional-feature{grid-template-columns:1fr}
+  .plan-grid{grid-template-columns:1fr}
+  .plan.featured{transform:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-quote{grid-column:1/-1}
+  .footer-bottom{flex-wrap:wrap;gap:12px}
+  .agency-image-card{min-height:380px}
+}
+
+@media(max-width:700px){
+  .names-head{grid-template-columns:1fr}
+  .names-block{margin-top:-34px!important}
+  .famous-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .famous-card{min-height:260px;aspect-ratio:9/13;border-radius:18px}
+  .famous-label{left:12px;right:12px;bottom:14px}
+  .famous-label small{font-size:7px;letter-spacing:.12em}
+  .famous-label strong{font-size:15px;margin:4px 0}
+  .famous-label span{font-size:9.5px}
+  .famous-grid .famous-card:last-child{grid-column:span 2;max-width:calc(50% - 6px);margin:0 auto;width:100%}
+  .youtube-card-grid,.offer-grid.four,.offer-grid.three,.offer-grid.two{grid-template-columns:1fr}
+  .studio-proof{margin-top:42px;height:auto}
+  .studio-instagram{padding:10px!important}
+  .studio-instagram .instagram-media{width:100%!important;max-width:100%!important}
+  .platform-head{align-items:flex-start;flex-direction:column}
+  .youtube-showcase{padding:18px}
+  .instagram-white-shell{padding:12px;min-height:560px}
+  .instagram-white-shell iframe{min-height:540px}
+  .offer-family-head{grid-template-columns:58px 1fr}
+  .offer-family-head>span{font-size:34px}
+  .plan.compact{min-height:auto}
+  .plan.compact p{min-height:auto}
+  .about-cta{margin-top:20px;margin-bottom:52px}
+  .photo-gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  .photo-gallery .photo-card:last-child{grid-column:span 2;max-width:calc(50% - 6px);margin:0 auto;width:100%}
+}
+
+@media(max-width:600px){
+  .hero-copy-clean .display{font-size:clamp(28px,7.8vw,40px);line-height:1.16}
+  .market-main{min-height:520px}
+  .market-side{grid-template-columns:1fr}
+  .insight-card{min-height:260px}
+  .compare{grid-template-columns:1fr;gap:16px}
+  .compare-video{aspect-ratio:9/16}
+  .portfolio-grid{grid-template-columns:1fr;gap:16px}
+  .course-grid{grid-template-columns:1fr}
+  .course-grid .portfolio-card:last-child{grid-column:auto}
+  .service-showcase-head{grid-template-columns:1fr}
+  .service-showcase{padding:58px 0}
+  .light-showcase,.agency-showcase{padding:24px}
+  .agency-flow{display:grid;grid-template-columns:1fr;text-align:center}
+  .agency-flow i{transform:rotate(90deg)}
+  .instagram-frame{height:460px}
+  .data-card{padding:25px}
+  .barline{grid-template-columns:90px 1fr 38px}
+  .compare-top{font-size:7px}
+  .compare-foot{font-size:7px}
+  .plan{min-height:390px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-quote{grid-column:auto}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+
+@media(max-width:440px){
+  .famous-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .famous-card{min-height:220px;aspect-ratio:9/13}
+  .famous-label strong{font-size:13.5px}
+  .famous-label span{font-size:8.5px}
+  .famous-grid .famous-card:last-child{max-width:100%}
+  .photo-gallery{grid-template-columns:1fr;gap:16px}
+  .photo-gallery .photo-card:last-child{max-width:100%}
+}
+
+/* Floating Back to Top Button on Left Side */
+.back-to-top{
+  position:fixed;
+  left:24px;
+  bottom:28px;
+  z-index:90;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 16px;
+  border-radius:999px;
+  background:rgba(17,18,17,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(219,188,130,.4);
+  color:var(--gold2);
+  font-family:'Nunito Sans',sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 10px 28px rgba(0,0,0,.5);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(16px);
+  transition:opacity .3s ease,visibility .3s ease,transform .3s cubic-bezier(.23,1,.32,1),border-color .25s,background .25s,color .25s;
+}
+.back-to-top.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.back-to-top:hover{
+  border-color:var(--gold2);
+  background:#232421;
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(0,0,0,.65);
+}
+.back-to-top svg{
+  width:14px;
+  height:14px;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:2.4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:transform .2s;
+}
+.back-to-top:hover svg{
+  transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+  .back-to-top{
+    left:16px;
+    bottom:20px;
+    width:42px;
+    height:42px;
+    padding:0;
+    justify-content:center;
+    border-radius:50%;
+  }
+  .back-to-top span{
+    display:none;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="topbar">
+  <div class="navwrap">
+    <a href="#inicio" aria-label="Início"><img class="logo" data-brand src="" alt="Logomarca da produtora"></a>
+    <nav class="nav" id="nav">
+      <a href="#mercado">Mercado</a>
+      <a href="#direcao">Direção</a>
+      <a href="#cases">Case</a>
+      <a href="#sobre">Quem sou</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#planos">Planos</a>
+    </nav>
+    <a class="navcta" href="https://wa.me/5521979223500" target="_blank">Falar com Rodrigo ↗</a>
+    <button class="menubtn" id="menubtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero hero-clean noise" id="inicio">
+    <div class="container">
+      <div class="hero-copy hero-copy-clean reveal" data-parallax="0.028">
+        <div class="eyebrow">Estratégia · direção · narrativa</div>
+        <h1 class="display">Vídeo bonito gera curtida.<span>Posicionamento com estratégia gera venda.</span></h1>
+        <p class="lead">Produção audiovisual para profissionais, empresas e marcas que não querem apenas aparecer — querem ser percebidos como a escolha certa.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#servicos">Conhecer as soluções <span>↗</span></a>
+          <a class="btn ghost" href="#direcao">Ver direção <span>▶</span></a>
+        </div>
+      </div>
+      <div class="hero-orbit orbit-one" data-parallax="-0.05"></div>
+      <div class="hero-orbit orbit-two" data-parallax="0.035"></div>
+    </div>
+  </section>
+
+  <!-- Pense nisso -->
+  <section class="think">
+    <div class="container think-grid">
+      <div class="think-index">01 / PENSE NISSO</div>
+      <div>
+        <h2>Se o cliente encontrar você hoje, a sua imagem sustenta o preço que você cobra?</h2>
+        <p>Antes da proposta, da reunião e da venda, existe uma percepção. É nessa percepção que o audiovisual trabalha.</p>
+      </div>
+      <a class="circle" href="#mercado">↓</a>
+    </div>
+  </section>
+
+  <!-- Mercado -->
+  <section class="section section-concrete noise" id="mercado">
+    <div class="container">
+      <div class="market-head reveal">
+        <div>
+          <div class="eyebrow">O mercado já está olhando</div>
+          <h2 class="title">A atenção está nas redes.<br><span class="gold">A decisão também.</span></h2>
+        </div>
+      </div>
+      <div class="market-question-callout reveal" data-parallax="0.016">
+        <div class="eyebrow">Responda a essas perguntas</div>
+        <h3><small>01</small> Seus clientes usam redes sociais?</h3>
+        <h3><small>02</small> Quantos clientes das redes sociais você fecha por mês?</h3>
+        <p>Pare de usar o Instagram para ver a vida alheia e use como ferramenta de vendas!</p>
+      </div>
+      <div class="market-stage reveal">
+        <article class="market-main" data-parallax="0.018">
+          <div class="eyebrow">Brasil · alcance potencial</div>
+          <div class="big-number">150 mi</div>
+          <h3>de pessoas podem ser alcançadas pelo YouTube no Brasil.</h3>
+          <p>Instagram e TikTok aparecem logo atrás. O seu cliente não precisa procurar longe: ele já está nas plataformas.</p>
+          <div class="platform-row">
+            <span>YouTube <b>150 mi</b></span>
+            <span>Instagram <b>147 mi</b></span>
+            <span>TikTok <b>131 mi</b></span>
+            <span>LinkedIn <b>90 mi</b></span>
+          </div>
+        </article>
+        <div class="market-side">
+          <article class="insight-card dark" data-parallax="0.014">
+            <small>Decisão de compra</small>
+            <strong>70,3%</strong>
+            <h3>já compraram após ver anúncios</h3>
+            <p>Audiovisual não é só alcance. Ele participa da conversão.</p>
+          </article>
+          <article class="insight-card red" data-parallax="-0.012">
+            <small>Rotina real</small>
+            <strong>57%</strong>
+            <h3>entram no Instagram várias vezes ao dia</h3>
+            <p>A frequência cria lembrança antes da necessidade de compra.</p>
+          </article>
+          <article class="insight-card goldcard" data-parallax="0.016">
+            <small>Prova social</small>
+            <strong>43%</strong>
+            <h3>são influenciados por avaliações</h3>
+            <p>Depoimentos transformam promessa em segurança.</p>
+          </article>
+          <article class="insight-card" data-parallax="-0.018">
+            <small>Formato prioritário</small>
+            <strong>74%</strong>
+            <h3>priorizam vídeo curto</h3>
+            <p>Reels, TikTok e Stories seguem como principal formato de conteúdo.</p>
+          </article>
+        </div>
+      </div>
+      <div class="data-wall reveal">
+        <article class="data-card">
+          <div class="eyebrow">Como as marcas são descobertas</div>
+          <h3>O social abre a porta. A indicação confirma.</h3>
+          <div class="bars">
+            <div class="barline"><span>Anúncios sociais</span><div class="bar"><i style="width:65.3%"></i></div><b>65,3%</b></div>
+            <div class="barline"><span>Recomendações</span><div class="bar"><i style="width:48.8%"></i></div><b>48,8%</b></div>
+            <div class="barline"><span>Google Ads</span><div class="bar"><i style="width:38.1%"></i></div><b>38,1%</b></div>
+            <div class="barline"><span>Influenciadores</span><div class="bar"><i style="width:32.1%"></i></div><b>32,1%</b></div>
+          </div>
+        </article>
+        <article class="data-card">
+          <div class="eyebrow">Publicidade e consumo</div>
+          <h3>Conteúdo influencia a compra.</h3>
+          <div class="rings"><div class="donut"></div></div>
+          <div class="data-legend"><span>● Sim</span><span>● Não</span><span>● Incerto</span></div>
+        </article>
+        <article class="data-card">
+          <div class="eyebrow">Onde mais compram</div>
+          <h3>Instagram lidera a compra influenciada por anúncios.</h3>
+          <div class="bars">
+            <div class="barline"><span>Instagram</span><div class="bar"><i style="width:100%"></i></div><b>55%</b></div>
+            <div class="barline"><span>Facebook</span><div class="bar"><i style="width:56%"></i></div><b>31%</b></div>
+            <div class="barline"><span>YouTube</span><div class="bar"><i style="width:55%"></i></div><b>30%</b></div>
+            <div class="barline"><span>TikTok</span><div class="bar"><i style="width:25%"></i></div><b>14%</b></div>
+          </div>
+        </article>
+      </div>
+      <p class="market-source">Fontes apresentadas nos materiais enviados: DataReportal Digital 2026 Brasil; Conversion e mLabs; Opinion Box; E-commerce Trends 2025; Buffer 2025. Os números de alcance publicitário não equivalem necessariamente a usuários ativos mensais.</p>
+    </div>
+  </section>
+
+  <!-- Ribbon -->
+  <div class="motion-ribbon" aria-hidden="true">
+    <div class="motion-track" data-marquee="0.11">ROTEIRO • DIREÇÃO • IMAGEM • PRESENÇA • ROTEIRO • DIREÇÃO • IMAGEM • PRESENÇA • </div>
+  </div>
+
+  <!-- A diferença / Comparação -->
+  <section class="section section-light" id="direcao">
+    <div class="container direction-grid">
+      <div class="direction-copy reveal">
+        <div class="eyebrow">A diferença que direção faz</div>
+        <h2 class="title">A mesma pessoa.<br>A mesma mensagem.<br><span class="gold">Outra presença.</span></h2>
+        <p>Você não precisa nascer pronto para a câmera. Precisa de alguém que organize a fala, conduza o ritmo, corrija a postura e transforme conhecimento em presença.</p>
+        <div class="points">
+          <div class="point"><b>✓</b> Roteiro alinhado antes da gravação</div>
+          <div class="point"><b>✓</b> Direção de postura, olhar e expressão</div>
+          <div class="point"><b>✓</b> Luz, áudio e enquadramento profissionais</div>
+          <div class="point"><b>✓</b> Edição profissional com ritmo, clareza e acabamento</div>
+        </div>
+      </div>
+      <div class="compare reveal">
+        <article class="compare-card">
+          <div class="compare-top"><span>SOZINHO</span><b>01</b></div>
+          <div class="compare-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/Af1ZPvkRrj4?rel=0&modestbranding=1" title="Vídeo feito sozinho" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="compare-foot">improviso · repetição · insegurança</div>
+        </article>
+        <article class="compare-card after">
+          <div class="compare-top"><span>COM DIREÇÃO</span><b>02</b></div>
+          <div class="compare-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/CkoStAs9m0I?rel=0&modestbranding=1" title="Vídeo com direção" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="compare-foot">clareza · presença · confiança</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section class="section noise" id="cases">
+    <div class="container">
+      <div class="case-feature">
+        <div class="case-image reveal" data-parallax="-0.025">
+          <img src="assets/case-raquel-ads.jpg" alt="Painel da campanha da cliente advogada">
+          <small>CASE 01 · ADVOCACIA · PERFORMANCE</small>
+        </div>
+        <div class="case-copy reveal">
+          <div class="eyebrow">Case de sucesso</div>
+          <h2 class="title">Quando a mensagem certa encontra a pessoa certa.</h2>
+          <p>Para uma cliente advogada, a estratégia começou antes do anúncio: roteiro alinhado ao perfil de cliente ideal, linguagem direta e comunicação feita para gerar identificação.</p>
+          <div class="result">
+            <strong>+800</strong>
+            <span>contatos de pessoas interessadas gerados pela campanha de mídia paga.</span>
+          </div>
+          <p class="case-quote">Boa estratégia não é falar com todo mundo. É fazer o público certo parar, se reconhecer e agir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre / Rodrigo Ramos -->
+  <section class="section about-v3 noise" id="sobre">
+    <div class="container about-grid">
+      <div class="portrait-art portrait-real reveal">
+        <div class="portrait-photo-wrap">
+          <img class="portrait-photo" src="assets/rodrigo.webp" alt="Rodrigo Ramos, fundador e diretor audiovisual" data-parallax="-0.018">
+        </div>
+        <div class="portrait-caption" data-parallax-x="0.018">
+          <span>RODRIGO RAMOS</span>
+          <small>Direção · fotografia · audiovisual</small>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <div class="eyebrow">Por trás da direção</div>
+        <h2 class="title">Eu sou Rodrigo Ramos.</h2>
+        <p>Sou o fundador da <strong>3P's Produções</strong>, um estúdio físico de criação de conteúdo e vendas para redes sociais localizado na Barra da Tijuca, Rio de Janeiro.</p>
+        <p>A minha jornada com as câmeras começou após mais de 20 anos trabalhando na linha de frente das vendas comerciais, liderando negociações e conectando soluções a clientes em ambientes corporativos de alta exigência — desde startups até multinacionais.<br><br>Essa bagagem única no mercado me deu uma visão muito clara e rara no audiovisual: <strong>vídeo nas redes sociais não serve apenas para ser bonito, serve para vender.</strong></p>
+        <p>É com essa mentalidade comercial que comandei a criação do nosso estúdio na Barra da Tijuca. Aqui, nós oferecemos a estrutura definitiva de gravação e direção para que profissionais liberais, empresários e marcas gravem conteúdos em nível de cinema, com roteiros focados em conversão e direção de set que elimina qualquer timidez em frente às câmeras.</p>
+        <p>Eu pratico diariamente o método que aplico com os meus clientes. Para provar o poder da retenção e do algoritmo digital na arena real, criei o canal <strong>Além do Ponteiro (<a href="https://www.instagram.com/alemdoponteiro/" target="_blank" rel="noreferrer" style="color:var(--gold2);text-decoration:underline">@alemdoponteiro</a>)</strong>, um canal de relojoaria de luxo que utilizo como meu laboratório vivo de testes de SEO, monetização e formatos verticais (Reels, Shorts e TikTok).</p>
+        <p>E por entender tão profundamente o campo de batalha, expandi a atuação do nosso estúdio: além de gravar e editar para os nossos clientes de assessoria, hoje atuo ativamente como <strong>Mentor e Treinador</strong>.</p>
+        <p>Através de consultorias individuais de posicionamento e da nossa imersão presencial de dois dias no próprio estúdio, eu treino empresários, profissionais e futuros videomakers a dominarem suas próprias lentes, roteiros e equipamentos.<br><br>Seja gravando o seu conteúdo com o rigor do nosso estúdio, ou treinando você para se tornar um videomaker, a nossa missão é apenas uma: <strong>transformar a sua presença digital na única escolha lógica do seu cliente.</strong></p>
+      </div>
+    </div>
+    
+    <div class="container about-cta">
+      <a class="btn gold" href="https://wa.me/5521979223500" target="_blank" rel="noreferrer">Fale com o Diretor <span>↗</span></a>
+    </div>
+    
+    <div class="container names-block">
+      <div class="names-head reveal">
+        <div class="eyebrow">Trajetória e relacionamento</div>
+        <h3>Alguns nomes com quem já trabalhei.</h3>
+        <p>Registros de projetos, eventos e conteúdos produzidos ao longo da minha trajetória.</p>
+      </div>
+      <div class="famous-grid">
+        <article class="famous-card reveal" data-parallax="0.014">
+          <img src="assets/ronaldinho.webp" alt="Registro de trabalho com Ronaldinho Gaúcho">
+          <div class="famous-label">
+            <small>FUTEBOL E ENTRETENIMENTO</small>
+            <strong>Ronaldinho Gaúcho</strong>
+            <span>Mito</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="-0.016">
+          <video src="assets/angela.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>ARTE E TELEDRAMATURGIA</small>
+            <strong>Angela Vieira</strong>
+            <span>Atriz da TV Globo</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="0.018">
+          <video src="assets/jp.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>JORNALISMO E TELEVISÃO</small>
+            <strong>JP Vergueiro</strong>
+            <span>Apresentador do Jornal da Band</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="-0.017">
+          <video src="assets/andre.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>FORMAÇÃO E MENTORIA</small>
+            <strong>André Kaercher</strong>
+            <span>Treinador de treinadores · Criador do MTI</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="0.019">
+          <video src="assets/thiago.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>VENDAS B2B</small>
+            <strong>Thiago Reis</strong>
+            <span>CEO da Growth Machine</span>
+          </div>
+        </article>
+      </div>
+    </div>
+    
+    <div class="container studio-proof reveal" id="estudio">
+      <div class="studio-copy">
+        <div class="eyebrow">Estrutura própria</div>
+        <h3>Estúdio na Barra da Tijuca.</h3>
+        <p>Um espaço preparado para produzir conteúdo, fotografia, cursos, entrevistas e podcasts com direção, iluminação e áudio profissionais.</p>
+        <div class="studio-points">
+          <span>✓ Conteúdo vertical e horizontal</span>
+          <span>✓ Fotografia profissional</span>
+          <span>✓ Cursos e entrevistas</span>
+          <span>✓ Estrutura para podcasts</span>
+        </div>
+      </div>
+      <div class="studio-media studio-instagram">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYF4eUqxI3k/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DYF4eUqxI3k/" target="_blank" rel="noreferrer">Ver o estúdio na Barra da Tijuca no Instagram ↗</a>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluções Audiovisuais / Serviços -->
+  <section class="section services-open noise" id="servicos">
+    <div class="container">
+      <div class="services-open-head reveal">
+        <div class="eyebrow">Soluções audiovisuais</div>
+        <h2 class="title">Veja o que fazemos.<br><span class="gold">E como cada entrega se apresenta.</span></h2>
+      </div>
+
+      <!-- 01 Conteúdo para redes sociais -->
+      <article class="service-showcase reveal" id="conteudo-redes">
+        <div class="service-showcase-head" data-parallax-x="0.014">
+          <span class="service-index">01</span>
+          <div>
+            <small>PRESENÇA E POSICIONAMENTO</small>
+            <h3>Conteúdo para redes sociais</h3>
+          </div>
+          <p>Direção, captação e edição para transformar conhecimento em conteúdo que gera lembrança, confiança e conversa.</p>
+        </div>
+        <div class="portfolio-grid" data-parallax-x="-0.012">
+          <article class="portfolio-card">
+            <div class="portfolio-frame vertical">
+              <iframe src="https://www.youtube.com/embed/J2Myn5_Ot88" title="Reels da Silvia" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Conteúdo dinâmico</small>
+              <h4>Reels da Silvia</h4>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-frame vertical">
+              <iframe src="https://www.youtube.com/embed/P0aTGN6WkKo?rel=0" title="Corretor de imóveis" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Posicionamento</small>
+              <h4>Corretor de imóveis</h4>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <!-- 02 Fotografia profissional -->
+      <article class="service-showcase light-showcase reveal" id="fotografia">
+        <div class="service-showcase-head" data-parallax-x="-0.012">
+          <span class="service-index">02</span>
+          <div>
+            <small>IMAGEM PROFISSIONAL</small>
+            <h3>Fotografia profissional</h3>
+          </div>
+          <p>Retratos dirigidos, seleção cuidadosa e tratamento em Photoshop. Nenhuma fotografia crua é entregue.</p>
+        </div>
+        <div class="photo-gallery" data-parallax-x="0.012">
+          <div class="photo-card">
+            <img src="assets/images/photography/foto_01.jpg" alt="Retrato profissional de alta autoridade" loading="lazy">
+          </div>
+          <div class="photo-card">
+            <img src="assets/images/photography/foto_02.jpg" alt="Retrato corporativo executivo" loading="lazy">
+          </div>
+          <div class="photo-card">
+            <img src="assets/images/photography/foto_03.jpg" alt="Fotografia de moda e estilo" loading="lazy">
+          </div>
+          <div class="photo-card">
+            <img src="assets/images/photography/foto_04.jpg" alt="Retrato executivo de liderança" loading="lazy">
+          </div>
+          <div class="photo-card">
+            <img src="assets/images/photography/foto_05.jpg" alt="Retrato profissional corporativo" loading="lazy">
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Cobertura de eventos -->
+      <article class="service-showcase reveal" id="eventos">
+        <div class="service-showcase-head" data-parallax-x="0.016">
+          <span class="service-index">03</span>
+          <div>
+            <small>REGISTRO E PROVA SOCIAL</small>
+            <h3>Cobertura de eventos</h3>
+          </div>
+          <p>Fotografia, Story Maker e videomaker para registrar autoridade, público, bastidores e os momentos que continuam gerando conteúdo.</p>
+        </div>
+        <div class="portfolio-grid" data-parallax-x="0.012">
+          <article class="portfolio-card">
+            <div class="portfolio-frame vertical">
+              <iframe src="https://www.youtube.com/embed/QuIKmVMKgBY?rel=0" title="After Movie Integral Médica" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Evento e prova social</small>
+              <h4>After Movie Integral Médica</h4>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-frame vertical">
+              <iframe src="https://www.youtube.com/embed/qcC0ONycFMU" title="Smart Fit" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Evento corporativo</small>
+              <h4>Smart Fit</h4>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <!-- 04 Cursos e treinamentos -->
+      <article class="service-showcase light-showcase reveal" id="cursos">
+        <div class="service-showcase-head" data-parallax-x="-0.014">
+          <span class="service-index">04</span>
+          <div>
+            <small>CONHECIMENTO EM PRODUTO</small>
+            <h3>Cursos e treinamentos</h3>
+          </div>
+          <p>Captação com direção, luz, áudio e teleprompter para transformar aulas e treinamentos em produtos claros e profissionais.</p>
+        </div>
+        <div class="course-grid" data-parallax-x="-0.011">
+          <article class="portfolio-card">
+            <div class="portfolio-frame landscape">
+              <iframe src="https://www.youtube.com/embed/4V6Er4lU7Es?rel=0" title="Mulheres da Lei" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Curso online</small>
+              <h4>Mulheres da Lei</h4>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-frame landscape">
+              <iframe src="https://www.youtube.com/embed/KfKvsd7IzJw?rel=0" title="O Outro Lado da Bíblia" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Curso online</small>
+              <h4>O Outro Lado da Bíblia</h4>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-frame landscape">
+              <iframe src="https://www.youtube.com/embed/e1fGX7uMWVo?rel=0" title="Micropigmentação Labial" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-meta">
+              <small>Treinamento técnico</small>
+              <h4>Micropigmentação Labial</h4>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <!-- 05 Captação para agências -->
+      <article class="service-showcase agency-showcase reveal" id="captacao-agencias">
+        <div class="service-showcase-head" data-parallax-x="0.012">
+          <span class="service-index">05</span>
+          <div>
+            <small>OPERAÇÃO WHITE LABEL</small>
+            <h3>Captação para agências</h3>
+          </div>
+          <p>A agência cuida da estratégia e da edição; nossa equipe entra com direção, captação em 4K e arquivos brutos organizados na nuvem.</p>
+        </div>
+        <div class="agency-flow" data-parallax-x="0.012">
+          <span>BRIEFING</span><i>→</i><span>DIREÇÃO</span><i>→</i><span>CAPTAÇÃO 4K</span><i>→</i><span>ARQUIVOS BRUTOS</span>
+        </div>
+      </article>
+
+      <!-- 06 Institucional e manifesto -->
+      <article class="service-showcase light-showcase reveal" id="institucional">
+        <div class="service-showcase-head" data-parallax-x="-0.01">
+          <span class="service-index">06</span>
+          <div>
+            <small>MARCA, MISSÃO E LEGADO</small>
+            <h3>Institucional e manifesto</h3>
+          </div>
+          <p>Um filme principal para apresentar essência, estrutura, diferenciais e depoimentos, com narrativa construída para gerar credibilidade.</p>
+        </div>
+        <div class="institutional-feature" data-parallax-x="-0.010">
+          <div class="portfolio-frame landscape">
+            <iframe src="https://www.youtube.com/embed/73AaKkBId6c?rel=0" title="Institucional e manifesto" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div>
+            <h4>Uma história completa em um único projeto.</h4>
+            <p>O espaço foi preparado para receber o filme principal, a descrição do desafio, a solução criativa e o resultado para a marca.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Planos / Conteúdo Recorrente -->
+  <section class="section plans noise" id="planos">
+    <div class="container">
+      <div class="eyebrow">Soluções · conteúdo recorrente</div>
+      <h2 class="title reveal">Escolha o ritmo da sua marca.</h2>
+      <p class="lead" style="color:#5d574f">Contratos trimestrais com direção em todas as gravações, roteiro estratégico e entrega programada em lotes de 10 vídeos.</p>
+      <div class="plan-grid">
+        <article class="plan reveal" data-parallax="0.012">
+          <small>PRESENÇA ATIVA</small>
+          <h3>10 vídeos</h3>
+          <p>Para aparecer de 2 a 3 vezes por semana com autoridade e conteúdo direto ao ponto.</p>
+          <div class="plan-lines">
+            <span>✓ 10 vídeos dinâmicos</span>
+            <span>✓ 1 sessão de estúdio por mês</span>
+            <span>✓ Briefing e alinhamento de pautas</span>
+            <span>✓ Direção de set e postura</span>
+            <span>✓ Edição profissional legendada</span>
+            <span>✓ Entrega em lotes programados</span>
+          </div>
+          <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20o%20Plano%20de%2010%20v%C3%ADdeos" target="_blank">Solicitar Proposta ↗</a>
+        </article>
+        <article class="plan featured reveal" data-parallax="-0.016">
+          <span class="plan-badge">MAIS ESCOLHIDO</span>
+          <small>DIAS ÚTEIS</small>
+          <h3>20 vídeos</h3>
+          <p>Presença forte de segunda a sexta com peças dinâmicas e vídeos premium.</p>
+          <div class="plan-lines">
+            <span>✓ 16 vídeos dinâmicos + 4 premium</span>
+            <span>✓ 1 sessão de estúdio por mês</span>
+            <span>✓ Briefing e alinhamento estratégico</span>
+            <span>✓ Direção de set e postura</span>
+            <span>✓ Edição dinâmica e cinematográfica</span>
+            <span>✓ Entrega em lotes de 10 vídeos</span>
+          </div>
+          <a class="btn" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20o%20Plano%20de%2020%20v%C3%ADdeos" target="_blank">Solicitar Proposta ↗</a>
+        </article>
+        <article class="plan reveal" data-parallax="0.018">
+          <small>MÊS COMPLETO</small>
+          <h3>30 vídeos</h3>
+          <p>Presença diária para marcas que querem ocupar espaço todos os dias.</p>
+          <div class="plan-lines">
+            <span>✓ 24 vídeos dinâmicos + 6 premium</span>
+            <span>✓ Até 2 sessões por mês</span>
+            <span>✓ Planejamento completo de conteúdo</span>
+            <span>✓ Direção de set e postura</span>
+            <span>✓ Edição de alto impacto e acabamento</span>
+            <span>✓ Entrega contínua em lotes</span>
+          </div>
+          <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20o%20Plano%20de%2030%20v%C3%ADdeos" target="_blank">Solicitar Proposta ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos Detalhados -->
+  <section class="section products-detailed noise" id="produtos">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <div class="eyebrow">Soluções e formatos</div>
+          <h2 class="title">Soluções para cada momento do negócio.</h2>
+        </div>
+        <p>Conheça os formatos disponíveis para eventos, cursos, retratos e filmes corporativos. Cada entrega é dimensionada sob medida para o seu objetivo.</p>
+      </div>
+
+      <!-- 01 Cobertura de eventos -->
+      <div class="offer-family reveal">
+        <div class="offer-family-head">
+          <span>01</span>
+          <div>
+            <small>REGISTRO · CONTEÚDO · EXPERIÊNCIA</small>
+            <h3>Cobertura de eventos</h3>
+          </div>
+        </div>
+        <div class="offer-grid four">
+          <article class="plan compact">
+            <small>FOTOGRAFIA</small>
+            <h3>Cobertura fotográfica</h3>
+            <p>Para registrar pessoas, estrutura e os momentos que definem o evento.</p>
+            <div class="plan-lines">
+              <span>✓ Fotógrafo profissional</span>
+              <span>✓ Seleção das melhores imagens</span>
+              <span>✓ Tratamento individual no Photoshop</span>
+              <span>✓ Entrega digital em alta resolução</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Cobertura%20Fotogr%C3%A1fica" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact">
+            <small>CONTEÚDO IMEDIATO</small>
+            <h3>Story Maker</h3>
+            <p>Conteúdo vertical e bastidores produzidos durante a experiência.</p>
+            <div class="plan-lines">
+              <span>✓ Captação com equipamento dedicado</span>
+              <span>✓ Stories e bastidores em tempo real</span>
+              <span>✓ Conteúdo vertical dinâmico</span>
+              <span>✓ Entrega ágil durante o evento</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Story%20Maker" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact featured">
+            <span class="plan-badge">AFTERMOVIE</span>
+            <small>COBERTURA EM VÍDEO</small>
+            <h3>Videomaker</h3>
+            <p>Uma narrativa audiovisual para prolongar a percepção do evento.</p>
+            <div class="plan-lines">
+              <span>✓ Até 4 horas de cobertura</span>
+              <span>✓ Aftermovie de até 3 minutos</span>
+              <span>✓ Direção, captação 4K e edição</span>
+              <span>✓ Uma rodada de ajustes</span>
+            </div>
+            <a class="btn" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Videomaker%20de%20Evento" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact">
+            <small>EQUIPE COMPLETA</small>
+            <h3>Cobertura Premium</h3>
+            <p>Fotografia, vídeo e conteúdo imediato em uma cobertura integrada.</p>
+            <div class="plan-lines">
+              <span>✓ Fotógrafo + videomaker</span>
+              <span>✓ Story Maker dedicado</span>
+              <span>✓ Aftermovie e fotos tratadas</span>
+              <span>✓ Cobertura completa da experiência</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Cobertura%20Premium" target="_blank">Consultar ↗</a>
+          </article>
+        </div>
+        <div class="offer-note">Possibilidade de dimensionamento personalizado e horas adicionais conforme a escala do seu evento.</div>
+      </div>
+
+      <!-- 02 Cursos e treinamentos -->
+      <div class="offer-family reveal">
+        <div class="offer-family-head">
+          <span>02</span>
+          <div>
+            <small>CONHECIMENTO · PRODUTO · ESCALA</small>
+            <h3>Cursos e treinamentos</h3>
+          </div>
+        </div>
+        <div class="offer-grid three">
+          <article class="plan compact">
+            <small>VIDEOAULA FLASH</small>
+            <h3>Até 1 hora de conteúdo</h3>
+            <p>Uma entrega direta para aulas, módulos iniciais e conteúdos especiais.</p>
+            <div class="plan-lines">
+              <span>✓ Até 1h30 de gravação</span>
+              <span>✓ Direção, luz e áudio de estúdio</span>
+              <span>✓ Teleprompter e gravação em 4K</span>
+              <span>✓ Edição e organização dos módulos</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Videoaula%20Flash" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact featured">
+            <span class="plan-badge">MAIS CONTRATADO</span>
+            <small>MINICURSO</small>
+            <h3>Até 2 horas de conteúdo</h3>
+            <p>Para transformar uma metodologia objetiva em um produto organizado.</p>
+            <div class="plan-lines">
+              <span>✓ Até 3 horas de gravação</span>
+              <span>✓ Direção, luz e áudio de estúdio</span>
+              <span>✓ Teleprompter e gravação em 4K</span>
+              <span>✓ Edição e organização dos módulos</span>
+            </div>
+            <a class="btn" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Minicurso" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact">
+            <small>CURSO COMPLETO</small>
+            <h3>Até 4 horas de conteúdo</h3>
+            <p>Mais profundidade para cursos completos e treinamentos estruturados.</p>
+            <div class="plan-lines">
+              <span>✓ Até 5 horas de gravação</span>
+              <span>✓ Direção, luz e áudio de estúdio</span>
+              <span>✓ Teleprompter e gravação em 4K</span>
+              <span>✓ Edição e organização completa</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Curso%20Completo" target="_blank">Consultar ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- 03 Institucional e manifesto -->
+      <div class="offer-family reveal">
+        <div class="offer-family-head">
+          <span>03</span>
+          <div>
+            <small>MARCA · NARRATIVA · AUTORIDADE</small>
+            <h3>Institucional e manifesto</h3>
+          </div>
+        </div>
+        <div class="offer-grid two">
+          <article class="plan compact">
+            <small>INSTITUCIONAL ESSENCIAL</small>
+            <h3>Clareza para apresentar sua empresa.</h3>
+            <p>Um filme objetivo para explicar estrutura, diferenciais e proposta de valor.</p>
+            <div class="plan-lines">
+              <span>✓ Sessão de até 4 horas</span>
+              <span>✓ Filme de até 2 minutos</span>
+              <span>✓ Até 2 depoimentos e 2 cortes verticais</span>
+              <span>✓ Direção, áudio, luz e edição refinada</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20V%C3%ADdeo%20Institucional" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact featured">
+            <span class="plan-badge">MAIOR PROFUNDIDADE</span>
+            <small>MANIFESTO COMPLETO</small>
+            <h3>Uma narrativa para marcar posição.</h3>
+            <p>Missão, prova social e emoção reunidas em um filme de marca.</p>
+            <div class="plan-lines">
+              <span>✓ Sessão de até 4 horas</span>
+              <span>✓ Filme principal de até 5 minutos</span>
+              <span>✓ Até 3 depoimentos e 5 cortes verticais</span>
+              <span>✓ Narrativa de marca e acabamento cinema</span>
+            </div>
+            <a class="btn" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Manifesto%20Completo" target="_blank">Consultar ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- 04 Fotografia profissional -->
+      <div class="offer-family reveal">
+        <div class="offer-family-head">
+          <span>04</span>
+          <div>
+            <small>IMAGEM · CREDIBILIDADE · POSICIONAMENTO</small>
+            <h3>Fotografia profissional</h3>
+          </div>
+        </div>
+        <div class="offer-grid three">
+          <article class="plan compact">
+            <small>ESSENCIAL</small>
+            <h3>10 fotos tratadas</h3>
+            <p>Uma base profissional para perfil, apresentação e comunicação.</p>
+            <div class="plan-lines">
+              <span>✓ Direção fotográfica de poses</span>
+              <span>✓ Seleção orientada</span>
+              <span>✓ Tratamento individual no Photoshop</span>
+              <span>✓ Entrega digital em alta resolução</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Fotografia%20Profissional%20(10%20fotos)" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact featured">
+            <span class="plan-badge">MAIS VERSÁTIL</span>
+            <small>PROFISSIONAL</small>
+            <h3>20 fotos tratadas</h3>
+            <p>Mais variação de poses, enquadramentos e possibilidades de uso.</p>
+            <div class="plan-lines">
+              <span>✓ Direção fotográfica de poses</span>
+              <span>✓ Maior variação de looks e cenários</span>
+              <span>✓ Tratamento individual no Photoshop</span>
+              <span>✓ Entrega digital em alta resolução</span>
+            </div>
+            <a class="btn" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Fotografia%20Profissional%20(20%20fotos)" target="_blank">Consultar ↗</a>
+          </article>
+          <article class="plan compact">
+            <small>COMPLETO</small>
+            <h3>30 fotos tratadas</h3>
+            <p>Um banco de imagens completo para campanhas e posicionamento.</p>
+            <div class="plan-lines">
+              <span>✓ Direção fotográfica de poses</span>
+              <span>✓ Banco de imagens amplo para o ano todo</span>
+              <span>✓ Tratamento individual no Photoshop</span>
+              <span>✓ Entrega digital em alta resolução</span>
+            </div>
+            <a class="btn dark" href="https://wa.me/5521979223500?text=Ol%C3%A1%20Rodrigo,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Fotografia%20Profissional%20(30%20fotos)" target="_blank">Consultar ↗</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agências / Captação -->
+  <section class="section section-light" id="agencias">
+    <div class="container direction-grid">
+      <div class="direction-copy reveal">
+        <div class="eyebrow">Para agências e parceiros</div>
+        <h2 class="title">Você cuida da estratégia.<br><span class="gold">A gente entra com a captação.</span></h2>
+        <p>Roteiro alinhado, direção de quem entende pessoas diante da câmera e arquivos brutos em 4K entregues na nuvem. Uma operação white label para escalar sem estrutura fixa.</p>
+        <div class="points">
+          <div class="point"><b>MEIA DIÁRIA</b> Até 3h de captação 4K com direção de set</div>
+          <div class="point"><b>DIÁRIA COMPLETA</b> Até 6h de captação 4K com direção de set</div>
+          <div class="point"><b>INCLUÍDO</b> Direção · Captação 4K · Arquivos organizados na nuvem</div>
+        </div>
+      </div>
+      <div class="agency-visual reveal" data-parallax="-0.018">
+        <div class="agency-image-card">
+          <img src="assets/images/captacao_agencias.jpg" alt="Captação e direção profissional em estúdio 4K" class="agency-photo">
+          <div class="agency-overlay">
+            <span>OPERAÇÃO WHITE LABEL</span>
+            <strong>Captação 4K com Direção de Set</strong>
+            <p>Entrega de arquivos brutos organizados diretamente na nuvem para a sua equipe editar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ribbon -->
+  <div class="motion-ribbon ribbon-dark" aria-hidden="true">
+    <div class="motion-track reverse" data-marquee="-0.09">CONTEÚDO • FOTOGRAFIA • EVENTOS • CURSOS • INSTITUCIONAL • CONTEÚDO • FOTOGRAFIA • EVENTOS • </div>
+  </div>
+
+  <!-- Canais: YouTube & Instagram -->
+  <section class="section channel-section noise" id="canais">
+    <div class="container">
+      <div class="services-open-head reveal">
+        <div class="eyebrow">Trabalhos em movimento</div>
+        <h2 class="title">A melhor apresentação<br><span class="gold">é aquela que você assiste.</span></h2>
+      </div>
+      
+      <!-- YouTube Showcase (Apenas 3 vídeos horizontais) -->
+      <article class="youtube-showcase reveal" data-parallax="0.012">
+        <div class="platform-head">
+          <div>
+            <small>YOUTUBE · CANAL OFICIAL</small>
+            <h3>Produções completas e portfólio</h3>
+            <p>Vídeos recentes, projetos longos, coberturas, cursos e filmes institucionais em formato horizontal.</p>
+          </div>
+          <a class="btn outline" href="https://www.youtube.com/@videomakerrodrigoramos" target="_blank">ABRIR CANAL ↗</a>
+        </div>
+        <div class="youtube-card-grid">
+          <a class="youtube-card" href="https://www.youtube.com/watch?v=fsJEGUlxEYM" target="_blank">
+            <img src="https://i.ytimg.com/vi/fsJEGUlxEYM/hqdefault.jpg" alt="Videoclipe Mesmo no Vale há Vida">
+            <span class="play-chip">▶</span>
+            <div>
+              <small>VIDEOCLIPE</small>
+              <strong>Mesmo no Vale há Vida</strong>
+            </div>
+          </a>
+          <a class="youtube-card" href="https://www.youtube.com/watch?v=jJBAiHOzcqU" target="_blank">
+            <img src="https://i.ytimg.com/vi/jJBAiHOzcqU/hqdefault.jpg" alt="Evento de colaboradores da Smart Fit">
+            <span class="play-chip">▶</span>
+            <div>
+              <small>COBERTURA DE EVENTO</small>
+              <strong>Smart Fit</strong>
+            </div>
+          </a>
+          <a class="youtube-card" href="https://www.youtube.com/watch?v=73AaKkBId6c" target="_blank">
+            <img src="https://i.ytimg.com/vi/73AaKkBId6c/hqdefault.jpg" alt="Vídeo institucional Tree Intelligence">
+            <span class="play-chip">▶</span>
+            <div>
+              <small>INSTITUCIONAL</small>
+              <strong>Tree Intelligence</strong>
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <!-- Instagram Showcase -->
+      <article class="instagram-showcase reveal" data-parallax="-0.012">
+        <div class="instagram-copy">
+          <small>INSTAGRAM · @VIDEOMAKERRODRIGORAMOS</small>
+          <h3>Conteúdo, bastidores e trabalhos recentes.</h3>
+          <a class="btn dark" href="https://www.instagram.com/videomakerrodrigoramos/" target="_blank">ABRIR INSTAGRAM ↗</a>
+        </div>
+        <div class="instagram-white-shell">
+          <iframe src="https://www.instagram.com/videomakerrodrigoramos/embed" title="Instagram de Rodrigo Ramos" loading="lazy"></iframe>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-concrete" id="faq">
+    <div class="container faq-grid">
+      <div class="reveal">
+        <div class="eyebrow">Dúvidas frequentes</div>
+        <h2 class="title">Clareza também faz parte da entrega.</h2>
+        <p class="lead" style="color:#5c554d;margin-top:16px">Tudo o que você precisa saber sobre o nosso método de direção, estrutura de estúdio, prazos e condições comerciais.</p>
+      </div>
+      <div class="faq-list reveal" data-parallax="-0.010">
+
+        <!-- 01 Processo e Preparação -->
+        <div class="faq-category">
+          <span class="faq-category-badge">01 · Processo e Preparação</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Eu preciso levar os roteiros prontos ou vocês criam os temas e os textos?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Você não precisa se preocupar em criar nada do zero sozinho.</strong> Nós fazemos o alinhamento estratégico prévio com base no seu nicho, nas dores do seu cliente ideal e no que realmente vende no seu mercado.</p>
+            <p>Montamos a estrutura dos roteiros (gancho de atenção, desenvolvimento e chamada para ação). Se você já tiver ideias ou temas técnicos que queira abordar, nós lapidamos para que a mensagem fique fluida, atraente e com linguagem de conversão.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Eu travo e sou tímido na frente da câmera. A direção realmente ajuda ou vou precisar ler teleprompter?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Mais de 90% das pessoas que gravam comigo no estúdio começaram dizendo exatamente isso.</strong> Meu papel no estúdio não é apenas apertar o botão de gravar, é dirigir você do início ao fim.</p>
+            <p>Eu conduzo a sua fala frase por frase, ajusto a postura, o tom de voz e a direção do olhar. Você não precisa decorar textos longos nem parecer um robô lendo. A dinâmica é tão natural quanto uma conversa orientada — gravamos em blocos curtos e só liberamos o take quando o resultado transmitir máxima segurança e autoridade.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Quantas trocas de roupa posso levar para o estúdio?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Recomendamos trazer de <strong>3 a 5 opções de looks</strong> (camisas, blazers, sobreposições e acessórios diferentes). Temos camarim e espaço reservado para você se trocar com total conforto.</p>
+            <p>Alternamos os figurinos e os enquadramentos durante a sessão para que o seu feed pareça ter sido gravado em vários dias diferentes, mantendo a variedade e o dinamismo visual da sua marca.</p>
+          </div>
+        </div>
+
+        <!-- 02 Escopo dos Planos e Edição -->
+        <div class="faq-category">
+          <span class="faq-category-badge">02 · Escopo dos Planos e Edição</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Qual a diferença entre vídeo dinâmico e vídeo premium nos planos de 20 e 30 vídeos?<span>＋</span></button>
+          <div class="faq-a">
+            <p>O <strong>vídeo dinâmico</strong> é o formato ágil para o dia a dia das redes (Reels, TikTok e Shorts): foco em retenção rápida, cortes precisos, legendas dinâmicas e elementos visuais para responder dúvidas e gerar conexão imediata.</p>
+            <p>O <strong>vídeo premium</strong> possui acabamento cinematográfico: tratamento de cor avançado, narrativa mais elaborada, inserção de b-rolls (cenas de apoio de alta qualidade) e ritmo pensado para anúncios de alta conversão, autoridade institucional ou lançamentos.</p>
+            <div class="faq-video-compare">
+              <div class="faq-video-box">
+                <div class="faq-video-head">
+                  <small>Exemplo de Vídeo Premium</small>
+                  <a href="https://youtube.com/shorts/J2Myn5_Ot88" target="_blank" class="faq-video-link">Assistir ↗</a>
+                </div>
+                <div class="faq-video-frame">
+                  <iframe src="https://www.youtube-nocookie.com/embed/J2Myn5_Ot88" title="Exemplo de Vídeo Premium" loading="lazy" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="faq-video-box">
+                <div class="faq-video-head">
+                  <small>Exemplo de Vídeo Dinâmico</small>
+                  <a href="https://youtube.com/shorts/YTT7JiTkgVI" target="_blank" class="faq-video-link">Assistir ↗</a>
+                </div>
+                <div class="faq-video-frame">
+                  <iframe src="https://www.youtube-nocookie.com/embed/YTT7JiTkgVI" title="Exemplo de Vídeo Dinâmico" loading="lazy" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Localização, Estrutura e Gravação Externa -->
+        <div class="faq-category">
+          <span class="faq-category-badge">03 · Localização, Estrutura e Gravação Externa</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Onde exatamente fica o estúdio na Barra da Tijuca e tem estacionamento?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Nosso estúdio fica localizado no <strong>Shopping Città América</strong>, na <strong>Avenida das Américas, 700</strong> — Barra da Tijuca, ao lado do Downtown e próximo à estação de metrô Jardim Oceânico. O local conta com estacionamento amplo, segurança e total comodidade para você e sua equipe.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Se eu preferir gravar na minha clínica/consultório ou empresa, vocês atendem?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Com certeza.</strong> Levamos toda a nossa estrutura móvel de cinema (câmeras 4K, iluminação profissional de estúdio, microfones de lapela sem fio e teleprompter) até o seu espaço.</p>
+            <p>Atendemos com flexibilidade na Barra da Tijuca, Recreio, Zona Sul e demais regiões do Rio de Janeiro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Posso levar convidados (sócio, equipe ou paciente para depoimento) na mesma sessão?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Sim! A sessão de estúdio é sua.</strong> Você pode trazer sócios, membros da sua equipe para compor vídeos ou clientes para gravar depoimentos e prova social de alta credibilidade.</p>
+          </div>
+        </div>
+
+        <!-- 04 Dúvidas Específicas de Nicho -->
+        <div class="faq-category">
+          <span class="faq-category-badge">04 · Dúvidas Específicas de Nicho</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Médicos e Profissionais de Saúde: os vídeos respeitam as normas do CFM/CRM?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Temos total familiaridade com as diretrizes e regras éticas do CFM e conselhos regionais.</strong> Todas as pautas e abordagens são construídas com foco em autoridade técnico-científica, educação em saúde e valorização da consulta, sem promessas sensacionalistas ou violação de sigilo médico.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Agências e Parceiros (White Label): como funciona o sigilo e a entrega dos arquivos?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Atuamos com <strong>sigilo contratual absoluto (NDA)</strong>. No dia da gravação, nossa equipe opera como o braço de captação da sua agência perante o seu cliente final.</p>
+            <p>Entregamos todos os arquivos brutos organizados em 4K na nuvem via Google Drive ou Dropbox em até 24h a 48h úteis após o set.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Cursos e Infoprodutos: qual a estrutura disponível para vídeo-aulas?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Nossa estrutura de estúdio conta com suporte para teleprompter profissional, lapelas de alta fidelidade e cenário preparado para vídeo-aulas, com possibilidade de captura combinada de slides e material didático para a sua plataforma de membros.</p>
+          </div>
+        </div>
+
+        <!-- 05 Pagamento e Contrato -->
+        <div class="faq-category">
+          <span class="faq-category-badge">05 · Pagamento e Contrato</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">O que significa o contrato trimestral?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Trabalhamos com o ciclo mínimo de <strong>3 meses</strong> porque presença digital e autoridade de marca exigem consistência. Um mês isolado é apenas um teste; três meses é onde você constrói posicionamento, educa o público e colhe resultados comerciais consistentes. O pagamento é feito mês a mês.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Vocês emitem Nota Fiscal?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Sim</strong>, emitimos Nota Fiscal de prestação de serviços para todas as contratações (Pessoa Jurídica ou Pessoa Física).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Como funciona a proposta e as formas de pagamento?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Apresentamos uma <strong>proposta personalizada</strong> de acordo com a sua necessidade e o volume de entregas do projeto. Trabalhamos com condições especiais para pagamento à vista via Pix ou parcelamento no cartão de crédito em até 3×.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta noise" id="contato">
+    <div class="cta-orbit cta-orbit-one" data-parallax="-0.035"></div>
+    <div class="cta-orbit cta-orbit-two" data-parallax="0.028"></div>
+    <div class="container cta-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="color:#2d2117">O próximo frame começa aqui</div>
+        <h2 class="title">Vamos transformar o que você faz em algo que as pessoas <span>não esquecem?</span></h2>
+      </div>
+      <div class="cta-side reveal">
+        <a class="btn dark" href="https://wa.me/5521979223500" target="_blank">Falar com Rodrigo no WhatsApp ↗</a>
+        <small>Barra da Tijuca · Rio de Janeiro</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img class="footer-logo" data-brand src="" alt="Logomarca da produtora">
+    </div>
+    <nav class="footer-nav">
+      <b>Explorar</b>
+      <a href="#mercado">Mercado</a>
+      <a href="#sobre">Quem sou</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#cases">Cases</a>
+    </nav>
+    <nav class="footer-nav">
+      <b>Conectar</b>
+      <a href="https://www.instagram.com/videomakerrodrigoramos/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@videomakerrodrigoramos" target="_blank">YouTube</a>
+      <a href="https://www.linkedin.com/in/rprramos/" target="_blank">LinkedIn</a>
+    </nav>
+    <div class="footer-quote">“O que constrói uma marca não é só o que ela vende. É o que ela faz as pessoas sentirem — e lembrarem.”</div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 · Produção audiovisual</span>
+    <span>Rodrigo Ramos · Rio de Janeiro</span>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <span>Topo</span>
+</button>
+
+<script>
+const brandAsset='assets/logo.png';
+document.querySelectorAll('[data-brand]').forEach(img=>img.src=brandAsset);
+const progress=document.getElementById('scrollProgress');
+const parallaxEls=[...document.querySelectorAll('[data-parallax]')];
+const horizontalEls=[...document.querySelectorAll('[data-parallax-x]')];
+const marqueeEls=[...document.querySelectorAll('[data-marquee]')];
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let ticking=false;
+
+function updateMotion(){
+  const vh=innerHeight,max=Math.max(1,document.documentElement.scrollHeight-vh),mobile=innerWidth<=850,factor=mobile?.34:1,limit=mobile?24:92;
+  progress.style.setProperty('--progress',Math.min(100,scrollY/max*100)+'%');
+  if(!reduceMotion){
+    parallaxEls.forEach(el=>{
+      const r=el.getBoundingClientRect(),speed=Number(el.dataset.parallax||0),distance=r.top+r.height/2-vh/2,shift=Math.max(-limit,Math.min(limit,-distance*speed*factor));
+      el.style.setProperty('--py',shift.toFixed(2)+'px');
+    });
+    horizontalEls.forEach(el=>{
+      const r=el.getBoundingClientRect(),speed=Number(el.dataset.parallaxX||0),distance=r.top+r.height/2-vh/2,shift=Math.max(-limit,Math.min(limit,-distance*speed*factor));
+      el.style.setProperty('--px',shift.toFixed(2)+'px');
+    });
+    marqueeEls.forEach(el=>{
+      const speed=Number(el.dataset.marquee||0),shift=(scrollY*speed)%Math.max(500,el.scrollWidth/2);
+      el.style.setProperty('--mx',shift.toFixed(2)+'px');
+    });
+  } else {
+    parallaxEls.forEach(el=>el.style.setProperty('--py','0px'));
+    horizontalEls.forEach(el=>el.style.setProperty('--px','0px'));
+    marqueeEls.forEach(el=>el.style.setProperty('--mx','0px'));
+  }
+  ticking=false;
+}
+
+function requestMotion(){
+  if(!ticking){
+    requestAnimationFrame(updateMotion);
+    ticking=true;
+  }
+}
+
+addEventListener('scroll',requestMotion,{passive:true});
+addEventListener('resize',requestMotion);
+updateMotion();
+
+const menu=document.getElementById('menubtn'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>{
+  const item=b.parentElement;
+  document.querySelectorAll('.faq-item').forEach(x=>{if(x!==item)x.classList.remove('open')});
+  item.classList.toggle('open');
+}));
+
+const observer=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('on');
+    observer.unobserve(e.target);
+  }
+}),{threshold:.08});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Back to Top button logic
+const backToTopBtn = document.getElementById('backToTop');
+if(backToTopBtn){
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 350) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+<script>
+window.addEventListener("load",()=>window.instgrm?.Embeds?.process());
+setTimeout(()=>window.instgrm?.Embeds?.process(),1200);
+</script>
+</body>
+</html>
+
