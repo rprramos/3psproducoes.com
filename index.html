@@ -325,12 +325,35 @@ button{font:inherit}
 .instagram-white-shell iframe{display:block;width:100%;height:100%;min-height:600px;border:0;background:#fff;border-radius:18px}
 
 /* FAQ */
-.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px}
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
 .faq-list{border-top:1px solid #0002}
+.faq-category{margin:36px 0 10px;padding-bottom:8px;border-bottom:1.5px solid rgba(111,75,48,.35);display:flex;align-items:center;gap:10px}
+.faq-category:first-child{margin-top:0}
+.faq-category-badge{font-size:9.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6f4b30}
 .faq-item{border-bottom:1px solid #0002}
-.faq-q{width:100%;background:transparent;border:0;color:var(--black);padding:20px 0;display:flex;justify-content:space-between;text-align:left;font:600 22px 'Manrope',sans-serif;cursor:pointer}
-.faq-a{display:none;padding:0 0 20px;color:#5e5953;font-size:12px;line-height:1.65;max-width:620px}
+.faq-q{width:100%;background:transparent;border:0;color:var(--black);padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;font:600 clamp(16px,1.4vw,20px)/1.35 'Manrope',sans-serif;cursor:pointer;transition:color .2s}
+.faq-q:hover{color:#7a4d2d}
+.faq-q span{font-size:22px;line-height:1;color:#7a4d2d;flex-shrink:0;transition:transform .25s ease,color .25s ease}
+.faq-item.open .faq-q{color:#7a4d2d}
+.faq-item.open .faq-q span{transform:rotate(45deg);color:#111}
+.faq-a{display:none;padding:0 0 22px;color:#4e4842;font-size:13.5px;line-height:1.75;max-width:680px}
+.faq-a p{margin:0 0 12px}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a strong{color:#1a1917;font-weight:700}
 .faq-item.open .faq-a{display:block}
+
+/* FAQ Video Comparison */
+.faq-video-compare{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px;max-width:580px}
+.faq-video-box{background:#1f201e;color:var(--ivory);border-radius:18px;padding:12px;border:1px solid rgba(219,188,130,.22);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.faq-video-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.faq-video-head small{font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+.faq-video-link{font-size:8px;font-weight:700;color:#c0b9af;text-decoration:underline;letter-spacing:.05em}
+.faq-video-link:hover{color:var(--gold2)}
+.faq-video-frame{aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#090a09}
+.faq-video-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:540px){
+  .faq-video-compare{grid-template-columns:1fr}
+}
 
 /* CTA */
 .cta{padding:100px 0;background:linear-gradient(115deg,#b8935e,#6d4b31);color:var(--black);position:relative;overflow:hidden}
@@ -1396,26 +1419,154 @@ button{font:inherit}
   <section class="section section-concrete" id="faq">
     <div class="container faq-grid">
       <div class="reveal">
-        <div class="eyebrow">Antes de começar</div>
+        <div class="eyebrow">Dúvidas frequentes</div>
         <h2 class="title">Clareza também faz parte da entrega.</h2>
+        <p class="lead" style="color:#5c554d;margin-top:16px">Tudo o que você precisa saber sobre o nosso método de direção, estrutura de estúdio, prazos e condições comerciais.</p>
       </div>
       <div class="faq-list reveal" data-parallax="-0.010">
-        <div class="faq-item">
-          <button class="faq-q">Como funciona a primeira conversa?<span>＋</span></button>
-          <div class="faq-a">Entendemos seu momento, público e objetivo. Depois indicamos a solução mais coerente.</div>
+
+        <!-- 01 Processo e Preparação -->
+        <div class="faq-category">
+          <span class="faq-category-badge">01 · Processo e Preparação</span>
         </div>
+
         <div class="faq-item">
-          <button class="faq-q">Onde fica o estúdio?<span>＋</span></button>
-          <div class="faq-a">Na Barra da Tijuca, no Rio de Janeiro. A estrutura atende vídeos, fotografias, cursos, entrevistas e podcasts.</div>
+          <button class="faq-q">Eu preciso levar os roteiros prontos ou vocês criam os temas e os textos?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Você não precisa se preocupar em criar nada do zero sozinho.</strong> Nós fazemos o alinhamento estratégico prévio com base no seu nicho, nas dores do seu cliente ideal e no que realmente vende no seu mercado.</p>
+            <p>Montamos a estrutura dos roteiros (gancho de atenção, desenvolvimento e chamada para ação). Se você já tiver ideias ou temas técnicos que queira abordar, nós lapidamos para que a mensagem fique fluida, atraente e com linguagem de conversão.</p>
+          </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-q">Vocês atendem fora do estúdio?<span>＋</span></button>
-          <div class="faq-a">Sim. A gravação pode acontecer no estúdio, no ambiente do cliente ou em locação combinada.</div>
+          <button class="faq-q">Eu travo e sou tímido na frente da câmera. A direção realmente ajuda ou vou precisar ler teleprompter?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Mais de 90% das pessoas que gravam comigo no estúdio começaram dizendo exatamente isso.</strong> Meu papel no estúdio não é apenas apertar o botão de gravar, é dirigir você do início ao fim.</p>
+            <p>Eu conduzo a sua fala frase por frase, ajusto a postura, o tom de voz e a direção do olhar. Você não precisa decorar textos longos nem parecer um robô lendo. A dinâmica é tão natural quanto uma conversa orientada — gravamos em blocos curtos e só liberamos o take quando o resultado transmitir máxima segurança e autoridade.</p>
+          </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-q">O material é entregue pronto para ser postado?<span>＋</span></button>
-          <div class="faq-a">Sim, inclusive o de redes sociais, já vai legendado.</div>
+          <button class="faq-q">Quantas trocas de roupa posso levar para o estúdio?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Recomendamos trazer de <strong>3 a 5 opções de looks</strong> (camisas, blazers, sobreposições e acessórios diferentes). Temos camarim e espaço reservado para você se trocar com total conforto.</p>
+            <p>Alternamos os figurinos e os enquadramentos durante a sessão para que o seu feed pareça ter sido gravado em vários dias diferentes, mantendo a variedade e o dinamismo visual da sua marca.</p>
+          </div>
         </div>
+
+        <!-- 02 Escopo dos Planos e Edição -->
+        <div class="faq-category">
+          <span class="faq-category-badge">02 · Escopo dos Planos e Edição</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Qual a diferença entre vídeo dinâmico e vídeo premium nos planos de 20 e 30 vídeos?<span>＋</span></button>
+          <div class="faq-a">
+            <p>O <strong>vídeo dinâmico</strong> é o formato ágil para o dia a dia das redes (Reels, TikTok e Shorts): foco em retenção rápida, cortes precisos, legendas dinâmicas e elementos visuais para responder dúvidas e gerar conexão imediata.</p>
+            <p>O <strong>vídeo premium</strong> possui acabamento cinematográfico: tratamento de cor avançado, narrativa mais elaborada, inserção de b-rolls (cenas de apoio de alta qualidade) e ritmo pensado para anúncios de alta conversão, autoridade institucional ou lançamentos.</p>
+            <div class="faq-video-compare">
+              <div class="faq-video-box">
+                <div class="faq-video-head">
+                  <small>Exemplo de Vídeo Premium</small>
+                  <a href="https://youtube.com/shorts/J2Myn5_Ot88" target="_blank" class="faq-video-link">Assistir ↗</a>
+                </div>
+                <div class="faq-video-frame">
+                  <iframe src="https://www.youtube-nocookie.com/embed/J2Myn5_Ot88" title="Exemplo de Vídeo Premium" loading="lazy" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="faq-video-box">
+                <div class="faq-video-head">
+                  <small>Exemplo de Vídeo Dinâmico</small>
+                  <a href="https://youtube.com/shorts/YTT7JiTkgVI" target="_blank" class="faq-video-link">Assistir ↗</a>
+                </div>
+                <div class="faq-video-frame">
+                  <iframe src="https://www.youtube-nocookie.com/embed/YTT7JiTkgVI" title="Exemplo de Vídeo Dinâmico" loading="lazy" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Localização, Estrutura e Gravação Externa -->
+        <div class="faq-category">
+          <span class="faq-category-badge">03 · Localização, Estrutura e Gravação Externa</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Onde exatamente fica o estúdio na Barra da Tijuca e tem estacionamento?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Nosso estúdio fica localizado em um ponto nobre e de fácil acesso na <strong>Barra da Tijuca</strong>, no Rio de Janeiro, em condomínio empresarial moderno, seguro, com recepção, climatização e estacionamento rotativo no próprio prédio para a sua total comodidade.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Se eu preferir gravar na minha clínica/consultório ou empresa, vocês atendem?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Com certeza.</strong> Levamos toda a nossa estrutura móvel de cinema (câmeras 4K, iluminação profissional de estúdio, microfones de lapela sem fio e teleprompter) até o seu espaço.</p>
+            <p>Atendemos com flexibilidade na Barra da Tijuca, Recreio, Zona Sul e demais regiões do Rio de Janeiro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Posso levar convidados (sócio, equipe ou paciente para depoimento) na mesma sessão?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Sim! A sessão de estúdio é sua.</strong> Você pode trazer sócios, membros da sua equipe para compor vídeos ou clientes para gravar depoimentos e prova social de alta credibilidade.</p>
+          </div>
+        </div>
+
+        <!-- 04 Dúvidas Específicas de Nicho -->
+        <div class="faq-category">
+          <span class="faq-category-badge">04 · Dúvidas Específicas de Nicho</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Médicos e Profissionais de Saúde: os vídeos respeitam as normas do CFM/CRM?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Temos total familiaridade com as diretrizes e regras éticas do CFM e conselhos regionais.</strong> Todas as pautas e abordagens são construídas com foco em autoridade técnico-científica, educação em saúde e valorização da consulta, sem promessas sensacionalistas ou violação de sigilo médico.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Agências e Parceiros (White Label): como funciona o sigilo e a entrega dos arquivos?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Atuamos com <strong>sigilo contratual absoluto (NDA)</strong>. No dia da gravação, nossa equipe opera como o braço de captação da sua agência perante o seu cliente final.</p>
+            <p>Entregamos todos os arquivos brutos organizados em 4K na nuvem via Google Drive ou Dropbox em até 24h a 48h úteis após o set.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Para Cursos e Infoprodutos: qual a estrutura disponível para vídeo-aulas?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Nossa estrutura de estúdio conta com suporte para teleprompter profissional, lapelas de alta fidelidade e cenário preparado para vídeo-aulas, com possibilidade de captura combinada de slides e material didático para a sua plataforma de membros.</p>
+          </div>
+        </div>
+
+        <!-- 05 Pagamento e Contrato -->
+        <div class="faq-category">
+          <span class="faq-category-badge">05 · Pagamento e Contrato</span>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">O que significa o contrato trimestral?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Trabalhamos com o ciclo mínimo de <strong>3 meses</strong> porque presença digital e autoridade de marca exigem consistência. Um mês isolado é apenas um teste; três meses é onde você constrói posicionamento, educa o público e colhe resultados comerciais consistentes. O pagamento é feito mês a mês.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Vocês emitem Nota Fiscal?<span>＋</span></button>
+          <div class="faq-a">
+            <p><strong>Sim</strong>, emitimos Nota Fiscal de prestação de serviços para todas as contratações (Pessoa Jurídica ou Pessoa Física).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Como funciona o pagamento no Pix e no cartão de crédito?<span>＋</span></button>
+          <div class="faq-a">
+            <p>Para pagamentos à vista via <strong>Pix</strong>, você conta com condições especiais em todos os planos. No <strong>cartão de crédito</strong>, você pode parcelar o valor em até 3× com taxa competitiva.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
