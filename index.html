@@ -173,17 +173,17 @@ button{font:inherit}
 .names-head{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:end;margin-bottom:28px}
 .names-head h3{font:700 clamp(34px,5vw,70px)/.98 'Manrope',sans-serif;letter-spacing:-.055em;max-width:780px}
 .names-head p{max-width:520px;color:#aaa39a}
-.famous-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.famous-card{position:relative;min-height:520px;border-radius:28px;overflow:hidden;background:#090a09;border:1px solid #dabb8224;transition:transform .32s cubic-bezier(.23,1,.32,1),border-color .32s ease,box-shadow .32s ease}
+.famous-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.famous-card{position:relative;aspect-ratio:9/14;min-height:360px;border-radius:22px;overflow:hidden;background:#090a09;border:1px solid #dabb8224;transition:transform .32s cubic-bezier(.23,1,.32,1),border-color .32s ease,box-shadow .32s ease}
 .famous-card:hover{transform:translateY(-8px);border-color:rgba(218,187,130,.78);box-shadow:0 20px 42px rgba(0,0,0,.26)}
 .famous-card img,.famous-card video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.famous-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(5,6,5,.94))}
-.famous-label{position:absolute;z-index:2;left:24px;right:24px;bottom:25px}
+.famous-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,6,5,.94))}
+.famous-label{position:absolute;z-index:2;left:16px;right:16px;bottom:18px}
 .famous-label small,.famous-label strong,.famous-label span{display:block}
-.famous-label small{font-size:8px;letter-spacing:.16em;color:var(--gold2)}
-.famous-label strong{font:700 27px/1.05 'Manrope',sans-serif;margin:8px 0;color:var(--ivory);transition:color .32s ease,letter-spacing .32s ease}
+.famous-label small{font-size:7.5px;letter-spacing:.14em;color:var(--gold2)}
+.famous-label strong{font:700 clamp(16px,1.2vw,21px)/1.1 'Manrope',sans-serif;margin:6px 0;color:var(--ivory);transition:color .32s ease,letter-spacing .32s ease}
 .famous-card:hover .famous-label strong{color:var(--gold2);letter-spacing:.01em}
-.famous-label span{font-size:11px;color:#c9c4bc}
+.famous-label span{font-size:10px;color:#c9c4bc}
 
 /* Estúdio */
 .studio-proof{display:grid;grid-template-columns:1fr 1.1fr;gap:0;margin-top:60px;border-radius:34px;overflow:hidden;background:var(--concrete);color:#181818}
@@ -374,7 +374,8 @@ button{font:inherit}
 
 @media(max-width:1050px){
   .market-side{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .famous-grid,.youtube-card-grid,.offer-grid.four{grid-template-columns:repeat(2,1fr)}
+  .famous-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .youtube-card-grid,.offer-grid.four{grid-template-columns:repeat(2,1fr)}
   .offer-grid.three{grid-template-columns:repeat(2,1fr)}
   .data-wall{grid-template-columns:1fr}
   .studio-proof{grid-template-columns:1fr}
@@ -429,8 +430,14 @@ button{font:inherit}
 @media(max-width:700px){
   .names-head{grid-template-columns:1fr}
   .names-block{margin-top:-34px!important}
-  .famous-grid,.youtube-card-grid,.offer-grid.four,.offer-grid.three,.offer-grid.two{grid-template-columns:1fr}
-  .famous-card{min-height:470px}
+  .famous-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .famous-card{min-height:260px;aspect-ratio:9/13;border-radius:18px}
+  .famous-label{left:12px;right:12px;bottom:14px}
+  .famous-label small{font-size:7px;letter-spacing:.12em}
+  .famous-label strong{font-size:15px;margin:4px 0}
+  .famous-label span{font-size:9.5px}
+  .famous-grid .famous-card:last-child{grid-column:span 2;max-width:calc(50% - 6px);margin:0 auto;width:100%}
+  .youtube-card-grid,.offer-grid.four,.offer-grid.three,.offer-grid.two{grid-template-columns:1fr}
   .studio-proof{margin-top:42px;height:auto}
   .studio-instagram{padding:10px!important}
   .studio-instagram .instagram-media{width:100%!important;max-width:100%!important}
@@ -474,6 +481,11 @@ button{font:inherit}
 }
 
 @media(max-width:440px){
+  .famous-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .famous-card{min-height:220px;aspect-ratio:9/13}
+  .famous-label strong{font-size:13.5px}
+  .famous-label span{font-size:8.5px}
+  .famous-grid .famous-card:last-child{max-width:100%}
   .photo-gallery{grid-template-columns:1fr;gap:16px}
   .photo-gallery .photo-card:last-child{max-width:100%}
 }
@@ -790,6 +802,22 @@ button{font:inherit}
             <small>FUTEBOL E ENTRETENIMENTO</small>
             <strong>Ronaldinho Gaúcho</strong>
             <span>Mito</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="-0.016">
+          <video src="assets/angela.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>ARTE E TELEDRAMATURGIA</small>
+            <strong>Angela Vieira</strong>
+            <span>Atriz da TV Globo</span>
+          </div>
+        </article>
+        <article class="famous-card reveal" data-parallax="0.018">
+          <video src="assets/jp.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <div class="famous-label">
+            <small>JORNALISMO E TELEVISÃO</small>
+            <strong>JP Vergueiro</strong>
+            <span>Apresentador do Jornal da Band</span>
           </div>
         </article>
         <article class="famous-card reveal" data-parallax="-0.017">
