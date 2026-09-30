@@ -7,6 +7,8 @@
  */
 
 // ===== CONFIGURAÇÃO =====
+// ID da planilha (trecho da URL entre /d/ e /edit). Deixe vazio se o script estiver dentro da planilha (Extensões → Apps Script).
+const ID_PLANILHA = '';
 const NOME_ABA = 'Respostas';
 const NOME_REMETENTE = "3P's Produções";
 // Deixe vazio para usar o e-mail da conta Google dona deste script.
@@ -55,8 +57,10 @@ function validar_(d) {
   if (ARQS.indexOf(d.principal) < 0) throw new Error('Arquétipo inválido');
 }
 
+function ss_() { return ID_PLANILHA ? SpreadsheetApp.openById(ID_PLANILHA) : SpreadsheetApp.getActiveSpreadsheet(); }
+
 function planilha_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = ss_();
   let aba = ss.getSheetByName(NOME_ABA);
   if (!aba) aba = ss.insertSheet(NOME_ABA);
   if (aba.getLastRow() === 0) {
@@ -115,7 +119,7 @@ function enviarDono_(d) {
     '<h2 style="margin:24px 0 8px;font-size:18px;color:#1A1D33">Pontuação (0 a 20)</h2>' + barras_(d) +
     '<h2 style="margin:24px 0 8px;font-size:18px;color:#1A1D33">Respostas brutas (item 1 a 60)</h2>' +
     '<p style="font-family:monospace;font-size:14px;word-break:break-all;margin:0">' + esc_(d.respostas) + '</p>' +
-    '<p style="margin:20px 0 0"><a href="' + SpreadsheetApp.getActiveSpreadsheet().getUrl() + '">Abrir a planilha com todas as respostas</a></p>'
+    '<p style="margin:20px 0 0"><a href="' + ss_().getUrl() + '">Abrir a planilha com todas as respostas</a></p>'
   );
   MailApp.sendEmail({
     to: para,
