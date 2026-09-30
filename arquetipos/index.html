@@ -102,6 +102,19 @@ textarea{font:inherit;font-size:.85rem;width:100%;min-height:170px;padding:12px;
 .err:empty{display:none}
 .sendbox{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:12px;background:var(--bg);font-size:.95rem}
 details summary{cursor:pointer;font-weight:600;color:var(--muted)}
+.ficha summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.ficha summary::-webkit-details-marker{display:none}
+.ficha summary::after{content:"Ver ficha completa ▾";font-size:.85rem;font-weight:600;color:var(--accent)}
+.ficha[open] summary::after{content:"Recolher ▴"}
+.ficha .fn{font-family:var(--display);font-weight:800;font-size:1.6rem;line-height:1.1}
+.ficha h4{margin:0 0 6px;font-family:var(--display);font-size:1rem}
+.ficha ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.ficha .frases li{font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.fontes{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:.92rem}
+.fontes a{color:var(--ink)}
+@media (max-width:560px){.cols{grid-template-columns:minmax(0,1fr)}}
 .toast{font-size:.9rem;color:var(--g-est);font-weight:600}
 @media (max-width:560px){
   .groups,.podium,.steps{grid-template-columns:minmax(0,1fr)}
@@ -180,6 +193,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--muted)}
   <footer class="note" style="text-align:center">Um estudo da <a href="../" style="color:inherit">3P's Produções</a></footer>
 </main>
 
+<script src="perfis.js"></script>
 <script>
 // ====== CONFIGURAÇÃO ======
 // Cole aqui a URL do App da Web do Google Apps Script (termina em /exec). Veja arquetipos/README.md
@@ -378,18 +392,12 @@ ${st.r.join("")}`;
     </div>
     <div class="panel wheelbox">${wheel(s,lead)}</div>
     <div class="podium">${r.slice(0,3).map((k,i)=>`<div class="pod ${i===0?"first":""}"><span class="eyebrow">${["Principal","Secundário","Terciário"][i]}</span><span class="n">${A[k].n}</span><span class="pct">${pts(s[k])} de 20 pontos</span></div>`).join("")}</div>
-    <div class="panel detail">
-      <h2>${a.n}, em detalhe</h2>
-      <dl>
-        <dt>Desejo</dt><dd>${cap(a.desejo)}</dd>
-        <dt>Medo</dt><dd>${cap(a.medo)}</dd>
-        <dt>Promessa</dt><dd>${a.promessa}</dd>
-        <dt>Tom de voz</dt><dd>${a.voz}</dd>
-        <dt>Estética</dt><dd>${a.visual}</dd>
-        <dt>Ideias de vídeo</dt><dd>${a.video}</dd>
-        <dt>Exemplos de marcas</dt><dd>${a.refs}</dd>
-      </dl>
-      <p class="note">O segundo arquétipo, <b>${A[r[1]].n}</b>, dá o tempero da comunicação: ${A[r[1]].voz.toLowerCase()}.</p>
+    ${fichaHTML(r[0],"Arquétipo principal","É a essência da sua marca: o que você promete e por que as pessoas escolhem você.",s,true)}
+    ${fichaHTML(r[1],"Arquétipo secundário","Dá o tempero: aparece no seu tom, no seu estilo e na forma de se relacionar.",s,false)}
+    ${fichaHTML(r[2],"Arquétipo terciário","Um traço de apoio: aparece em detalhes, conteúdos específicos e momentos pontuais.",s,false)}
+    <div class="panel">
+      <h3>Como os seus três arquétipos trabalham juntos</h3>
+      <p>${comboTexto(r)}</p>
     </div>
     <div class="panel">
       <h3>Pontuação completa (0 a 20)</h3>
@@ -397,6 +405,11 @@ ${st.r.join("")}`;
       <p class="note">Diferenças de até ${TIE_LIMIT} pontos entre dois arquétipos são tratadas como empate técnico.</p>
       <h3 style="margin-top:8px">Motivações (0 a 60)</h3>
       <div class="groups">${gs.map(g=>`<div class="grp"><b><span class="dot" style="background:var(${g.c})"></span>${g.n} · ${g.v}</b><span>${g.k.map(k=>A[k].n).join(" · ")}</span></div>`).join("")}</div>
+    </div>
+    <div class="panel">
+      <h3>Fontes</h3>
+      <ol class="fontes">${(window.FONTES||[]).map(f=>`<li><a href="${f.u}" target="_blank" rel="noopener">${esc(f.t)}</a><br><span class="note">${esc(f.uso)}</span></li>`).join("")}</ol>
+      <p class="note">${esc(window.NOTA_FONTES||"")}</p>
     </div>
     <div class="panel">
       <h3>Seu resultado por e-mail</h3>
@@ -417,9 +430,31 @@ ${st.r.join("")}`;
     pontos:Object.fromEntries(ORDER.map(k=>[A[k].n,pts(s[k])])),ranking:r.map(k=>A[k].n),leitura:clar,motivacao:gs[0].n,
     motivacoes:Object.fromEntries(gs.map(g=>[g.n,g.v])),desempate:st.tb?st.tbAns.map(k=>A[k].n).join(", "):"",
     alertas:q.w,media:+q.m.toFixed(2),desvio:+q.sd.toFixed(2),respostas:st.r.join(""),
-    detalhe:{nome:a.n,desejo:cap(a.desejo),medo:cap(a.medo),promessa:a.promessa,voz:a.voz,visual:a.visual,video:a.video,refs:a.refs},
-    segundo:{nome:A[r[1]].n,voz:A[r[1]].voz},resumo,site:""});
+    perfis:r.slice(0,3).map((k,i)=>Object.assign({nome:A[k].n,papel:["Principal","Secundário","Terciário"][i],pontos:pts(s[k])},window.PERFIS[k])),
+    combinacao:comboTexto(r),fontes:window.FONTES,notaFontes:window.NOTA_FONTES,resumo,site:""});
   $("redo").onclick=()=>{Object.assign(st,{sent:false,p:0,r:Array(ITEMS.length).fill(0),tb:null,tbAns:[],done:false});save();$("start").textContent="Começar o estudo";$("resumeNote").textContent="";show("intro");};
+}
+const CAMPOS=[["lema","Lema"],["desejo","Desejo central"],["meta","Meta"],["medo","Maior medo"],["estrategia","Estratégia"],["dom","Dom (talento)"],["armadilha","Armadilha (sombra)"],["tom","Tom de voz"],["roupas","Roupas e estilo"],["postura","Postura e presença em vídeo"],["posicionamento","Posicionamento"],["marcas","Marcas de referência"],["cuidado","Ponto de atenção"]];
+function fichaHTML(k,papel,sub,s,aberto){
+  const P=(window.PERFIS||{})[k];if(!P)return "";
+  const li=a=>a.map(x=>`<li>${esc(x)}</li>`).join("");
+  const dl=CAMPOS.map(([c,l])=>`<dt>${l}</dt><dd>${esc(P[c])}</dd>`).join("");
+  return `<details class="panel ficha" ${aberto?"open":""}>
+    <summary><span class="eyebrow">${papel} · ${pts(s[k])} de 20</span><span class="fn">${A[k].n}</span><span class="note">${sub}</span></summary>
+    <p class="lead">${esc(P.essencia)}</p>
+    <div class="chips">${P.personalidade.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>
+    <div class="detail"><dl>${dl}</dl></div>
+    <div class="cols">
+      <div><h4>Palavras que usa</h4><ul>${li(P.usa)}</ul></div>
+      <div><h4>Palavras que evita</h4><ul>${li(P.evita)}</ul></div>
+    </div>
+    <div><h4>Frases típicas</h4><ul class="frases">${li(P.frases)}</ul></div>
+    <div><h4>Ideias de conteúdo em vídeo</h4><ul>${li(P.conteudo)}</ul></div>
+  </details>`;
+}
+function comboTexto(r){
+  const [a,b,c]=r.map(k=>A[k].n);const Pa=window.PERFIS[r[0]],Pb=window.PERFIS[r[1]],Pc=window.PERFIS[r[2]];
+  return `${a} define a promessa da sua marca (${Pa.meta.toLowerCase().replace(/\.$/,"")}). ${b} define como você entrega essa promessa: o tom (${Pb.tom.split(".")[0].toLowerCase()}) e a forma de se relacionar. ${c} aparece como recurso pontual, útil em conteúdos específicos (${Pc.conteudo[0].toLowerCase()}). Na comunicação, lidere pelo ${a}, tempere com o ${b} e use o ${c} com moderação para não confundir a percepção da marca.`;
 }
 async function sendResult(payload){
   const box=$("sendbox");

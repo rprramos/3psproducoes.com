@@ -2,7 +2,7 @@
 
 Quiz de 60 afirmações (escala de 1 a 5) que identifica o arquétipo principal, o secundário e o terciário da marca de um cliente.
 
-- **Página:** `arquetipos/index.html`, publicada pelo GitHub Pages em `https://rprramos.github.io/3psproducoes.com/arquetipos/`
+- **Página:** `arquetipos/index.html` (as fichas dos 12 arquétipos e as fontes ficam em `arquetipos/perfis.js`), publicada pelo GitHub Pages em `https://rprramos.github.io/3psproducoes.com/arquetipos/`
 - **Backend:** `apps-script/Codigo.gs`, um Google Apps Script ligado a uma planilha. Ele guarda cada resposta na planilha e envia o resultado por e-mail para o cliente e para o dono da planilha.
 
 ## Configuração (uma vez, uns 10 minutos)

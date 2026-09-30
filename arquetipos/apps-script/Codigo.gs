@@ -26,7 +26,7 @@ const ARQS = ['Inocente', 'Explorador', 'Sábio', 'Herói', 'Rebelde', 'Mago', '
 function doPost(e) {
   try {
     const d = JSON.parse(e.postData.contents);
-    if (d.hp) return resposta_({ ok: true }); // robô (campo invisível preenchido)
+    if (d.hp) { d.alertas = (d.alertas || []).concat(['Campo anti-robô preenchido (pode ser preenchimento automático do navegador)']); }
     validar_(d);
 
     // evita envios repetidos do mesmo e-mail em sequência
@@ -81,27 +81,61 @@ function salvar_(d) {
   try { planilha_().appendRow(linha); } finally { lock.releaseLock(); }
 }
 
+const CAMPOS_ = [['lema', 'Lema'], ['desejo', 'Desejo central'], ['meta', 'Meta'], ['medo', 'Maior medo'], ['estrategia', 'Estratégia'],
+  ['dom', 'Dom (talento)'], ['armadilha', 'Armadilha (sombra)'], ['tom', 'Tom de voz'], ['roupas', 'Roupas e estilo'],
+  ['postura', 'Postura e presença em vídeo'], ['posicionamento', 'Posicionamento'], ['marcas', 'Marcas de referência'], ['cuidado', 'Ponto de atenção']];
+
+function lista_(arr, italico) {
+  return '<ul style="margin:4px 0 0;padding-left:20px;color:#1A1D33;font-size:15px">' + (arr || []).map(function (x) {
+    return '<li style="margin:2px 0' + (italico ? ';font-style:italic' : '') + '">' + esc_(x) + '</li>';
+  }).join('') + '</ul>';
+}
+function ficha_(p) {
+  const sub = { 'Principal': 'A essência da sua marca: o que você promete e por que as pessoas escolhem você.',
+    'Secundário': 'O tempero: aparece no seu tom, no seu estilo e na forma de se relacionar.',
+    'Terciário': 'Um traço de apoio: aparece em detalhes e conteúdos específicos.' }[p.papel] || '';
+  return '<div style="border:1px solid #DADDE7;border-radius:12px;padding:20px;margin:20px 0 0">' +
+    '<div style="font-size:12px;color:#5E637D;text-transform:uppercase;letter-spacing:.08em">' + esc_(p.papel) + ' · ' + esc_(p.pontos) + ' de 20</div>' +
+    '<h2 style="margin:4px 0 4px;font-size:24px;color:#1A1D33">' + esc_(p.nome) + '</h2>' +
+    '<p style="margin:0 0 12px;font-size:13px;color:#5E637D">' + sub + '</p>' +
+    '<p style="margin:0 0 12px;font-size:16px;color:#1A1D33">' + esc_(p.essencia) + '</p>' +
+    '<p style="margin:0 0 12px;font-size:14px;color:#3B3FB6;font-weight:bold">' + (p.personalidade || []).map(esc_).join(' · ') + '</p>' +
+    tabela_(CAMPOS_.map(function (c) { return [c[1], p[c[0]]]; })) +
+    '<h3 style="margin:16px 0 0;font-size:16px;color:#1A1D33">Palavras que usa</h3>' + lista_(p.usa) +
+    '<h3 style="margin:12px 0 0;font-size:16px;color:#1A1D33">Palavras que evita</h3>' + lista_(p.evita) +
+    '<h3 style="margin:12px 0 0;font-size:16px;color:#1A1D33">Frases típicas</h3>' + lista_(p.frases, true) +
+    '<h3 style="margin:12px 0 0;font-size:16px;color:#1A1D33">Ideias de conteúdo em vídeo</h3>' + lista_(p.conteudo) +
+    '</div>';
+}
+function fontes_(d) {
+  if (!d.fontes || !d.fontes.length) return '';
+  return '<h2 style="margin:28px 0 8px;font-size:18px;color:#1A1D33">Fontes</h2><ol style="margin:0;padding-left:20px;font-size:13px;color:#1A1D33">' +
+    d.fontes.map(function (f) {
+      return '<li style="margin:6px 0"><a href="' + esc_(f.u) + '" style="color:#3B3FB6">' + esc_(f.t) + '</a><br><span style="color:#5E637D">' + esc_(f.uso) + '</span></li>';
+    }).join('') + '</ol>' + (d.notaFontes ? '<p style="font-size:12px;color:#5E637D;margin:8px 0 0">' + esc_(d.notaFontes) + '</p>' : '');
+}
+function corpoResultado_(d) {
+  return podio_(d) +
+    (d.perfis || []).map(ficha_).join('') +
+    (d.combinacao ? '<h2 style="margin:28px 0 8px;font-size:20px;color:#1A1D33">Como os seus três arquétipos trabalham juntos</h2><p style="margin:0;font-size:15px;color:#1A1D33">' + esc_(d.combinacao) + '</p>' : '') +
+    '<h2 style="margin:28px 0 8px;font-size:20px;color:#1A1D33">Pontuação completa (0 a 20)</h2>' + barras_(d);
+}
+
 function enviarCliente_(d) {
-  const x = d.detalhe || {};
   const html = moldura_(
     '<p style="margin:0 0 6px;color:#5E637D;font-size:13px;text-transform:uppercase;letter-spacing:.1em">Seu resultado</p>' +
     '<h1 style="margin:0 0 12px;font-size:28px;color:#1A1D33">Sua marca é ' + esc_(d.principal) + '</h1>' +
     '<p style="margin:0 0 20px;font-size:16px;color:#1A1D33">Olá, ' + esc_(primeiroNome_(d.nome)) + '! ' +
-    'Obrigado por fazer o estudo. Estes são os três arquétipos que mais aparecem nas suas respostas:</p>' +
-    podio_(d) +
-    '<h2 style="margin:24px 0 8px;font-size:20px;color:#1A1D33">' + esc_(x.nome) + ', em detalhe</h2>' +
-    tabela_([['Desejo', x.desejo], ['Medo', x.medo], ['Promessa', x.promessa], ['Tom de voz', x.voz],
-      ['Estética', x.visual], ['Ideias de vídeo', x.video], ['Exemplos de marcas', x.refs]]) +
-    (d.segundo ? '<p style="margin:16px 0 0;font-size:15px;color:#1A1D33">O segundo arquétipo, <b>' + esc_(d.segundo.nome) +
-      '</b>, dá o tempero da sua comunicação: ' + esc_(String(d.segundo.voz).toLowerCase()) + '.</p>' : '') +
-    '<h2 style="margin:24px 0 8px;font-size:20px;color:#1A1D33">Pontuação completa (0 a 20)</h2>' + barras_(d) +
+    'Obrigado por fazer o estudo. Estes são os três arquétipos que mais aparecem nas suas respostas, com a ficha completa de cada um:</p>' +
+    corpoResultado_(d) +
     '<p style="margin:20px 0 0;font-size:14px;color:#5E637D">Este estudo é um ponto de partida. O resultado fica mais preciso numa conversa de devolutiva, ' +
     'em que confirmamos os arquétipos com exemplos reais do seu negócio.</p>' +
-    (LINK_CONTATO ? '<p style="margin:20px 0 0"><a href="' + LINK_CONTATO + '" style="display:inline-block;background:#3B3FB6;color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:600">Agendar minha devolutiva</a></p>' : '')
+    (LINK_CONTATO ? '<p style="margin:20px 0 0"><a href="' + LINK_CONTATO + '" style="display:inline-block;background:#3B3FB6;color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:600">Agendar minha devolutiva</a></p>' : '') +
+    fontes_(d)
   );
   MailApp.sendEmail({
     to: d.email,
-    subject: 'Seu arquétipo de marca: ' + d.principal,
+    subject: 'Seu arquétipo de marca: ' + d.principal + ' + ' + d.secundario + ' + ' + d.terciario,
     htmlBody: html,
     name: NOME_REMETENTE,
     replyTo: EMAIL_DONO || Session.getEffectiveUser().getEmail()
@@ -116,10 +150,10 @@ function enviarDono_(d) {
       ['Terciário', d.terciario], ['Leitura', d.leitura], ['Motivação dominante', d.motivacao],
       ['Desempate', d.desempate || '(não precisou)'], ['Média / desvio', d.media + ' / ' + d.desvio],
       ['Alertas', (d.alertas || []).join(' ') || 'Nenhum']]) +
-    '<h2 style="margin:24px 0 8px;font-size:18px;color:#1A1D33">Pontuação (0 a 20)</h2>' + barras_(d) +
+    corpoResultado_(d) +
     '<h2 style="margin:24px 0 8px;font-size:18px;color:#1A1D33">Respostas brutas (item 1 a 60)</h2>' +
     '<p style="font-family:monospace;font-size:14px;word-break:break-all;margin:0">' + esc_(d.respostas) + '</p>' +
-    '<p style="margin:20px 0 0"><a href="' + ss_().getUrl() + '">Abrir a planilha com todas as respostas</a></p>'
+    '<p style="margin:20px 0 0"><a href="' + ss_().getUrl() + '">Abrir a planilha com todas as respostas</a></p>' + fontes_(d)
   );
   MailApp.sendEmail({
     to: para,
